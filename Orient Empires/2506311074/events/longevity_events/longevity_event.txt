@@ -1,0 +1,49 @@
+﻿# longevity 
+namespace = longevity
+
+longevity.0001 = {
+	type = character_event
+
+	title = longevity.0001.t
+	desc = longevity.0001.desc
+	theme = physical_health
+
+	trigger = {
+		is_immortal = no
+
+		is_ai = no # debug
+	}
+
+	option = {
+		name = longevity.0001.a
+		if = {
+			limit = {
+				is_immortal = no
+			}
+
+			trigger_event = longevity.0002
+		}
+	}
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = longevity.0001.b
+	}
+}
+
+longevity.0002 = {
+	type = character_event
+
+	title = longevity.0002.t
+	desc = longevity.0002.desc
+	theme = physical_health
+
+	option = {
+		name = longevity.0002.a
+
+		immortal = yes
+		set_immortal_age = this.age
+	}
+
+}
