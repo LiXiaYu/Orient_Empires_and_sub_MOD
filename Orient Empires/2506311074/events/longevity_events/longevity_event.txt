@@ -42,7 +42,7 @@ longevity.0002 = {
 	option = {
 		name = longevity.0002.a
 
-		immortal = yes
+		add_trait = longevity_trait
 		set_immortal_age = this.age
 	}
 

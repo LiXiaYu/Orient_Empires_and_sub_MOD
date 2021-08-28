@@ -1,0 +1,13 @@
+﻿longevity_trait = {
+	index = 1
+
+	desc = trait_longevity_trait_desc
+
+	birth = 0
+	inherit_chance = 0
+	random_creation = 0
+	good = yes
+
+	immortal = yes
+	
+}
