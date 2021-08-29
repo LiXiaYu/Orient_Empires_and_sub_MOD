@@ -4496,6 +4496,7 @@ tiance_01 = {
 	type_icon = "icon_structure_alhambra.dds"
 	
 	can_construct_potential = {
+	    barony = title:b_Luoyang
 		building_requirement_tribal = no
 	}
 	
@@ -4521,6 +4522,7 @@ tiance_02 = {
 	type_icon = "icon_structure_alhambra.dds"
 	
 	can_construct_potential = {
+	    barony = title:b_Luoyang
 		building_requirement_tribal = no
 	}
 	
