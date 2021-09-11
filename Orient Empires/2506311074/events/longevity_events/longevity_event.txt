@@ -8,10 +8,19 @@ longevity.0001 = {
 	desc = longevity.0001.desc
 	theme = physical_health
 
+	left_portrait = root
+
 	trigger = {
 		is_immortal = no
-
+		NOT = { has_character_flag = had_longevity_0001_event }
 		is_ai = no # debug
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = had_longevity_0001_event
+			days = 3650
+		}
 	}
 
 	option = {
@@ -38,6 +47,10 @@ longevity.0002 = {
 	title = longevity.0002.t
 	desc = longevity.0002.desc
 	theme = physical_health
+
+	left_portrait = {
+		character = root
+	}
 
 	option = {
 		name = longevity.0002.a

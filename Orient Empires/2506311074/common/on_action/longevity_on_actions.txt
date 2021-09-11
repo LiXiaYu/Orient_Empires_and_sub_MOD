@@ -1,0 +1,31 @@
+on_birthday = { # Fires 4 times per year
+	trigger = {
+		is_landed = yes 
+		exists = capital_province
+		trigger_if = {
+			limit = {
+				any_courtier = {
+					count > 0
+					has_religion = religion:taoism_religion
+				}
+			}
+			age > 30
+		}
+		trigger_else_if = {
+			limit = {
+				has_religion = religion:taoism_religion
+			}
+			is_adult = yes
+		}
+		trigger_else = {
+			age > 50
+		}
+		NOR = {
+			has_character_flag = had_longevity_0001_event
+		}
+	}
+
+	events = {
+		longevity.0001
+	}
+}
