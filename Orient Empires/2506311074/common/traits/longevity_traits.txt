@@ -1,5 +1,5 @@
 ﻿longevity_trait = {
-	index = 1
+	index = 114514
 
 	desc = trait_longevity_trait_desc
 
