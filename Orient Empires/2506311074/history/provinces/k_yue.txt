@@ -182,7 +182,7 @@
 #c_fuzou
 #b_Fuzhou_Changle 
 10222 = {
-    culture = min
+    culture = han
 	religion = zenzong
 	holding = castle_holding 
 }
@@ -208,7 +208,7 @@
 #c_quanzhou
 #b_Quanzhou_Jinjiang 
 10226 = {
-    culture = min
+    culture = han
 	religion = pagan
 	holding = castle_holding 
 }
@@ -309,24 +309,24 @@
 
 }
 
-#c_ryukyu
+#k_ryukyu 
+#d_ryukyu 
+#c_ryukyu 
 #b_ryukyu
-10925 = {
+11286 = {
 	culture = ryukyu
 	religion = pagan
 	holding = tribal_holding
 }
-
-#b_saki
-10926 = { 
-	culture = ryukyu
-	religion = pagan
-	holding = tribal_holding
-}
-
 #b_amami
-10927 = { 
+11227 = {
 	culture = ryukyu
 	religion = pagan
-	holding = tribal_holding		
+	holding = tribal_holding
+}
+#b_miyakojima  #b_saki
+11285 = {
+	culture = ryukyu
+	religion = pagan
+	holding = tribal_holding
 }

@@ -30,7 +30,7 @@
 		trait = ill
 		death = yes
 		trait = miaohao_trait_taizu
-		give_nickname = shihao_taizu
+		#give_nickname = shihao_taizu
 	}
 }
 194326 = { #耶律德光 Yelü Deguang, Khitan name 堯骨 Yaogu, courtesy name 德謹 Dejin. 遼太宗 Taizong of Liao.
@@ -47,6 +47,11 @@
 	trait = arrogant
 	902.11.25 = {
 		birth = yes
+	}
+	936.9.1 = {
+		effect = { allow_alliance = character:1412375 }
+		add_pressed_claim = title:k_yan
+		add_pressed_claim = title:d_yunzhong
 	}
 	947.5.1 = {
 		trait = ill
@@ -67,8 +72,8 @@
 	899.6.6 = {
 		birth = yes
 	}
-	#917.1.1 = { effect = {ROOT = {add_consort=c_1413612}} }
-	#923.1.1 = { effect = {ROOT = {add_consort=c_1414006}} }
+	917.1.1 = { make_concubine = character:1413612 }
+	923.1.1 = { make_concubine = character:1414006 }
 	930.11.23 = {
 		employer = 1412344
 	}
@@ -78,7 +83,7 @@
 	931.10.28 = {
 		name = "Zanhua_name"
 	}
-	#932.1.1 = { effect = {ROOT = {add_consort=c_1400903}} }
+	932.1.1 = { make_concubine = character:1400903 }
 	933.12.15 = { employer = 1412350 }
 	934.5.24 = { employer = 1412361 }
 	937.1.7 = {
@@ -114,8 +119,7 @@
 	mother = 1413510
 	trait = education_stewardship_1
 	trait = drunkard
-	trait = lustful
-	trait = lustful
+		trait = lustful
 	931.9.19 = {
 		birth = yes
 	}
@@ -136,7 +140,7 @@
 	948.9.1 = {
 		birth = yes
 	}
-	#976.1.1 = { add_consort = 1414009 }
+	976.1.1 = { make_concubine = character:1414009 }
 	982.10.13 = {
 		death = yes
 		trait = miaohao_trait_jingzong
@@ -161,8 +165,8 @@
 	972.1.16 = {
 		birth = yes
 	}
-	#980.1.1 = { effect = {ROOT = {add_consort=c_1406238}} }
-	#1004.1.1 = { effect = {ROOT = {add_consort=c_julu_geng_004}} }
+	980.1.1 = { make_concubine = character:1406238 }
+	1004.1.1 = { make_concubine = character:julu_geng_004 }
 	1031.6.25 = {
 		death = yes
 		trait = miaohao_trait_shengzong
@@ -182,7 +186,7 @@
 	1016.4.3 = {
 		birth = yes
 	}
-	#1031.4.3 = { effect = {ROOT = {add_consort=c_1413517}} }
+	1031.4.3 = { make_concubine = character:1413517 }
 	1032.1.1 = {
 		#remove_spouse=1413625
 		add_spouse=1413625
@@ -283,7 +287,7 @@
 	1075.6.5 = {
 		birth = yes
 	}
-	#1092.1.1 = { effect = {ROOT = {add_consort=c_1413932}} }
+	1092.1.1 = { make_concubine = character:1413932 }
 	#1125.3.26 = {
 	#	name = "Tianzuo_name"
 	#}
@@ -1098,7 +1102,7 @@
 	
 	trait = ill
 	#birth date unknown
-	933.1.1 = {
+	945.1.1 = {
 		birth = yes
 	}
 	978.10.5 = {
@@ -1714,7 +1718,7 @@
 		birth = yes
 	}
 	1063.8.15 = {
-		death = { death_reason = death killer = 1414007} #death_archer
+		death = { death_reason = death_battle killer = 1414007} #death_archer
 	}
 }
 1413084 = { #耶律宗簡 Yelü Zongjian, Khitan name 别古特 Biegute, courtesy name 撒懶 Salan (Salhan in Khitan). Seventh (third named) son of Shengzong. In may of 1018 made 右衛大將軍 (either this date or Zongyuan's birth date are wrong). In 1027 made 彰信軍節度使, and 王子郎君班詳穩. In Zhongxi era 柳城郡王. In 1050 led an expediton against Xi Xia, died on the way back.
@@ -3833,7 +3837,7 @@
 	religion = mahayana
 	
 	culture = khitan
-	father = 1413204Harb
+	father = 1413204
 	#birth and death dates unknown
 	970.1.1 = {
 		birth = yes
@@ -5031,7 +5035,7 @@
 	culture = khitan
 	father = 1413281
 	#birth and death dates unknown
-	1027.1.1 = {
+	1057.1.1 = {
 		birth = yes
 	}
 	1084.1.1 = {
@@ -8692,7 +8696,7 @@
 	trait = education_diplomacy_3
 	trait = poet
 	#birth date unknown
-	985.1.1 = {
+	975.1.1 = {
 		birth = yes
 	}
 	982.10.13 = { employer = 194331 }
@@ -8934,7 +8938,7 @@
 	#spouse = 1413092
 	trait = education_martial_2
 	#birth and death dates unknown
-	987.1.1 = {
+	977.1.1 = {
 		birth = yes
 	}
 	987.1.1 = { employer = 194331 }
@@ -8962,7 +8966,7 @@
 	mother = 1413960
 	trait = education_martial_2
 	#birth and death dates unknown
-	988.1.1 = {
+	978.1.1 = {
 		birth = yes
 	}
 	988.1.1 = { employer = 194331 }
@@ -10792,7 +10796,7 @@
 	father = 1413650
 	mother = 1413260
 	#Birth and death dates unknown
-	1032.1.1 = {
+	1040.1.1 = {
 		birth= yes
 	}
 	1085.1.1 = {
@@ -10904,7 +10908,7 @@
 		birth= yes
 	}
 	1073.1.1 = {
-		#add_consort = 1413834
+		make_concubine = character:1413834
 	}
 	1110.1.1 = {
 		death = yes
@@ -12595,7 +12599,7 @@
 	culture = khitan
 	father = 1413769
 	#birth and death dates unknown
-	958.1.1 = {
+	948.1.1 = {
 		birth = yes
 	}
 	1003.1.1 = {
@@ -13290,7 +13294,7 @@
 }
 1413814 = { #直魯袞 Zhilugun (Jiruguñ in Khitan).
 	name = "Jirugun_name"
-	#dynasty=0 
+	###dynasty=0 
 	religion = mahayana
 	
 	culture = khitan
@@ -13379,7 +13383,7 @@
 }
 1413819 = { #陳家女 Chenjianu, 秦国太夫人. Died before 1105. Her father was some 突呂不. Second wife of Wotela according to 大中央胡里只契丹国故礼賓使耶律糺隣墓誌銘. Gave birth to 5 sons and 2 daughters.
 	name = "Chengianu_name"
-	dynasty=0
+	##dynasty=0
 	religion = mahayana
 	
 	culture = khitan
@@ -13397,7 +13401,7 @@
 }
 1413820 = { #楊姐 Yangjie. A daughter of 某惕隱司長壽夷離畢阿剌里. Died before 1105, had no children. Third wife of Wotela according to 大中央胡里只契丹国故礼賓使耶律糺隣墓誌銘.
 	name = "Yangsie_name"
-	dynasty=0
+	##dynasty=0
 	religion = mahayana
 	
 	culture = khitan
@@ -13508,7 +13512,7 @@
 }
 1413827 = { #耨斤 Nuojin. Fifth wife of Aguzhi according to 奪里懶太山將軍妻永清郡主二人の墓誌。
 	name = "Nogin_name" 
-	dynasty=0
+	##dynasty=0
 	culture = khitan
 	religion = mahayana
 	
@@ -15935,7 +15939,7 @@
 	trait = diligent
 	trait = intellect_good_3
 	#birth and death dates unknown
-	1009.1.1 = {
+	1019.1.1 = {
 		birth = yes
 	}
 	1063.1.1 = {
@@ -15969,7 +15973,7 @@
 	trait = education_martial_2
 	trait = diligent
 	#birth date unknown
-	1015.1.1 = {
+	1020.1.1 = {
 		birth = yes
 	}
 	1082.1.1 = {
@@ -16843,7 +16847,7 @@
 	}
 	1260.1.1={
 		trait = ill
-		death = {death_reason = yes }
+		death = yes
 	}
 } 
 1231549 = { #耶律買住 Yelü Maizhu, son of Toghon according to 元史. 攻嘉定，未下而卒
@@ -16953,7 +16957,7 @@
 1231521 = { #耶律牙里果 Yelü Yaligua, courtesy name 敵輦 Dinian. Fourth son of Abaoji. In 922.2.12 was leading forces against Later Tang and he was captured by Li Cunxu 李存勖 and kept imprisoned at Taiyuan. In 936 he returned back to the country and was made a Tigin. During Shizong's reign lost his post and died soon after.
 	name= "Nalga_name"
 	dynasty=1000102400 # Liao Dynasty
-	religion="tengri_pagan_name"
+	religion="tengri_pagan"
 	culture=khitan
 	father=194325
 	mother=1413608
@@ -16986,7 +16990,7 @@
 1231522 = { #unnamed ancestor of Yelü Dashi
 	name= "Gwenin_name" # ficitious
 	dynasty=1000102400 # Liao Dynasty
-	religion="tengri_pagan_name"
+	religion="tengri_pagan"
 	culture=khitan
 	father=1231521
 	936.1.1 = {
@@ -16999,7 +17003,7 @@
 1231528 = { #unnamed ancestor of Yelü Dashi
 	name= "Sageji_name"  # ficitious
 	dynasty=1000102400 # Liao Dynasty
-	religion="tengri_pagan_name"
+	religion="tengri_pagan"
 	culture=khitan
 	father=1231522
 	963.1.1 = {

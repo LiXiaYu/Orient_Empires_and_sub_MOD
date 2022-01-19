@@ -181,7 +181,8 @@
 							}
 						}
 					}
-					change_government_legion_government_effect = yes
+					add_character_flag = { flag = temp_government_type_corps years = 1 } #WLTDJFIX往来天地间修正
+					#change_government_legion_government_effect = yes
 				}
 				if = {
 					limit = {
@@ -197,7 +198,8 @@
 							}
 						}
 					}
-					change_government_bureau_government_effect = yes
+					add_character_flag = { flag = temp_government_type_bureau years = 1 } #WLTDJFIX往来天地间修正
+					#change_government_bureau_government_effect = yes 
 				}
 			}					
 			#获取封臣
@@ -218,16 +220,32 @@
 			}
 			#获取头衔及封臣
 			$TITLE$ = {
-				change_title_holder_include_vassals = {
-					holder = scope:lucky
-					change = scope:change
-					take_baronies = no
-					government_base = $TITLE$.holder
+#WLTDJFIX往来天地间修正(开始)	
+				if = {
+					limit = { tier >= tier_county }
+					change_title_holder_include_vassals = {
+						holder = scope:lucky
+						change = scope:change
+						take_baronies = no
+						government_base = $TITLE$.holder
+					}
 				}
+#				change_title_holder_include_vassals = {
+#					holder = scope:lucky
+#					change = scope:change
+#					take_baronies = no
+#					government_base = $TITLE$.holder
+#				}
+#WLTDJFIX往来天地间修正(结束）
 			}
 			scope:lucky = { 
-				
+
 				inter_east_contract_effect = yes #继承契约
+				if = {
+					limit = { is_landed = yes }
+					inter_east_contract_effect = yes
+				}
+
 				every_vassal = { #幸运者的旧封臣如果存在，还给法理领主
 					limit = {
 						is_in_list = lucky_old_vassal
@@ -250,21 +268,28 @@
 				}	
 				
 				# 保持政体与前一致
+#WLTDJFIX往来天地间修正（开始）
 				if = {
 					limit = {
+						is_landed = yes
 						$TITLE$.holder = {
 							OR = {
 								is_corps_government_trigger = yes
 								has_government = feudal_government
+								has_character_flag = temp_government_type_corps
 							}
 						}
 					}
-					change_government_legion_government_effect = yes
+					change_government_corps_government_effect = yes
+					remove_character_flag = temp_government_type_corps
+
 				}
-				if = {
+				else_if = {
 					limit = {
+						is_landed = yes
 						$TITLE$.holder = {
 							OR = {
+								has_character_flag = temp_government_type_bureau
 								is_bureau_government_trigger = yes
 								AND = {
 									has_government = imperial_government
@@ -276,7 +301,36 @@
 						}
 					}
 					change_government_bureau_government_effect = yes
+					remove_character_flag = temp_government_type_bureau
 				}
+#				if = {
+#					limit = {
+#						$TITLE$.holder = {
+#							OR = {
+#								is_corps_government_trigger = yes
+#								has_government = feudal_government
+#							}
+#						}
+#					}
+#					change_government_legion_government_effect = yes
+#				}
+#				if = {
+#					limit = {
+#						$TITLE$.holder = {
+#							OR = {
+#								is_bureau_government_trigger = yes
+#								AND = {
+#									has_government = imperial_government
+#									$TITLE$ = {
+#										tier <= tier_county
+#									}
+#								}
+#							}
+#						}
+#					}
+#					change_government_bureau_government_effect = yes
+#				}
+#WLTDJFIX往来天地间修正（结束）
 			}
 			
 			resolve_title_and_vassal_change = scope:change
@@ -290,6 +344,20 @@
 						$TITLE$.title_capital_county.holder.top_liege = scope:liege
 					}
 				}
+#WLTDJFIX往来天地间20211204（开始）
+				if = {
+					limit = { $TITLE$.title_capital_county.holder = { is_ai = no } }
+					$TITLE$.title_capital_county.holder = { save_temporary_scope_as = player }
+					scope:player = {
+						send_interface_message = {
+							type = event_generic_neutral
+							title = bureaucracy.0001.t #本地化
+							desc = bureaucracy.0001.desc #本地化
+							left_icon = scope:lucky
+						}
+					}
+				}
+#WLTDJFIX往来天地间20211204（结束）
 				create_title_and_vassal_change = {
 					type = usurped
 					save_scope_as = change2

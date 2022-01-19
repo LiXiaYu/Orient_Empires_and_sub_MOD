@@ -1,7 +1,8 @@
-#Shatuo
+﻿#Shatuo
 house_Li-Zhuye = {
 	name = "dynn_Li_Zhuye"
-	dynasty = Zhuye
+	dynasty = 1000049851
+	motto = dynn_Zhuye_motto
 }
 
 house_Xiao-Suru = {
@@ -18,3 +19,4 @@ house_Li-tang = {
 	name = "dynn_Li"
 	dynasty = tang_dynasty
 }
+

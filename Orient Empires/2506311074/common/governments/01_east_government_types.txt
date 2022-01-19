@@ -1,7 +1,7 @@
 ﻿imperial_government = {
-	create_cadet_branches = no
+	create_cadet_branches = yes
 	rulers_should_have_dynasty = yes
-	dynasty_named_realms = no
+	#dynasty_named_realms = no
 
 	fallback = 2
 
@@ -9,6 +9,7 @@
 		highest_held_title_tier >= tier_kingdom
 		OR = {
 			has_culture_group = culture_group:chinese_group
+			has_culture_group = culture_group:yamato_group
 			has_culture = culture:shatuo
 			has_culture = culture:tuyuhun
 			has_culture = culture:tangut
@@ -22,22 +23,24 @@
 		}
 	}
 
-	primary_culture_groups = { chinese_group goryeo_group }
+	primary_culture_groups = { chinese_group yamato_group goryeo_group }
 	primary_cultures = { han bai goguryeo jiaozhi min pu }
 
 	primary_holding = castle_holding
-	valid_holdings = { castle_holding city_holding tribal_holding }
+	valid_holdings = { castle_holding city_holding }
 	required_county_holdings = { castle_holding city_holding }
 	court_generate_spouses = yes
 	court_generate_commanders = no
 
 	vassal_contract = {
-		feudal_government_taxes
+		imperial_government_taxes
+		#feudal_government_taxes
 		special_imperial_contract
 		special_imperial_corps
 		special_imperial_royal
 		special_imperial_bureau
-		feudal_government_levies
+		imperial_government_levies
+		#feudal_government_levies
 		#special_contract
 		religious_rights
 		fortification_rights
@@ -50,11 +53,13 @@
 
 	character_modifier = {
 			#domain_limit = 10
-			knight_limit = 24
-			vassal_limit = 20	
+			#knight_limit = 12
+			vassal_limit = 15	
 
 		feudal_government_vassal_opinion = -10
+		#corps_government_vassal_opinion = -10
 		clan_government_vassal_opinion = -20
+		tribal_government_vassal_opinion = -20
 		republic_government_vassal_opinion = -30
 		theocracy_government_vassal_opinion = -30
 
@@ -83,7 +88,7 @@
 corps_government = {
 	create_cadet_branches = yes
 	rulers_should_have_dynasty = no
-	dynasty_named_realms = no
+	dynasty_named_realms = yes
 
 	fallback = 2
 
@@ -91,6 +96,7 @@ corps_government = {
 		highest_held_title_tier >= tier_county
 		OR = {
 			has_culture_group = culture_group:chinese_group
+			has_culture_group = culture_group:yamato_group
 			has_culture = culture:shatuo
 			has_culture = culture:tangut
 			has_culture = culture:bai
@@ -106,13 +112,15 @@ corps_government = {
 	primary_holding = castle_holding
 	valid_holdings = { castle_holding tribal_holding }
 	required_county_holdings = { castle_holding }
-	primary_cultures = { han shatuo bai goguryeo jiaozhi min pu }
+	primary_culture_groups = { chinese_group yamato_group }
 	court_generate_spouses = yes
 	court_generate_commanders = yes
 
 	vassal_contract = {
-		feudal_government_taxes
-		feudal_government_levies
+		#feudal_government_taxes
+		#feudal_government_levies
+		imperial_government_taxes
+		imperial_government_levies
 		special_imperial_corps
 		special_contract
 		religious_rights
@@ -209,8 +217,10 @@ bureau_government = {
 	court_generate_commanders = no
 
 	vassal_contract = {
-		feudal_government_taxes
-		feudal_government_levies
+		#feudal_government_taxes
+		#feudal_government_levies
+		imperial_government_taxes
+		imperial_government_levies		
 		special_contract
 		religious_rights
 		fortification_rights

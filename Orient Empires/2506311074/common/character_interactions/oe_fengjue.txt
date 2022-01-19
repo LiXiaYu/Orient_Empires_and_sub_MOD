@@ -16,10 +16,16 @@
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_kingdom
-					is_landed = yes
+					highest_held_title_tier < tier_kingdom					
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -27,6 +33,9 @@
 	greeting = positive
 	
 	is_valid_showing_failures_only = {
+		scope:actor = {
+				is_adult = yes
+		}
 	}
 
 	auto_accept = yes
@@ -59,10 +68,16 @@ oe_create_kingdom_2_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_kingdom
-					is_landed = yes
+					highest_held_title_tier < tier_kingdom					
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -70,6 +85,9 @@ oe_create_kingdom_2_interaction = {
 	greeting = positive
 	
 	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_adult = yes
+		}
 	}
 
 	auto_accept = yes
@@ -102,10 +120,16 @@ oe_create_kingdom_3_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_kingdom
-					is_landed = yes
+					highest_held_title_tier < tier_kingdom					
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -113,6 +137,9 @@ oe_create_kingdom_3_interaction = {
 	greeting = positive
 	
 	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_adult = yes
+		}
 	}
 
 	auto_accept = yes
@@ -145,10 +172,16 @@ oe_create_kingdom_4_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_kingdom
-					is_landed = yes
+					highest_held_title_tier < tier_kingdom					
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -156,6 +189,9 @@ oe_create_kingdom_4_interaction = {
 	greeting = positive
 	
 	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_adult = yes
+		}
 	}
 
 	auto_accept = yes
@@ -188,10 +224,16 @@ oe_create_kingdom_5_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_kingdom
-					is_landed = yes
+					highest_held_title_tier < tier_kingdom					
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -199,6 +241,9 @@ oe_create_kingdom_5_interaction = {
 	greeting = positive
 	
 	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_adult = yes
+		}
 	}
 
 	auto_accept = yes
@@ -231,10 +276,16 @@ oe_create_kingdom_6_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_kingdom
-					is_landed = yes
+					highest_held_title_tier < tier_kingdom					
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -242,6 +293,9 @@ oe_create_kingdom_6_interaction = {
 	greeting = positive
 	
 	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_adult = yes
+		}
 	}
 
 	auto_accept = yes
@@ -277,10 +331,16 @@ oe_create_duchy_1_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_duchy
-					is_landed = yes
+					highest_held_title_tier < tier_duchy				
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -288,6 +348,9 @@ oe_create_duchy_1_interaction = {
 	greeting = positive
 	
 	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_adult = yes
+		}
 	}
 
 	auto_accept = yes
@@ -296,10 +359,16 @@ oe_create_duchy_1_interaction = {
 		scope:actor = {
 			OE_create_duchy_effect = { DUKETITLE = title:d_chinese_title_1 }
 		}
+		title:d_chinese_title_1.holder = {
+			add_realm_law_skip_effects = official_succession_law
+		}
+		scope:recipient = {
+			change_government_royal_government_effect = yes
+		}
 	}
 	
 	ai_will_do = {
-		base = 0
+		base = 50
 	}
 }
 oe_create_duchy_2_interaction = {
@@ -320,10 +389,16 @@ oe_create_duchy_2_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_duchy
-					is_landed = yes
+					highest_held_title_tier < tier_duchy				
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -331,6 +406,9 @@ oe_create_duchy_2_interaction = {
 	greeting = positive
 	
 	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_adult = yes
+		}
 	}
 
 	auto_accept = yes
@@ -339,10 +417,16 @@ oe_create_duchy_2_interaction = {
 		scope:actor = {
 			OE_create_duchy_effect = { DUKETITLE = title:d_chinese_title_2 }
 		}
+		title:d_chinese_title_2.holder = {
+			add_realm_law_skip_effects = official_succession_law
+		}
+		scope:recipient = {
+			change_government_royal_government_effect = yes
+		}
 	}
 	
 	ai_will_do = {
-		base = 0
+		base = 50
 	}
 }
 oe_create_duchy_3_interaction = {
@@ -363,10 +447,16 @@ oe_create_duchy_3_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_duchy
-					is_landed = yes
+					highest_held_title_tier < tier_duchy				
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -374,6 +464,9 @@ oe_create_duchy_3_interaction = {
 	greeting = positive
 	
 	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_adult = yes
+		}
 	}
 
 	auto_accept = yes
@@ -382,10 +475,16 @@ oe_create_duchy_3_interaction = {
 		scope:actor = {
 			OE_create_duchy_effect = { DUKETITLE = title:d_chinese_title_3 }
 		}
+		title:d_chinese_title_3.holder = {
+			add_realm_law_skip_effects = official_succession_law
+		}
+		scope:recipient = {
+			change_government_royal_government_effect = yes
+		}
 	}
 	
 	ai_will_do = {
-		base = 0
+		base = 50
 	}
 }
 oe_create_duchy_4_interaction = {
@@ -406,10 +505,16 @@ oe_create_duchy_4_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_duchy
-					is_landed = yes
+					highest_held_title_tier < tier_duchy				
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -417,6 +522,9 @@ oe_create_duchy_4_interaction = {
 	greeting = positive
 	
 	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_adult = yes
+		}
 	}
 
 	auto_accept = yes
@@ -425,10 +533,16 @@ oe_create_duchy_4_interaction = {
 		scope:actor = {
 			OE_create_duchy_effect = { DUKETITLE = title:d_chinese_title_4 }
 		}
+		title:d_chinese_title_4.holder = {
+			add_realm_law_skip_effects = official_succession_law
+		}
+		scope:recipient = {
+			change_government_royal_government_effect = yes
+		}
 	}
 	
 	ai_will_do = {
-		base = 0
+		base = 50
 	}
 }
 oe_create_duchy_5_interaction = {
@@ -449,10 +563,16 @@ oe_create_duchy_5_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_duchy
-					is_landed = yes
+					highest_held_title_tier < tier_duchy				
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -460,6 +580,9 @@ oe_create_duchy_5_interaction = {
 	greeting = positive
 	
 	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_adult = yes
+		}
 	}
 
 	auto_accept = yes
@@ -468,10 +591,16 @@ oe_create_duchy_5_interaction = {
 		scope:actor = {
 			OE_create_duchy_effect = { DUKETITLE = title:d_chinese_title_5 }
 		}
+		title:d_chinese_title_5.holder = {
+			add_realm_law_skip_effects = official_succession_law
+		}
+		scope:recipient = {
+			change_government_royal_government_effect = yes
+		}
 	}
 	
 	ai_will_do = {
-		base = 0
+		base = 50
 	}
 }
 oe_create_duchy_6_interaction = {
@@ -492,10 +621,16 @@ oe_create_duchy_6_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_duchy
-					is_landed = yes
+					highest_held_title_tier < tier_duchy				
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -503,6 +638,9 @@ oe_create_duchy_6_interaction = {
 	greeting = positive
 	
 	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_adult = yes
+		}
 	}
 
 	auto_accept = yes
@@ -511,10 +649,16 @@ oe_create_duchy_6_interaction = {
 		scope:actor = {
 			OE_create_duchy_effect = { DUKETITLE = title:d_chinese_title_6 }
 		}
+		title:d_chinese_title_6.holder = {
+			add_realm_law_skip_effects = official_succession_law
+		}
+		scope:recipient = {
+			change_government_royal_government_effect = yes
+		}
 	}
 	
 	ai_will_do = {
-		base = 0
+		base = 50
 	}
 }
 
@@ -536,10 +680,16 @@ oe_create_duchy_7_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_duchy
-					is_landed = yes
+					highest_held_title_tier < tier_duchy				
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -554,6 +704,12 @@ oe_create_duchy_7_interaction = {
 	on_accept = {
 		scope:actor = {
 			OE_create_duchy_effect = { DUKETITLE = title:d_chinese_title_7 }
+		}
+		title:d_chinese_title_7.holder = {
+			add_realm_law_skip_effects = official_succession_law
+		}
+		scope:recipient = {
+			change_government_royal_government_effect = yes
 		}
 	}
 	
@@ -579,10 +735,16 @@ oe_create_duchy_8_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_duchy
-					is_landed = yes
+					highest_held_title_tier < tier_duchy				
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -597,6 +759,12 @@ oe_create_duchy_8_interaction = {
 	on_accept = {
 		scope:actor = {
 			OE_create_duchy_effect = { DUKETITLE = title:d_chinese_title_8 }
+		}
+		title:d_chinese_title_8.holder = {
+			add_realm_law_skip_effects = official_succession_law
+		}
+		scope:recipient = {
+			change_government_royal_government_effect = yes
 		}
 	}
 	
@@ -622,10 +790,16 @@ oe_create_duchy_9_interaction = {
 		scope:actor = {
 			every_vassal = {
 				limit = {
-					highest_held_title_tier < tier_duchy
-					is_landed = yes
+					highest_held_title_tier < tier_duchy				
 				}
 				add_to_list = characters
+			}
+			every_courtier = {
+				limit = {
+					is_landed =no
+					NOT = { has_character_flag = in_council }
+				}
+				add_to_list = characters				
 			}
 		}
 	}
@@ -640,6 +814,12 @@ oe_create_duchy_9_interaction = {
 	on_accept = {
 		scope:actor = {
 			OE_create_duchy_effect = { DUKETITLE = title:d_chinese_title_9 }
+		}
+		title:d_chinese_title_9.holder = {
+			add_realm_law_skip_effects = official_succession_law
+		}
+		scope:recipient = {
+			change_government_royal_government_effect = yes
 		}
 	}
 	

@@ -114,16 +114,14 @@ war = {
 	
 }
 
-
-# Goryeo Civil War
 war = {
-	name = "war_907_goryeo_civil_war"	
-	start_date = 906.8.1
-	end_date = 908.9.25
-	targeted_titles={ k_silla }
-	casus_belli = revolt_independence_war
-	attackers = { 1900549 }
-	defenders = { 1900366 }
-	claimant = 1900549
-
+	#name = "war_Later_Jin" 
+	start_date = 936.9.1
+	end_date = 936.12.31
+	targeted_titles = { e_celestia }
+	#casus_belli = shatuo_unite_war
+	casus_belli = mandate_war_cb
+	attackers = { 1412375 194326 }
+	defenders = { 1412361 }
+	
 }

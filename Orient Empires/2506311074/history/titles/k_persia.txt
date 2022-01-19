@@ -1,29 +1,7 @@
 k_persia = {
 	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	
-# Dulafids or Ejlids
-#825.10.10 = {
-#	liege = e_arabia
-#	holder = 188697
-#}
-866.1.1 = {
-	liege = e_arabia
-	holder = 1234931
-}
-867.7.1 = { holder = 163132
-}
-#866-867 Wasif, July 867 Musa b. Bugha
-870.10.10 = { holder = 163152
-}
-894.10.10 = { holder = 1230543
-}
-896.10.10 = { holder = 1230541
-}
-898.10.10 = {
-	liege = 0
-	holder = 0
-}	
+		
 # Buyids
 949.12.12 = { holder = 1231063 # Rukn al-Dawla "Hasan" - Senior Emir of the Buyid Confederacy after his brother Imad al-Dawla Ali's death
 }
@@ -150,40 +128,6 @@ d_tekule = { #tribal title
 }
 
 
-}
-
-
-d_oghuz = { #tribal title
-
-
-700.1.1 = { holder = 1230100
-	government = tribal_government
-}
-738.1.1 = { holder = 1230101
-}
-763.1.1 = { holder = 1230103
-}
-773.1.1 = { holder = 1230106
-}
-791.1.1 = { holder = 1231978
-}
-835.1.1 = { holder = 1231979
-}
-863.1.1 = { holder = 1231980
-}
-885.1.1 = { holder = 1231981
-}
-912.1.1 = { holder = 1230146
-}
-946.1.1 = { holder = 1600009
-}
-980.1.1 = { holder = 1230138
-}
-1015.1.1 = {
-
-	holder = 1230137
-}
-1042.1.1 = { holder = 0
 }
 
 
@@ -461,8 +405,10 @@ d_hamadan = {
 	
 	840.1.1 = {
 		liege = 0
-		holder = 0
+		holder = 163098
 	}
+	#Dulafids
+	874.1.1 = { holder = 1230541 liege = 0 }
 	
 }
 
@@ -496,12 +442,7 @@ d_isfahan = {
 }
 894.10.10 = { holder = 1230543
 }
-896.10.10 = { holder = 1230541
-}
-898.10.10 = {
-	liege = 0
-	holder = 0
-}
+896.10.10 = { holder = 1230541 liege = 0 }
 # Buyids
 943.1.1 = { holder = 1231063
 }
@@ -639,20 +580,16 @@ c_isfahan = {
 	
 	767.1.1 = {
 		holder = 188727
-		liege = d_hamadan
 	}
 # Dulafids or Ejlids
 840.10.10 = {
-	liege = d_isfahan
 	holder = 163098
 }
-864.1.1 = {
-	liege = d_ahvaz
-	holder = 1234931
-}
-867.10.29 = {
-	liege = d_isfahan
+840.1.1 = {
 	holder = 163098
+}
+866.1.1 = {
+	holder = 163151
 }
 870.10.10 = { holder = 163152
 }
@@ -660,6 +597,7 @@ c_isfahan = {
 }
 896.10.10 = { holder = 1230541
 }
+
 #912.1.1 = {
 #	holder = 1231138
 #}
@@ -791,16 +729,13 @@ c_ardestan = {
 	}
 # Dulafids or Ejlids
 840.10.10 = {
-	liege = d_isfahan
 	holder = 163098
 }
 864.1.1 = {
-	liege = d_ahvaz
 	holder = 1234931
 }
-867.10.29 = {
-	liege = d_isfahan
-	holder = 163098
+866.1.1 = {
+	holder = 163151
 }
 870.10.10 = { holder = 163152
 }
@@ -808,6 +743,7 @@ c_ardestan = {
 }
 896.10.10 = { holder = 1230541
 }
+
 #912.1.1 = {
 #	holder = 1231138
 #}
@@ -938,17 +874,11 @@ c_qumisha = {
 		holder = 188727
 	}
 # Dulafids or Ejlids
-840.10.10 = {
-	liege = d_isfahan
+840.1.1 = {
 	holder = 163098
 }
-864.1.1 = {
-	liege = d_ahvaz
-	holder = 1234931
-}
-867.10.29 = {
-	liege = d_isfahan
-	holder = 163098
+866.1.1 = {
+	holder = 163151
 }
 870.10.10 = { holder = 163152
 }
@@ -956,6 +886,7 @@ c_qumisha = {
 }
 896.10.10 = { holder = 1230541
 }
+
 #912.1.1 = {
 #	holder = 1231138
 #}
@@ -1087,18 +1018,17 @@ c_luristan = {
 		holder = 188727
 	}
 # Dulafids or Ejlids
-840.10.10 = {
-	liege = d_isfahan
-	holder = 1230537
+840.1.1 = {
+	holder = 163098
 }
 866.1.1 = {
-	liege = d_kurdistan
-	holder = 163132
+	holder = 163151
 }
 868.10.10 = {
 	liege = d_isfahan
 	holder = 1230541
 }
+
 920.1.1 = {
 	
 	holder = 261010
@@ -1191,6 +1121,8 @@ d_kirman = {
 }
 865.1.1 = { holder = 1236289
 }
+#Simjurids
+907.1.1 = { holder = 1230260 }
 934.1.1 = {
 	liege = k_transoxiana
 	holder = 1230261 # Abu-Ishaq Simjuri 
@@ -1346,6 +1278,8 @@ c_kirman = {
 	liege = d_kirman
 	holder = 1236289
 }
+#Simjurids
+907.1.1 = { holder = 1230260 }
 934.1.1 = {
 	liege = 0
 	holder = 1230777 # Mohammad b. Elyas
@@ -1903,7 +1837,8 @@ c_jiruft = {
 
 
 d_yazd = {
-
+#Simjurids
+907.1.1 = { holder = 1230260 }
 1241.1.1 = { holder = 1235910
 }
 1246.1.1 = { #some time during Salgur's reign
@@ -1942,6 +1877,8 @@ c_yazd = {
 	liege = d_kirman
 	holder = 1236289
 }
+#Simjurids
+907.1.1 = { holder = 1230260 }
 934.1.1 = { #?
 	liege = d_fars
 	holder = 1231062
@@ -2062,7 +1999,7 @@ c_mafaza = {
 955.1.1 = {
 	liege = d_nishapur
 }
-989.1.1 = { holder = 1230263 # Abu 'Alí Simjuri becomes governor of all of Khorasan, upon the death of his father Abu'l-Hasan
+989.1.1 = { holder = 1230263 # Abu 'Ali Simjuri becomes governor of all of Khorasan, upon the death of his father Abu'l-Hasan
 }
 995.1.1 = {
 	liege = d_kohestan
@@ -2276,6 +2213,80 @@ c_shahre-babak = {
 	
 }
 
+d_rayy = {
+	867.1.1 = {	change_development_level = 10 }
+	1066.1.1 = { change_development_level = 16 }
+
+	900.1.1 = {	holder = 163161 }
+	
+# Buyids
+943.1.1 = { holder = 1231063
+}
+949.12.12 = {
+	liege = k_persia
+}
+976.9.9 = { holder = 1231068
+}
+984.1.1 = { #Fakhr al-Dawla proclaims himself Shahanshah
+	liege = 0
+	holder = 1231066
+}
+997.10.10 = { holder = 1231108
+}
+998.12.1 = {
+	liege = k_persia
+}
+1023.1.1 = { #disconnected from the other Buyid branches due to their infighting and the independent Kakuyids
+	liege = 0
+}
+1029.1.1 = {
+	liege = k_kabulistan
+	holder = 1600008
+}
+1033.1.1 = { holder = 1230381
+}
+1037.1.1 = {
+	liege = 0
+	holder = 0
+}
+1227.12.2 = {
+	liege = e_ilkhanate
+	holder = 93253
+}
+#1234.2.10 = {
+#	liege = e_china_west_governor
+#}
+1236.1.1 = { holder = 1229824
+}
+1242.1.1 = { holder = 217220 # Arghun Aqa
+}
+1256.1.1 = { holder = 478011
+}
+1259.8.11 = {
+	liege = e_ilkhanate
+}
+1265.2.8 = { holder = 478010
+}
+1282.1.1 = { holder = 125523
+}
+1284.1.1 = { holder = 478008
+}
+1291.1.1 = { holder = 125525
+}
+1295.1.1 = { holder = 125522
+}
+1295.10.4 = { holder = 125524
+}
+1304.5.11 = { holder = 478007
+}
+1316.12.16 = { holder = 478006
+}
+1335.12.1 = {
+	liege = 0
+	holder = 0
+}
+	
+}
 
 c_rayy = {
 	867.1.1 = {	change_development_level = 10 }
@@ -2305,6 +2316,9 @@ c_rayy = {
 	liege = k_khorasan
 	holder = 163100
 }
+
+900.1.1 = {	holder = 163161 }
+
 931.1.1 = {
 	liege = d_tabaristan
 	holder = 166989
@@ -2635,8 +2649,7 @@ c_qom = {
 }
 894.10.10 = { holder = 1230543
 }
-896.10.10 = { holder = 1230541
-}
+896.10.10 = { holder = 1230541 }
 931.1.1 = {
 	liege = d_tabaristan
 	holder = 166989
@@ -2789,6 +2802,7 @@ c_hamadan = {
 }
 896.10.10 = { holder = 1230541
 }
+
 931.1.1 = {
 	liege = d_tabaristan
 	holder = 166989
@@ -3084,6 +3098,7 @@ c_dinawar = {
 }
 896.10.10 = { holder = 1230541
 }
+
 931.1.1 = {
 	liege = d_tabaristan
 	holder = 166989
@@ -3232,16 +3247,18 @@ d_fars = {
 }
 851.5.5 = { holder = 1230530
 }
-851.10.10 = { holder = 163162
-}
-864.1.1 = { holder = 1230666
-}
-867.1.1={
+860.1.1 = {
 	liege = 0
+	holder = 1000230509
 }
-868.1.1 = {
+867.10.10 = {
+	holder = 1230666
 	liege = e_arabia
 }
+872.1.1 = {		#Last Tahirid
+holder = 163162	
+}
+# Buyids
 934.1.1 = {
 	liege = 0
 	holder = 1231062
@@ -3416,14 +3433,15 @@ c_shiraz = {
 	}
 	
 	862.1.1 = {
-		liege = "d_fars"
 		holder = 1000230509
 	}
-	867.10.10 = {		#Kinda placeholder
-		holder = 302701
-		liege = d_fars	#Saffarid
+	867.10.10 = {		#Last Tahirid
+		holder = 163162
+		liege = d_fars	
 	}
-	
+	934.1.1 = {
+		holder = 1231062
+	}
 	1066.1.1 = {
 	
 		holder = 3854
@@ -4251,6 +4269,9 @@ c_sif-i-umara = {
 
 d_khuzestan = {
 
+860.1.1 = { liege = 0 holder = 1000230509 }
+867.10.10 = { holder = 1230541 liege = e_arabia }
+
 1055.12.18 = {
 	liege = e_persia
 	holder = 1231099
@@ -4319,12 +4340,19 @@ c_sardan = {
 }
 860.10.10 = { holder = 163151
 }
-864.1.1 = {
-	liege = d_ahvaz
-	holder = 1234931
+861.1.1 = {
+	holder = 163101
 }
-868.10.10 = {
+862.1.1 = {
+	liege = d_fars
+	holder = 163160
+}
+867.10.10 = {
 	liege = d_isfahan
+	holder = 1230541
+}
+898.10.10 = {
+	liege = d_khuzestan
 	holder = 1230541
 }
 936.1.1 = {
@@ -4447,9 +4475,15 @@ c_ramhurmuz = {
 }
 851.10.10 = { holder = 163162
 }
-863.1.1 = { holder = 1230528
+861.1.1 = {
+	liege = "d_sistan"
 }
-864.1.1 = { holder = 1230666
+862.1.1 = {
+	liege = d_fars
+	holder = 1000230509
+}
+867.10.10 = {		#Last Tahirid
+	holder = 163162	
 }
 934.1.1 = { holder = 1231062
 }
@@ -4571,14 +4605,21 @@ c_tustar = {
 }
 860.10.10 = { holder = 163151
 }
-864.1.1 = {
-	liege = d_ahvaz
-	holder = 1234931
+861.1.1 = {
+	liege = "d_sistan"
+}
+861.1.1 = {
+	holder = 163101
+}
+862.1.1 = {
+	holder = 163160
+	liege = d_fars
 }
 868.10.10 = {
 	liege = d_isfahan
 	holder = 1230541
 }
+
 936.1.1 = {
 	liege = d_ahvaz
 	holder = 261010 # Abu Abdallah Baridi
@@ -4691,9 +4732,16 @@ c_ahvaz = {
 
 769.1.1 = { holder = 188649
 }
-864.1.1 = {
-	liege = d_ahvaz
-	holder = 1234931
+862.1.1 = {
+	liege = d_merv
+}
+862.1.1 = {
+	holder = 163160
+	liege = d_fars
+}
+872.1.1 = {		#Last Tahirid
+	holder = 163162	
+	liege = d_fars
 }
 
 936.1.1 = {
@@ -4831,9 +4879,12 @@ c_abbadan = {
 
 768.1.1 = { holder = 188666
 }
-866.1.1 = {
-	liege = d_basra
-	holder = 1230248
+862.1.1 = {
+	liege = "d_merv"
+}
+862.1.1 = {
+	holder = 163160
+	liege = "d_fars"
 }
 936.1.1 = {
 	liege = d_ahvaz
@@ -4976,10 +5027,6 @@ c_dawraq = {
 862.1.1 = { holder = 163160
 	liege = "d_fars"
 }
-864.1.1 = {
-	liege = d_ahvaz
-	holder = 1234931
-}
 
 936.1.1 = {
 	liege = d_ahvaz
@@ -5118,10 +5165,15 @@ d_kermanshah = {
 		holder = 34002
 		liege=e_arabia
 	}
-	
-	840.1.1={
-		liege=0
-		holder = 0
+	#Dulafids
+	840.10.10 = {
+		liege = 0
+		holder = 163098
+	}
+
+	868.10.10 = {
+		liege=e_arabia
+		holder = 1230541
 	}
 1055.12.18 = {
 	liege = e_persia
@@ -5187,19 +5239,16 @@ c_kermanshah = {
 	}
 # Dulafids or Ejlids
 840.10.10 = {
-	liege = d_isfahan
 	holder = 163098
 }
-860.10.10 = { holder = 163151
-}
 866.1.1 = {
-	liege = d_kurdistan
-	holder = 163132
+	liege = d_hamadan
 }
 868.10.10 = {
-	liege = d_isfahan
+	liege = d_kermanshah
 	holder = 1230541
 }
+
 920.1.1 = {
 	liege = d_kurdistan
 	holder = 1231434
@@ -5297,19 +5346,19 @@ c_masabadhan = {
 	764.1.1 = {
 		holder = 188726
 	}
-# Dulafids or Ejlids
-840.10.10 = {
-	liege = d_isfahan
-	holder = 1230537
-}
-866.1.1 = {
-	liege = d_kurdistan
-	holder = 163132
-}
-868.10.10 = {
-	liege = d_isfahan
-	holder = 1230541
-}
+	# Dulafids or Ejlids
+	840.10.10 = {
+		holder = 163098
+	}
+	860.10.10 = { holder = 163151
+	}
+	866.1.1 = {
+		liege = d_hamadan
+	}
+	868.10.10 = {
+		liege = d_kermanshah
+		holder = 1230541
+	}
 920.1.1 = {
 	liege = d_kurdistan
 	holder = 1231434
@@ -5398,23 +5447,18 @@ c_saimara = {
 	768.1.1 = {
 		holder = 188631 # Khuzaymah b Khazmi (fictitious assignment)
 	}
-# Dulafids or Ejlids
-840.10.10 = {
-	liege = d_isfahan
-	holder = 1230537
-}
-866.1.1 = {
-	liege = d_kurdistan
-	holder = 163132
-}
-868.10.10 = {
-	liege = d_isfahan
-	holder = 1230541
-}
-920.1.1 = {
-	liege = d_kurdistan
-	holder = 1231434
-}
+	# Dulafids or Ejlids
+	840.10.10 = {
+		holder = 163098
+	}
+	860.10.10 = { holder = 163151
+	}
+	866.1.1 = {
+		liege = d_hamadan
+	}
+	868.10.10 = {
+		holder = 1230541
+	}
 960.1.1 = { holder = 1231435
 }
 961.1.1 = { holder = 1231436

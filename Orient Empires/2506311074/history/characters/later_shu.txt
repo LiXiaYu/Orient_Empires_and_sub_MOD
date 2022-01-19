@@ -17,7 +17,7 @@ longgang_meng_01 = { #孟佚 Meng Yi. Great-grandfather of Meng Zhixiang. (十�
 	}
 	934.7.1 = {
 		trait = miaohao_trait_taizu
-		give_nickname = shihao_taizu
+		#give_nickname = shihao_taizu
 	}
 }
 longgang_meng_02 = { #孟察 Meng Cha. Grandfather of Meng Zhixiang. (舊五代史/卷136) In 934.4.17 made 世祖. (十國春秋/卷048)
@@ -107,7 +107,7 @@ longgang_meng_06 = { #孟知祥 Meng Zhixiang. Son of Meng Dao. (舊五代史/�
 		trait = ill
 	}
 	934.3.16 = {
-		#
+		add_trait = founding_monarch
 	}
 	934.9.7 = {
 		death = yes
@@ -121,7 +121,7 @@ longgang_meng_07 = { #孟貽範 Meng Yifan
 	culture = han
 	religion = zhengyi
 	father=longgang_meng_06
-	mother=1412329
+	mother=later_shu_li_001
 	#birth and death dates unknown
 	903.1.1 = {
 		birth = yes
@@ -136,7 +136,7 @@ longgang_meng_08 = { #孟貽邕 Meng Yiyong
 	culture = han
 	religion = zhengyi
 	father=longgang_meng_06
-	mother=1412329
+	mother=later_shu_li_001
 	#birth and death dates unknown
 	905.1.1 = {
 		birth = yes
@@ -151,7 +151,7 @@ longgang_meng_09 = { #孟貽矩 Meng Yiju. 摄彭州刺吏、銀青光禄大夫�
 	culture = han
 	religion = zhengyi
 	father=longgang_meng_06
-	mother=1412329
+	mother=later_shu_li_001
 	#birth and death dates unknown
 	908.1.1 = {
 		birth = yes

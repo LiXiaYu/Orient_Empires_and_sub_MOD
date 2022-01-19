@@ -2230,6 +2230,7 @@
 	culture = han
 	father = 1405860
 	mother = longxi_li_1168
+	female = yes
 	#birth and death dates unknown
 	794.1.1 = {
 		birth = yes

@@ -1,6 +1,6 @@
 ﻿#称帝开国
 found_new_chinese_empire_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_activity.dds"
 	ai_check_interval = 90
   	major = yes
 
@@ -38,7 +38,7 @@ found_new_chinese_empire_decision = {
 	is_valid_showing_failures_only = {
 		is_independent_ruler = yes
 		is_capable_adult = yes
-		is_at_war = no
+		#is_at_war = no
 	}
 
 	effect = {
@@ -46,9 +46,12 @@ found_new_chinese_empire_decision = {
 	}
 
 	cost = {
-		gold = 1000
-		prestige = 1000
-		piety = 600
+		gold = {
+			value = massive_gold_value
+		}
+		prestige = {
+			value = major_prestige_value
+		}
 	}
 	
 	ai_potential = {
@@ -76,8 +79,8 @@ found_new_chinese_empire_decision = {
 
 #建立拓跋汗国
 found_steppe_chinese_empire_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
-	ai_check_interval = 90
+	picture = "gfx/interface/illustrations/decisions/fp1_decisons_hold_bolt.dds"
+	ai_check_interval = 1000
   	major = yes
 
 	is_shown = {
@@ -90,7 +93,6 @@ found_steppe_chinese_empire_decision = {
 		prestige_level >= 3
 		is_independent_ruler = yes
 		is_capable_adult = yes
-		is_at_war = no
 		OR = {
 			AND = { #幽云/上秦
 				completely_controls = title:d_youzhou
@@ -103,11 +105,11 @@ found_steppe_chinese_empire_decision = {
 					completely_controls = title:c_weizhou
 				}
 			}
-			AND = { #中秦
+			AND = { #中秦/大辽/大金
 				has_title = title:k_khitan
-				has_title = title:k_liao
 				has_title = title:k_jurchen
 				OR = {
+					has_title = title:k_liao
 					completely_controls = title:d_fengzhou
 					completely_controls = title:d_teriqan
 					completely_controls = title:d_karat
@@ -146,7 +148,7 @@ found_steppe_chinese_empire_decision = {
 	is_valid_showing_failures_only = {
 		is_independent_ruler = yes
 		is_capable_adult = yes
-		is_at_war = no
+		#is_at_war = no
 	}
 
 	effect = {
@@ -154,9 +156,12 @@ found_steppe_chinese_empire_decision = {
 	}
 
 	cost = {
-		gold = 1000
-		prestige = 1000
-		piety = 600
+		gold = {
+			value = massive_gold_value
+		}
+		prestige = {
+			value = major_prestige_value
+		}
 	}
 	
 	ai_potential = {
@@ -164,19 +169,19 @@ found_steppe_chinese_empire_decision = {
 	}
 
 	ai_will_do = {
-		base = 100
+		base = 1000
 		
 		modifier = {
-			add = 50
+			add = 150
 			exists = primary_title
 			primary_title.tier > tier_county
 		}
 		
 		modifier = {
-			factor = 10
+			factor = 300
 			any_child = {
 				is_alive = yes
-				count < 3
+				count > 2
 			}
 		}
 	}
@@ -184,7 +189,7 @@ found_steppe_chinese_empire_decision = {
 
 #兴复大唐 Restoring Tang Empire 
 restore_tang_empire_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
 	ai_check_interval = 120
 	major = yes
 
@@ -198,8 +203,17 @@ restore_tang_empire_decision = {
 		}
 		NOT = { exists = title:e_tang.holder }
 		title:e_tang = { is_title_created = no }
-		highest_held_title_tier <= tier_kingdom
-
+		OR = {
+			highest_held_title_tier <= tier_kingdom
+			AND = {
+				highest_held_title_tier > tier_kingdom
+				OR = {
+					has_title = title:e_wu
+					has_title = title:e_shu
+					has_title = title:e_min
+				}
+			}
+		}
 			NOR = {
 				culture_group = culture_group:nanman_group
 				culture_group = culture_group:tibetan_group
@@ -220,27 +234,31 @@ restore_tang_empire_decision = {
 		is_capable_adult = yes
 		is_imprisoned = no
 		is_independent_ruler = yes
-		OR = {
-			AND = {
-				any_held_title = {
-					count >= 2
-					tier = tier_kingdom
-				}
-				#primary_title.title_held_years > 10
-				capital_province = {
-					geographical_region = world_asia_china
-				}
-				prestige_level >= high_prestige_level
-			}
+#		any_held_title = {
+#			count >= 2
+#			tier = tier_kingdom
+#		}
+		#primary_title.title_held_years > 5
+		capital_province = {
+			geographical_region = world_asia_china
+		}
+		AND = {
 			OR = {
-
 				completely_controls = title:k_jin
 				completely_controls = title:k_yan
 				completely_controls = title:k_zhou
 				completely_controls = title:k_wu
 				completely_controls = title:k_shu
+				completely_controls = title:k_chu
+			}
+			OR = {
 				AND = {
 					completely_controls = title:c_taiyuan
+					completely_controls = title:c_weizhou
+					completely_controls = title:c_youzhou
+				}
+				AND = {
+					completely_controls = title:c_bianzhou
 					completely_controls = title:c_weizhou
 					completely_controls = title:c_youzhou
 				}
@@ -251,7 +269,6 @@ restore_tang_empire_decision = {
 				AND = {
 					completely_controls = title:c_yangzhou
 					completely_controls = title:c_jinling
-					completely_controls = title:c_ezhou
 				}
 			}
 		}
@@ -260,7 +277,7 @@ restore_tang_empire_decision = {
 	is_valid_showing_failures_only = {
 		is_capable_adult = yes
 		is_independent_ruler = yes
-		is_at_war = no
+		#is_at_war = no
 	}
 
 	effect = {
@@ -283,7 +300,7 @@ restore_tang_empire_decision = {
 }
 #兴复大汉 Restoring Han Empire
 build_han_empire_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	ai_check_interval = 90
   	major = yes
 	
@@ -317,22 +334,34 @@ build_han_empire_decision = {
 		capital_province = {
 			geographical_region = world_asia_china
 		}
-		#OR = { 
-			#dynasty = dynasty:han_dynasty
-			#dynasty = {
-			#	OR = {
-					#name = "dynn_Liu" 
-					#name = "Liu"
-					#name = "刘"
-			#	}
-			#}
-		#}
+		OR = { 
+			dynasty = dynasty:1000048895 
+			dynasty = dynasty:1000048987 
+			dynasty = dynasty:1000048271
+			dynasty = dynasty:1000048969
+			dynasty = dynasty:1000050108
+			dynasty = dynasty:1000048389
+			dynasty = dynasty:later_shu_liu_dyn
+			dynasty = dynasty:later_tang_liu_dyn
+			dynasty = dynasty:1000048025
+			dynasty = dynasty:1000048268
+			dynasty = dynasty:yongqiu_liu_dyn
+			dynasty = dynasty:yonghe_liu_dyn
+			AND = {
+				highest_held_title_tier > tier_kingdom
+				OR = {
+					has_title = title:e_wu
+					has_title = title:e_shu
+					has_title = title:e_min
+				}
+			}
+		}
 	}
 
 	is_valid_showing_failures_only = {
 		is_independent_ruler = yes
 		is_capable_adult = yes
-		is_at_war = no
+		#is_at_war = no
 	}
 
 	effect = {
@@ -359,7 +388,7 @@ build_han_empire_decision = {
 }
 #建立吴越
 found_wuyue_kingdom_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
 	major = yes
 	ai_check_interval = 60
 
@@ -393,7 +422,7 @@ found_wuyue_kingdom_decision = {
 
 	is_valid_showing_failures_only = {
 		is_capable_adult = yes
-		is_at_war = no
+		#is_at_war = no
 	}
 
 	cost = {
@@ -416,7 +445,7 @@ found_wuyue_kingdom_decision = {
 }
 #建立大闽
 found_min_kingdom_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
 	major = yes
 	ai_check_interval = 60
 
@@ -448,7 +477,7 @@ found_min_kingdom_decision = {
 
 	is_valid_showing_failures_only = {
 		is_capable_adult = yes
-		is_at_war = no
+		#is_at_war = no
 	}
 
 	cost = {
@@ -471,7 +500,7 @@ found_min_kingdom_decision = {
 }
 #受禅称帝
 replace_celestia_empire_decision = {  
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	ai_check_interval = 90
   	major = yes
 	is_shown = {
@@ -541,6 +570,197 @@ replace_celestia_empire_decision = {
 			any_child = {
 				is_alive = yes
 				count < 3
+			}
+		}
+	}
+}
+#建立大魏
+found_wei_kingdom_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	major = yes
+	ai_check_interval = 60
+
+	is_shown = {
+		highest_held_title_tier = tier_duchy
+		NOT = { has_game_rule = off_custom_kingdoms }
+		capital_province = {
+			geographical_region = world_asia_china_yanzhao
+		}
+	}
+
+	is_valid = {
+		is_capable_adult = yes
+		is_at_war = no
+		AND = {
+			completely_controls = title:d_weibo
+			completely_controls = title:d_xiangwei
+			completely_controls = title:d_xingci
+		}
+		OR = {
+			custom_description = {
+				text = found_kingdom_decision_three_duchies_held
+				any_held_title = {
+					count > 2
+					tier = tier_duchy
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		#is_at_war = no
+	}
+
+	cost = {
+		gold = 800
+		prestige = 1000
+		piety = 500
+	}
+
+	effect = {
+		found_wei_kingdom_effect = yes
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#重建汉王国
+found_han_kingdom_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	major = yes
+	ai_check_interval = 60
+
+	is_shown = {
+		highest_held_title_tier = tier_duchy
+		NOT = { has_game_rule = off_custom_kingdoms }
+		capital_province = {
+			OR = {
+				geographical_region = world_asia_china_shu
+				geographical_region = world_asia_china_qin
+			}
+		}
+	}
+
+	is_valid = {
+		prestige_level >= 3
+		is_capable_adult = yes
+		is_at_war = no
+		AND = {
+			completely_controls = title:d_hanzhong
+			completely_controls = title:d_ba
+			completely_controls = title:d_dongchuan
+		}
+		OR = {
+			custom_description = {
+				text = found_kingdom_decision_three_duchies_held
+				any_held_title = {
+					count > 2
+					tier = tier_duchy
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_capable_adult = yes
+		#is_at_war = no
+	}
+
+	cost = {
+		gold = 800
+		prestige = 1000
+		piety = 500
+	}
+
+	effect = {
+		found_han_kingdom_effect = yes
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#重建陇右道
+found_western_protectorate_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	ai_check_interval = 1000
+  	major = yes
+
+	is_shown = {
+	 	is_landed = yes
+		
+		OR = {
+			is_oe_imperial_government_trigger = yes
+			capital_province = {
+				OR = {
+					geographical_region = world_asia_china_shu
+					geographical_region = world_asia_china_north
+					geographical_region = world_steppe_tarim
+				}
+			}
+		}	
+	}
+
+	is_valid = {
+		prestige_level >= 3
+		#has_culture_group = culture_group:chinese_group
+		NOT = { has_character_flag = western_protector }
+		k_khotan = { NOT = { de_jure_liege = e_celestia } }
+		is_independent_ruler = yes
+		is_capable_adult = yes
+		completely_controls = title:d_guiyi
+		completely_controls = title:k_khotan
+		completely_controls = title:d_kara_khoja
+		completely_controls = title:d_muyunkum
+	}
+
+	is_valid_showing_failures_only = {
+		is_independent_ruler = yes
+		is_capable_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		found_western_protectorate_effect = yes	
+	}
+
+	cost = {
+		gold = {
+			value = monumental_gold_max_value
+		}
+		piety = {
+			value = monumental_piety_value
+		}
+	}
+	
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 1000
+		
+		modifier = {
+			add = 2000
+			exists = primary_title
+			primary_title.tier > tier_county
+		}
+		
+		modifier = {
+			factor = 300
+			any_child = {
+				is_alive = yes
+				count > 2
 			}
 		}
 	}

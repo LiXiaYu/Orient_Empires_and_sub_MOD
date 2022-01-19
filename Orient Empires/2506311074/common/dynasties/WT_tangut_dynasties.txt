@@ -404,14 +404,14 @@
 	name = "dynn_Asy"
 	culture = tangut
 }
-1000049401={
-	name = "dynn_Sysy"
-	culture = tangut
-}
-1000049402={
-	name = "dynn_Rendzon"
-	culture = tangut
-}
+#1000049401={
+#	name = "dynn_Sysy"
+#	culture = tangut
+#}
+#1000049402={
+#	name = "dynn_Rendzon"
+#	culture = tangut
+#}
 #1000049403={
 #	name = "dynn_Chhenshon"
 #	culture = tangut
@@ -420,14 +420,14 @@
 #	name = "dynn_Kwylhew"
 #	culture = tangut
 #}
-1000049405={
-	name = "dynn_Putew"
-	culture = tangut
-}
-1000049406={
-	name = "dynn_Lewla"
-	culture = tangut
-}
+#1000049405={
+#	name = "dynn_Putew"
+#	culture = tangut
+#}
+#1000049406={
+#	name = "dynn_Lewla"
+#	culture = tangut
+#}
 1000049407={
 	name = "dynn_Gwankew"
 	culture = tangut
@@ -600,23 +600,23 @@
 	name = "dynn_Jwerar"
 	culture = tangut
 }
-1000049451={
+1000049451_1={
 	name = "dynn_Nezhe"
 	culture = tangut
 }
-1000049452={
+1000049452_1={
 	name = "dynn_Cheon"
 	culture = tangut
 }
-1000049453={
+1000049453_1={
 	name = "dynn_Lhelhor"
 	culture = tangut
 }
-1000049454={
+1000049454_1={
 	name = "dynn_Lhede"
 	culture = tangut
 }
-1000049455={
+1000049455_1={
 	name = "dynn_Lhedi"
 	culture = tangut
 }
@@ -952,14 +952,14 @@
 	name = "dynn_Kararo"
 	culture = tangut
 }
-1000049541={
-	name = "dynn_Zhin"
-	culture = tangut
-}
-1000049542={
-	name = "dynn_Von"
-	culture = tangut
-}
+#1000049541={
+#	name = "dynn_Zhin"
+#	culture = tangut
+#}
+#1000049542={
+#	name = "dynn_Von"
+#	culture = tangut
+#}
 #1000049543={
 #	name = "dynn_Chhyton"
 #	culture = tangut

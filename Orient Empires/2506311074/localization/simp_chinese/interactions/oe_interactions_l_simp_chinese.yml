@@ -10,8 +10,8 @@
  action_call_vassal_to_war_interaction_combined_group_name:1 "召集臣属加入战争"
  action_call_vassal_to_war_interaction_desc:2 "命令忠君体国的臣子们速速调兵助战"
  action_call_vassal_to_war_interaction_combined_group_description:2 "召集你的臣属们勤王"
- action_call_vassal_to_war_interaction_label:2 "调集[recipient.GetUIName]勤王"
- action_call_vassal_to_war_interaction_combined_label:0 "调集[recipient.GetUIName]勤王"
+ action_call_vassal_to_war_interaction_label:2 "调集现有@soldier_icon![recipient.GetMaxMilitaryStrength|0]兵力的[recipient.GetUIName]勤王"
+ action_call_vassal_to_war_interaction_combined_label:0 "调集现有@soldier_icon![recipient.GetMaxMilitaryStrength|0]兵力的[recipient.GetUIName]勤王"
  action_call_vassal_to_war_interaction_click:0 "#I 点击打开互动#!"
  
  char_interaction.0400.desc:0 "我已经不能再忍受你对朝廷的不服从了，现在我要削除你的独立权力。"
@@ -41,7 +41,7 @@
  CHANGE_VASSAL_OFFICIAL:0 "推行流官制"
 
  summon_sb_to_be_vassal_interaction:0 "招降"
- summon_sb_to_be_vassal_interaction_desc:0 "招降[recipient.GetShortUINameNoTooltip]，使其成为你的封臣"
+ summon_sb_to_be_vassal_interaction_desc:0 "[summon_sb_to_be_vassal_interaction|E][recipient.GetShortUINameNoTooltip]，使其成为你的封臣"
  summon_sb_to_be_vassal_interaction_extra_icon:0 "$hook_extra_icon$"
  summon_sb_to_be_vassal_interaction_accept_msg_title:0"招降成功"
  summon_sb_to_be_vassal_interaction_decline_msg_title:0"招降失败"
@@ -50,8 +50,8 @@
  action_summon_sb_to_be_vassal_interaction:1 "招降"
  action_summon_sb_to_be_vassal_interaction_combined_group_label:3 "招降"
  action_summon_sb_to_be_vassal_interaction_combined_group_name:1 "招降"
- action_summon_sb_to_be_vassal_interaction_desc:2 ""
- action_summon_sb_to_be_vassal_interaction_combined_group_description:2 "招降某人"
+ action_summon_sb_to_be_vassal_interaction_desc:2 "[summon_sb_to_be_vassal_interaction|E][recipient.GetUIName]"
+ action_summon_sb_to_be_vassal_interaction_combined_group_description:2 "[summon_sb_to_be_vassal_interaction|E]某人"
  action_summon_sb_to_be_vassal_interaction_label:2 "招降[recipient.GetUIName]"
  action_summon_sb_to_be_vassal_interaction_combined_label:0 "招降[recipient.GetUIName]"
  action_summon_sb_to_be_vassal_interaction_click:0 "#I 点击打开互动#!"
@@ -104,9 +104,9 @@
  
  #Interaction Options:
  OPTION_LVLING:0 "更改政体为律令制"
- OPTION_MINGZHOU:0"民州"
- OPTION_JUNFU:0"军府"
- OPTION_HUANGSHI:0"皇室特权"
+ OPTION_MINGZHOU:0 "民州"
+ OPTION_JUNFU:0 "军府"
+ OPTION_HUANGSHI:0 "皇室特权"
  OPTION_OFFICIAL_SUCCESSION_LAW:0 "更改继承法为勘磨叙迁"
  #custom tooltip:
  option_mingzhou_contract_tooltip:0 "将契约设定为民州"
@@ -118,3 +118,11 @@
  want_to_betray:0 "想要背叛"
  betray_me_in_war:0 "在战争中倒戈"
  OPTION_GIVE_GOLD:0 "奖赏金钱"
+
+
+actor_secondary_hm_replace_the_bureaucratic_interaction:0 "候补官员"
+ hm_replace_the_bureaucratic_interaction:0 "替换官员"
+ hm_replace_the_bureaucratic_interaction_desc:0 "朝廷可以随时差遣候补官员去接替在任的刺史、知州和转运使；节度使和招讨使当然也可以撤换，但是当心，他们手握重兵！"
+recipient_secondary_hm_exchange_two_bannermen_interaction:0 "转封目标"
+ hm_exchange_two_bannermen_interaction:0 "调换辖区"
+ hm_exchange_two_bannermen_interaction_desc:0 "天子有令，臣下当动若雷霆；奉王命以赴绝域，虽万难亦无所辞。为了统筹军事，您可以将任意封臣与他们同等级的其他封臣交换领地，令其前往您指定的辖区；当然，不是每个将领都愿意。"

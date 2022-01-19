@@ -1,178 +1,4 @@
-﻿bm_626_epic = {
-	start_date = 626.1.1
-	is_playable = yes
-	
-}
-
-bm_867_normads = {
-	start_date = 867.1.1
-	is_playable = yes
-
-	# 李国昌 
-	character = {
-		name = "bookmark_normads_liguochang"
-		dynasty = 1000049851
-		dynasty_splendor_level = 1
-		type = male
-		birth = 810.1.1
-		title = d_zhenwu
-		government = tribal_government
-		culture = shatuo
-		religion = tengri_pagan
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
-		history_id = 1412306
-		position = { 764 650 }		
-        animation = personality_rational
-	}
-
-	# 慕容复
-	character = {
-		name = "bookmark_silkroad_murongfu"
-		dynasty=105818 #Murong
-		dynasty_splendor_level = 5
-		type = male
-		birth = 845.1.1
-		title = d_shuofang
-		government = tribal_government
-		religion="tengri_pagan"
-		culture="tuyuhun"
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
-		history_id = 247407
-		position = { 183 640 }
-
-		animation = personality_cynical	
-
-	}
-
-	# 拓跋思恭
-	character = {
-		name = "bookmark_normads_tuobasigong"
-		dynasty = 1000049308
-		dynasty_splendor_level = 1
-		type = male
-		birth = 826.1.1
-		title = c_anle
-		government = tribal_government
-		culture = tangut
-		religion = tengri_pagan
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
-		history_id = 1415030
-		position = { 503 835 }
-		
-		animation = dismissal
-
-	}
-
-	# 耶律匀德实
-	character = {
-		name = "bookmark_normads_Undesh"
-		dynasty = 1000102400
-		dynasty_splendor_level = 1
-		type = male
-		birth = 826.1.1
-		title = c_degere
-		government = tribal_government
-		culture = khitan
-		religion = tengri_pagan
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
-		history_id = 1413011
-		position = { 1034 513 }
-		
-		animation = rage
-	}
-
-	# 卢龙节度使 张允伸
-	character = {
-		name = "bookmark_normads_zhangyunshen"
-		dynasty = 1000048347
-		dynasty_splendor_level = 2
-		type = male
-		history_id = 1401882
-		birth = 784.1.1
-		title = d_youzhou
-		government = corps_government
-		culture = hebei
-		religion = shangqing
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
-		position = { 1024 796 }
-	}
-
-	# Bodonchar Munkhag Borjigin
-	character = {
-		name = "bookmark_normads_Borjigin"
-		dynasty = 11100
-		dynasty_splendor_level = 1
-		type = male
-		birth = 850.1.2
-		title = c_chiya
-		government = tribal_government
-		culture = mongol
-		religion = tengri_pagan
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
-		history_id = 303255
-		position = { 1206 230 }
-
-		animation = personality_cynical
-		
-	}
-	# 赫连铎
-	character = {
-		name = "bookmark_normads_helianduo"
-		dynasty=1000049802
-		dynasty_splendor_level = 1
-		type = male
-		birth = 820.2.7
-		title = d_ordos
-		government = tribal_government
-		religion=tengri_pagan
-		culture=tuyuhun
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
-		history_id = 1410404
-		position = { 543 540 }
-		animation = personality_bold
-		
-	}	
-
-	# 仆固俊
-	character = {
-		name = "bookmark_silkroad_Bokut"
-		dynasty = 1040065 #Bilgä
-		dynasty_splendor_level = 5
-		type = male
-		birth = 839.6.5
-		title = d_kara_khoja
-		government = feudal_government
-		religion = manichean
-		culture = uyghur
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
-		history_id = 302972
-		position = { 110 360 }
-		
-		animation = personality_rational
-
-	}
-	
-	# 甘州回鹘
-	character = {
-		name = "bookmark_silkroad_ediz"
-		dynasty = 1040064 # Ediz
-		dynasty_splendor_level = 5
-		type = male
-		birth = 828.1.1
-		title = d_yijinai
-		government = feudal_government
-		religion = "manichean"
-		culture = "uyghur"
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
-		history_id = 166766
-		position = { 270 400 }
-		
-		animation = paranoia
-
-	}
-}
-
-
+﻿
 bm_867_falling = {
 	start_date = 867.1.1
 	is_playable = yes
@@ -189,12 +15,66 @@ bm_867_falling = {
 		culture = han
 		religion = mahayana
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
-		history_id = longxi_li_1036
-		position = { 874 402 }
+		history_id = character:longxi_li_1036
+		position = { 774 402 }
 		
 		animation = personality_irrational
 
 	}
+
+	# 李国昌 
+	character = {
+		name = "bookmark_normads_liguochang"
+		dynasty = 1000049851
+		dynasty_splendor_level = 1
+		type = male
+		birth = 810.1.1
+		title = d_zhenwu
+		government = tribal_government
+		culture = shatuo
+		religion = tengri_pagan
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 1412306
+		position = { 704 150 }		
+        animation = personality_rational
+	}
+
+#	# 拓跋思恭
+#	character = {
+#		name = "bookmark_normads_tuobasigong"
+#		dynasty = 1029317
+#		dynasty_splendor_level = 1
+#		type = male
+#		birth = 826.1.1
+#		title = c_anle
+#		government = tribal_government
+#		culture = tangut
+#		religion = tengri_pagan
+#		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+#		history_id = 1415030
+#		position = { 503 235 }
+#		
+#		animation = dismissal
+#
+#	}
+
+#	# 耶律匀德实
+#	character = {
+#		name = "bookmark_normads_Undesh"
+#		dynasty = 1000102400
+#		dynasty_splendor_level = 1
+#		type = male
+#		birth = 826.1.1
+#		title = c_degere
+#		government = tribal_government
+#		culture = khitan
+#		religion = tengri_pagan
+#		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+#		history_id = 1413011
+#		position = { 1034 113 }
+#		
+#		animation = rage
+#	}
 
 	# 王景崇
 	character = {
@@ -209,7 +89,7 @@ bm_867_falling = {
 		culture = uyghur
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
 		history_id = 1410723
-		position = { 1243 110 }
+		position = { 1243 240 }
 		
 		animation = boredom
 
@@ -228,17 +108,32 @@ bm_867_falling = {
 		culture = sogdian
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
 		history_id = 1412826
-		position = { 1120 338 }
+		position = { 1050 398 }
 			
 		animation = personality_forgiving
 
 	}
 
+	# 卢龙节度使 张允伸
+	character = {
+		name = "bookmark_normads_zhangyunshen"
+		dynasty = 1000048347
+		dynasty_splendor_level = 2
+		type = male
+		history_id = 1401882
+		birth = 784.1.1
+		title = d_youzhou
+		government = corps_government
+		culture = hebei
+		religion = shangqing
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 1024 146 }
+	}
+	
 	# 高骈
 	character = {
 		name = "bookmark_falling_gaopian"
 		dynasty = bohai_gao_dyn
-		dynasty_house = house_youzhou_gao
 		dynasty_splendor_level = 3
 		type = male
 		birth = 821.1.1
@@ -247,8 +142,8 @@ bm_867_falling = {
 		religion = shangqing
 		culture = han
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
-		history_id = bohai_gao_275
-		position = { 866 869 }
+		history_id = character:bohai_gao_275
+		position = { 866 850 }
 
 	}
 
@@ -284,7 +179,7 @@ bm_867_falling = {
 		culture = han
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
 		history_id = 1404168
-		position = { 1357 444 }				
+		position = { 1357 464 }				
 		animation = personality_forgiving
 	
 	}
@@ -302,7 +197,7 @@ bm_867_falling = {
 		culture="han"
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
 		history_id = 1406381
-		position = { 1046 769 }				
+		position = { 1046 740 }				
 		animation = rage
 	
 	}
@@ -319,8 +214,8 @@ bm_867_falling = {
 		religion="mahayana"
 		culture="han"
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
-		history_id = dunhuang_zhang_004
-		position = { 300 223 }
+		history_id = character:dunhuang_zhang_004
+		position = { 350 203 }
 		
 		animation = disgust
 
@@ -339,7 +234,7 @@ bm_867_falling = {
 		culture=zhangzhung
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
 		history_id = hx04
-		position = { 510 384 }
+		position = { 400 454 }
 		
 		animation = love
 
@@ -391,7 +286,6 @@ bm_882_golden = {
 	character = {
 		name = "bookmark_golden_gaopian"
 		dynasty = bohai_gao_dyn
-		dynasty_house = house_youzhou_gao
 		dynasty_splendor_level = 3
 		type = male
 		birth = 821.1.1
@@ -400,7 +294,7 @@ bm_882_golden = {
 		religion = shangqing
 		culture = han
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
-		history_id = bohai_gao.275
+		history_id = bohai_gao_275
 		position = { 1299 504 }				
 		animation = personality_forgiving
 	
@@ -503,7 +397,7 @@ bm_882_golden = {
 	# 拓跋思恭
 	character = {
 		name = "bookmark_normads_tuobasigong"
-		dynasty = 1000049308
+		dynasty = 1029317
 		dynasty_splendor_level = 1
 		type = male
 		birth = 826.1.1
@@ -524,7 +418,7 @@ bm_882_golden = {
 bm_907_ruins = {
 	start_date = 907.6.2
 	is_playable = yes
-	default = yes
+	recommended = yes
 
 	# 朱温
 	character = {
@@ -534,10 +428,10 @@ bm_907_ruins = {
 		type = male
 		history_id = 1400469
 		birth = 852.12.5
-		title = e_liang
+		title = e_celestia
 		government = imperial_government
 		culture = han
-		religion = taiping
+		religion = jingxue
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
 		position = { 907 465 }
 		
@@ -549,7 +443,6 @@ bm_907_ruins = {
 	character = {
 		name = "bookmark_ruins_likeyong" 
 		dynasty = 1000049851
-		dynasty_house = house_Li-Zhuye
 		dynasty_splendor_level = 1
 		type = male
 		birth = 856.10.24
@@ -584,19 +477,19 @@ bm_907_ruins = {
 
 	}
 
-	# 徐知诰
+	# 徐温
 	character = {
-		name = "bookmark_ruins_xuzhigao"
+		name = "bookmark_ruins_xuwen"
 		dynasty = 1000048943
 		dynasty_splendor_level = 3
 		type = male
-		birth = 889.1.7
-		title = c_runzhou
+		birth = 862.1.7
+		title = d_zhenhai
 		government = corps_government
 		religion = jingxue
 		culture = han
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
-		history_id = 1406215
+		history_id = character:qushan_xu_003
 		position = { 1159 564 }				
 		animation = personality_forgiving
 	
@@ -609,7 +502,7 @@ bm_907_ruins = {
 		dynasty_splendor_level = 2
 		type = male
 		birth = 852.3.10
-		title = k_wuyue
+		title = k_yue
 		government = corps_government
 		religion = zenzong
 		culture = han
@@ -679,13 +572,208 @@ bm_907_ruins = {
 	
 }
 
-
-bm_936_reconquest = {
+bm_936_divide = {
 	start_date = 936.9.15
 	is_playable = yes
+	default = yes
+
+	# 石敬瑭
+	character = {
+		name = "bookmark_divide_shijingtang" 
+		dynasty = 1000049854
+		dynasty_splendor_level = 1
+		type = male
+		history_id = 1412375
+		birth = 892.3.30
+		title = k_jin
+		government = corps_government
+		culture = sogdian
+		religion = mazdayasna
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		position = { 754 432 }
+		
+		animation = personality_bold
+
+	}
 	
+	# 李从珂
+	character = {
+		name = "bookmark_divide_licongke" 
+		dynasty = 1000049851
+		dynasty_house = house_Li-Zhuye
+		dynasty_splendor_level = 2
+		type = male
+		birth = 885.2.11
+		title = e_tang
+		government = tribal_government
+		culture = shatuo
+		religion = tengri_pagan
+		history_id = 1412361
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 957 495 }
+		
+		animation = rage
+
+	}
+
+	# 耶律德光
+	character = {
+		name = "bookmark_divide_deguang" 
+		dynasty = 1000102400
+		dynasty_splendor_level = 3
+		type = male
+		birth = 902.11.25
+		title = e_cathay
+		government = tribal_government
+		culture = khitan
+		religion = tengri_pagan
+		history_id = 194326
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 900 250 }
+		
+		animation = personality_content
+
+	}
+
+	# 徐知诰
+	character = {
+		name = "bookmark_divide_xuzhigao"
+		dynasty = 1000048861
+		dynasty_splendor_level = 3
+		type = male
+		birth = 889.1.7
+		title = k_wu
+		government = corps_government
+		religion = jingxue
+		culture = han
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 1406215
+		position = { 1149 604 }				
+		animation = personality_forgiving
+	
+	}
+
+	# 王昶
+	character = {
+		name = "bookmark_divide_wangchang"
+		dynasty = 1000048906
+		dynasty_splendor_level = 2
+		type = male
+		birth = 920.1.1
+		title = e_min
+		government = corps_government
+		religion = zenzong
+		culture = han
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 1406742
+		position = { 1250 824 }				
+		animation = personality_forgiving
+	
+	}
+
+	# 刘䶮
+	character = {
+		name = "bookmark_divide_liuyan" 
+		dynasty = 1000048895
+		dynasty_splendor_level = 2
+		type = male
+		history_id = 1406526
+		birth = 889.1.1
+		title = e_han
+		government = imperial_government
+		culture = han
+		religion = jingxue
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		position = { 930 830 }
+		
+		animation = personality_rational
+
+	}
+
+	# 曹元德
+	character = {
+		name = "bookmark_divide_caoyuande"
+		dynasty = dunhuang_cao_dyn
+		dynasty_splendor_level = 2
+		type = male
+		birth = 890.1.1
+		title = k_guiyi
+		government = corps_government
+		culture = han
+		religion = mahayana
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = dunhuang_cao_003
+		position = { 303 335 }
+		
+		animation = dismissal
+
+	}
+
+	# 孟知祥
+	character = {
+		name = "bookmark_divide_mengchang"
+		dynasty = longgang_meng_dyn
+		dynasty_splendor_level = 2
+		type = male
+		birth = 919.12.9
+		title = e_shu
+		government = imperial_government
+		culture = han
+		religion = zhengyi
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = longgang_meng_11
+		position = { 603 635 }
+		
+		animation = personality_rational
+
+	}
+
+	# 王建
+	character = {
+		name = "bookmark_divide_wangjian"
+		dynasty = 1000062009 #Wang
+		dynasty_splendor_level = 2
+		type = male
+		birth = 877.1.31
+		title = k_goryeo
+		government = feudal_government
+		religion= mahayana
+		culture = goguryeo
+		history_id = 1900573
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 1367 395 }
+		animation = personality_content
+	}
+
+	# 平将门
+	character = {
+		name = "bookmark_divide_Masakado"
+		dynasty = 10001100
+		dynasty_splendor_level = 2
+		type = male
+		birth = 903.1.1
+		title = c_kazusa
+		government = corps_government
+		religion= shinto
+		culture = yamato
+		history_id = 10110402
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		position = { 1457 605 }
+		animation = personality_content
+	}
+
 }
 
+bm_960_relight = {
+	start_date = 960.2.1
+	is_playable = no
+	#recommended = yes
+}
+
+bm_986_reconquest = {
+	start_date = 986.6.15
+	is_playable = no	
+}
 
 bm_1067_rebalance = {
 	start_date = 1067.1.26
@@ -700,13 +788,13 @@ bm_1067_rebalance = {
 		type = male
 		history_id = 217726
 		birth = 1048.1.1
-		title = e_song
+		title = e_celestia
 		government = imperial_government
 		religion="jingshi"
 		culture="han"
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
 		tutorial = yes
-		position = { 1160 604 }
+		position = { 1060 504 }
 		
 		animation = personality_rational
 
@@ -759,10 +847,11 @@ bm_1067_rebalance = {
 		history_id = 400001
 		birth = 1032.1.1
 		title = c_achu
+		government = tribal_government
 		culture = jurchen
 		religion = pagan
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
-		position = { 1500 283 }
+		position = { 1260 183 }
 		
 		animation = personality_bold
 
@@ -782,7 +871,7 @@ bm_1067_rebalance = {
 		culture = bai
 		religion = ari
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
-		position = { 800 800 }
+		position = { 800 700 }
 		
 		animation = dismissal
 
@@ -792,6 +881,7 @@ bm_1067_rebalance = {
 	character = {
 			name = "bookmark_rebalance_dongzhan"
 			dynasty=2003080 #Tsongkhapa
+			dynasty_splendor_level = 3
 			type = male
 			birth = 1026.1.1
 			title = d_xining
@@ -809,6 +899,7 @@ bm_1067_rebalance = {
 		character = {
 			name = "bookmark_rebalance_wanghui"
 			dynasty = 1000062009 #Wang
+			dynasty_splendor_level = 2
 			type = male
 			birth = 1019.12.1
 			title = k_goryeo
@@ -817,8 +908,23 @@ bm_1067_rebalance = {
 			culture = goguryeo
 			history_id = 1900651
 			difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
-			position = { 1467 635 }
+			position = { 1397 535 }
 			animation = personality_content
 
 	}
+}
+
+bm_636_epic = {
+	start_date = 636.1.1
+	is_playable = no	
+}
+
+#bm_751_talas = {
+#	start_date = 751.1.1
+#	is_playable = no
+#}
+
+bm_1032_peace = {
+	start_date = 1032.11.1
+	is_playable = no	
 }

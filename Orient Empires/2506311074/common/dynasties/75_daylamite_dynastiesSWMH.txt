@@ -11,62 +11,62 @@
 #Kakúyids
 
 1000102200 = {
-	name="Kakúyí"
+	name="Kakúyi"
 	culture = daylamite
 	
 }
 1000102201 = {
-	name="Búyí"
+	name="dynn_Buyid"
 	culture = daylamite
 	
 }
 1000102202 = {
-	name="Rudbárí"
+	name="Rudbari"
 	culture = daylamite
 	
 }
 1000102203 = {
-	name="Dámghání"
+	name="Damghani"
 	culture = daylamite
 	
 }
 1000102204 = {
-	name="Sháhánshávand"
+	name="Shahanshavand"
 	culture = daylamite
 	
 }
 1000102205 = {
-	name="Sallárí"
+	name="Sallari"
 	culture = daylamite
 	
 }
 1000102206 = {
-	name="Qazwíní"
+	name="Qazwini"
 	culture = daylamite
 	
 }
 1000102207 = {
-	name="Perozání"
+	name="Perozani"
 	culture = daylamite
 	
 }
 1000102208 = {
-	name="Mardí"
+	name="Mardi"
 	culture = daylamite
 	
 }
 1000102209 = {
-	name="Násirvand"
+	name="Nasirvand"
 	culture = daylamite
 	
 }
 1000102210 = {
-	name="Hazáraspí"
+	name="Hazaraspi"
 	culture = daylamite
 	
 }
 1000102211 = {
-	name="Mihrbatí"
+	name="Mihrbati"
 	culture = daylamite #?
 	 #?
 }

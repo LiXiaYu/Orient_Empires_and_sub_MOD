@@ -665,7 +665,7 @@ bohai_gao_047 = { #高元海 Gao Yuanhai. Son of Gao Sizong. (北齊書/卷14) I
 	father = bohai_gao_046
 	#spouse = 陸太姬甥
 	#birth and death dates unknown
-	512.1.1 = {
+	530.1.1 = {
 		birth = yes
 	}
 	578.1.1 = {
@@ -968,12 +968,12 @@ bohai_gao_068 = { #高歡 Gao Huan. Eldest son of Gao Shusheng. (魏書/卷32 an
 	496.1.1 = {
 		birth = yes
 	}
-	532.1.1 = { add_consort = 1405521 }
+	532.1.1 = { make_concubine = character:1405521 }
 	547.2.25 = {
 		death = yes
 	}
-	550.6.10 = { trait = miaohao_trait_taizu give_nickname = shihao_taizu }
-	565.12.18 = { trait = miaohao_trait_gaozu give_nickname = shihao_gaozu }
+	550.6.10 = { trait = miaohao_trait_taizu  } #give_nickname = shihao_taizu
+	565.12.18 = { trait = miaohao_trait_gaozu  } #give_nickname = shihao_gaozu
 }
 bohai_gao_069 = { #高婁斤 Gao Loujin, 常山君 Lady Changshan. Older sister of Gao Huan son of Gao Shusheng. Married 尉景. (北齊書/卷15) (魏太保尉公妻故常山郡墓誌銘)
 	dynasty = bohai_gao_dyn #Bohai Gao
@@ -1093,7 +1093,7 @@ bohai_gao_076 = { #高澄 Gao Cheng. Eldest son of Gao Huan. (北齊書/卷3) In
 	521.1.1 = {
 		birth = yes
 	}
-	532.1.1 = { add_consort = 1405521 }
+	532.1.1 = { make_concubine = character:1405521 }
 	549.9.15 = {
 		death = { death_reason = death_murder killer = "蘭京" }
 	}
@@ -1281,7 +1281,7 @@ bohai_gao_088 = { #高洋 Gao Yang. Second son of Gao Huan. (北齊書/卷4) In 
 	529.1.1 = {
 		birth = yes
 	}
-	532.1.1 = { add_consort = 1405521 }
+	532.1.1 = { make_concubine = character:1405521 }
 	559.11.25 = {
 		death = yes
 		trait = miaohao_trait_weizong
@@ -2221,8 +2221,8 @@ bohai_gao_152 = { #高皇后 Empress Gao. Eldest daughter of Gao Huan, married Y
 	culture = han
 	religion = jingshi
 	father = bohai_gao_068
-	#female = 代郡昭君婁氏 婁内干女
-	mother = yes
+	female = yes
+	#mother = 代郡昭君婁氏 婁内干女
 	#birth and death dates unknown	
 	518.1.1 = {
 		birth = yes
@@ -3700,7 +3700,7 @@ bohai_gao_254 = { #高慈 Gao Ci. Son of Gao Guangfu. (唐故朝散大夫上柱�
 }
 bohai_gao_255 = { #高石安 Gao Shi'an. Eldest son of Gao Zhen. (新唐書/卷071下)
 	dynasty = bohai_gao_dyn #Bohai Gao
-	name = "Shi'an_name2"
+	name = "Shian_name2"
 	culture = han
 	religion = jingshi
 	father = bohai_gao_237

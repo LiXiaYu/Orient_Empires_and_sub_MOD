@@ -567,6 +567,7 @@
  Cimba:0 "琛巴"
  Congcan:0 "从璨"
  Conghou:0 "从厚"
+ Congjin:0 "从进"
  Congjing:0 "从璟"
  Congke:0 "从珂"
  Congmin:0 "从敏"
@@ -1133,7 +1134,8 @@
  Qianhuang:0 "虔晃"
  Xuanxi:0 "玄锡"
 
-
+Lili:0 "犁雳"
+Banijur:0 "班尼术"
 
 #Silla
  Yinglian:0 "膺廉"
@@ -1148,3 +1150,13 @@
 #Tibetan
 Tsenhye:0 "赞心牙"
 Yanxin:0 "延心"
+
+#Anime
+Sai:0 "佐為"
+
+
+Wugezhi_name:0 "五哥之"
+Modahuo_name:0 "末怛活"
+
+
+Lamurch:0 "连木尔赤"

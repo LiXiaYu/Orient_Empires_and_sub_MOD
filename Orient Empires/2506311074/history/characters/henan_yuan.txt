@@ -20,7 +20,8 @@
 		#name = "Shizu_name"
 	}
 	535.2.3={
-		#name = "Taizu_name"
+		##name = "Taizu_name"
+		add_trait = miaohao_trait_taizu
 	}
 }
 1415001 = { #拓跋沙漠汗 Tuoba Shamohan
@@ -1125,13 +1126,13 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415236
-	#spouse = langya_wang.795
+	#spouse = langya_wang_795
 	female=yes
 	#birth  dates unknown
 	510.1.1={
 		birth=yes
 	}
-	526.1.1 = { add_spouse = langya_wang.795 }
+	526.1.1 = { add_spouse = langya_wang_795 }
 	560.1.1 = {
 		death=yes
 	}
@@ -1247,7 +1248,7 @@
 	537.1.1={
 		birth=yes
 	}
-	550.1.1 = { add_spouse = bohai_gao.103 }
+	550.1.1 = { add_spouse = bohai_gao_103 }
 	602.1.1 = {
 		death=yes
 	}
@@ -1277,7 +1278,7 @@
 		birth=yes
 	}
 	520.1.1 = {
-		add_spouse = longxi_li.0151
+		add_spouse = longxi_li_0151
 	}
 	529.1.1 = {
 		death=yes
@@ -1795,7 +1796,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415219
-	#spouse = longxi_li.0195
+	#spouse = longxi_li_0195
 	#birth and death dates unknown
 	480.1.1={
 		birth=yes
@@ -1810,7 +1811,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415285
-	mother = longxi_li.0195
+	mother = longxi_li_0195
 	#birth and death dates unknown
 	520.1.1={
 		birth=yes
@@ -1825,7 +1826,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415285
-	mother = longxi_li.0195
+	mother = longxi_li_0195
 	#spouses = 枹罕念氏 daughter of 念賢, 博陵崔氏 daugter of 崔宣猷
 	535.1.1={
 		birth=yes
@@ -1840,7 +1841,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415285
-	mother = longxi_li.0195
+	mother = longxi_li_0195
 	female=yes
 	#birth and death dates unknown
 	517.1.1={
@@ -1856,7 +1857,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415285
-	mother = longxi_li.0195
+	mother = longxi_li_0195
 	female=yes
 	#birth and death dates unknown
 	520.1.1={
@@ -2144,7 +2145,7 @@
 	culture = xianbei
 	father = 1415295
 	#mother = 河南穆氏, 穆亮從妹, 穆壽孫女 (魏書/卷18)
-	#spouse = langya_wang.094
+	#spouse = langya_wang_094
 	485.1.1={
 		birth=yes
 	}
@@ -4724,13 +4725,13 @@
 	}
 }
 1415500 = { #元崇智 Yuan Chongzhi. Eldest son of Yuan Xianwei, 24 years old in 525.11.25. (魏故假節輔國將軍東豫州刺史元公墓誌銘) Adopted son of Yuan Boyang. (魏故假節輔國車騎大將軍青州刺史元公墓誌銘)
-	name = "Chongzhi_name3"
+	name = "Chongzhi_name4"
 	dynasty = 1029300 #Tuoba
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415499
 	#mother = 長樂馮氏 駙馬都尉定州刺史洛州刺史馮熙之女
-	#spouse = hedong_xue_99
+	#spouse = hedong_xue_099
 	#death date unknown
 	502.1.1={
 		birth=yes
@@ -4929,7 +4930,7 @@
 	culture = xianbei
 	father = 1415497
 	#mother = 河南乙氏 乙延之女 乙烏頭之孫女
-	#spouse = longxi_li.2137
+	#spouse = longxi_li_2137
 	490.5.1={
 		birth=yes
 	}
@@ -4943,8 +4944,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415513
-	#mother = longxi_li.2137
-	#death date unknown
+	#mother = longxi_li_2137
 	523.1.1={
 		birth=yes
 	}
@@ -4958,7 +4958,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415513
-	#mother = longxi_li.2137
+	#mother = longxi_li_2137
 	female=yes
 	#death date unknown
 	521.1.1={
@@ -5119,7 +5119,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415526
-	#spouse = jingzhao_wei.384
+	#spouse = jingzhao_wei_384
 	557.1.1={
 		birth=yes
 	}
@@ -5580,7 +5580,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415559
-	#spouse = longxi_li.116
+	#spouse = longxi_li_116
 	#birth and death dates unknown
 	503.1.1={
 		birth=yes
@@ -5646,7 +5646,7 @@
 	489.1.1={
 		birth=yes
 	}
-	511.1.1 = { add_spouse = langya_wang.097 }
+	511.1.1 = { add_spouse = langya_wang_097 }
 	517.3.21={
 		death=yes
 	}
@@ -5661,17 +5661,18 @@
 		birth=yes
 	}
 	490.1.1={
-		add_consort= 1407571
+		make_concubine = character:1407571
 	}
 	493.1.1={
-		add_consort= 1408328
+		make_concubine = character:1408328
 	}
 	496.2.2={
-		add_consort= 1409648
+		make_concubine = character:1409648
 	}
 	499.4.26={
 		death=yes
-		#name = "Gaozu_name"
+		##name = "Gaozu_name"
+		add_trait = miaohao_trait_gaozu
 	}
 }
 1415566 = { #元禧 Yuan Xi
@@ -5680,7 +5681,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415014
-	#spouse = longxi_li.0143
+	#spouse = longxi_li_0143
 	#birth date unknown
 	468.1.1={
 		birth=yes
@@ -5739,7 +5740,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415014
-	#spouse = longxi_li.0194
+	#spouse = longxi_li_0194
 	473.1.1={
 		birth=yes
 	}
@@ -5805,7 +5806,7 @@
 		birth=yes
 	}
 	490.1.1 = { add_spouse = 1801083 }
-	499.1.1 = { add_spouse = langya_wang.089 }
+	499.1.1 = { add_spouse = langya_wang_089 }
 	527.1.1={
 		death=yes
 	}
@@ -5902,7 +5903,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415570
-	mother = longxi_li.0194
+	mother = longxi_li_0194
 	507.1.1={
 		birth=yes
 	}
@@ -5929,13 +5930,13 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415680
-	#spouse = bohai_gao.152
+	#spouse = bohai_gao_152
 	510.1.1={
 		birth=yes
 	}
 	530.1.1 = {
-		add_consort=1415664
-		add_consort=1415678
+		make_concubine = character:1415664
+		make_concubine = character:1415678
 	}
 	535.2.3={
 		death=death_poison
@@ -5988,11 +5989,11 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415666
-	#spouse = bohai_gao.153
+	#spouse = bohai_gao_153
 	524.1.1={
 		birth=yes
 	}
-	550.1.1 = { add_consort = 1800586 }
+	550.1.1 = { make_concubine = character:1800586 }
 	552.1.21={
 		death=death_murder
 	}
@@ -6485,7 +6486,7 @@
 		birth=yes
 	}
 	553.1.1={
-		death = { death_reason = death_execution killer = bohai_gao.088 }
+		death = { death_reason = death_execution killer = bohai_gao_088 }
 	}
 }
 1415623 = { #元子亮 Yuan Ziliang
@@ -6687,7 +6688,7 @@
 	489.1.1={
 		birth=yes
 	}
-	505.1.1 = { add_spouse = langya_wang.097 }
+	505.1.1 = { add_spouse = langya_wang_097 }
 	510.2.2={
 		death=yes
 	}
@@ -6774,8 +6775,8 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415570
-	mother = longxi_li.0194
-	#spouse = 1409740
+	#mother = longxi_li_0194
+	#spouse = longxi_li_2111
 	#birth date unknown
 	493.1.1={
 		birth=yes
@@ -6792,14 +6793,14 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415642
-	mother = 1409740
-	#spouse = bohai_gao.152
+	mother = longxi_li_2111
+	#spouse = bohai_gao_152
 	#birth date unknown
 	513.1.1={
 		birth=yes
 	}
 	559.1.1={
-		death = { death_reason = death_execution killer = bohai_gao.088 }
+		death = { death_reason = death_execution killer = bohai_gao_088 }
 	}
 }
 1415644 = { #元襲 Yuan Xi
@@ -6808,13 +6809,13 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415642
-	mother = 1409740
+	mother = longxi_li_2111
 	#birth and death dates unknown
 	520.1.1={
 		birth=yes
 	}
 	559.1.1={
-		death = { death_reason = death_execution killer = bohai_gao.088 }
+		death = { death_reason = death_execution killer = bohai_gao_088 }
 	}
 }
 1415645 = { #元楚華 Yuan Chuhua. Married 馮顥. (魏故使持節假黃鉞侍中太師領司徒都督中外諸軍事彭城武宣王妃李氏墓誌銘)
@@ -6824,7 +6825,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415570
-	mother = longxi_li.0194
+	#mother = longxi_li_0194
 	#birth and death dates unknown
 	494.1.1={
 		birth=yes
@@ -6840,13 +6841,13 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415570
-	mother = longxi_li.0194
+	#mother = longxi_li_0194
 	#birth and death dates unknown
 	495.1.1={
 		birth=yes
 	}
 	512.1.1 = {
-		add_spouse = longxi_li.0169
+		add_spouse = longxi_li_0169
 	}
 	550.1.1={
 		death=yes
@@ -6858,7 +6859,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415570
-	mother = longxi_li.0194
+	mother = longxi_li_0194
 	508.1.1={
 		birth=yes
 	}
@@ -7188,7 +7189,7 @@
 	523.1.1={
 		birth=yes
 	}
-	538.1.1 = { add_spouse = bohai_gao.076 }
+	538.1.1 = { add_spouse = bohai_gao_076 }
 	573.1.1={
 		death=yes
 	}
@@ -7306,7 +7307,7 @@
 		birth=yes
 	}
 	529.1.1 = {
-		add_spouse = longxi_li.0151
+		add_spouse = longxi_li_0151
 	}
 	530.9.28={
 		death=yes
@@ -7483,7 +7484,7 @@
 	514.1.1={
 		birth=yes
 	}
-	528.1.1 = { add_spouse = bohai_gao.070 }
+	528.1.1 = { add_spouse = bohai_gao_070 }
 	543.1.1={
 		death=yes
 	}
@@ -7674,7 +7675,7 @@
 		birth=yes
 	}
 	552.1.21={
-		death = { death_reason = death_execution killer = bohai_gao.088 }
+		death = { death_reason = death_execution killer = bohai_gao_088 }
 	}
 }
 1415703 = { #元謹 Yuan Jin
@@ -7940,7 +7941,7 @@
 		birth=yes
 	}
 	537.9.20={
-		death = { death_reason = death_execution killer = bohai_gao.068 }
+		death = { death_reason = death_execution killer = bohai_gao_068 }
 	}
 }
 1415722 = { #元子思 Yuan Zihua. Brother of Yuan Zihua. (魏書/卷12 and 魏書/卷14) In 537.9.20 executed. (魏書/卷12)
@@ -7955,7 +7956,7 @@
 		birth=yes
 	}
 	537.9.20={
-		death = { death_reason = death_execution killer = bohai_gao.068 }
+		death = { death_reason = death_execution killer = bohai_gao_068 }
 	}
 }
 1415723 = { #元鑒之 Yuan Jianzhi. Son of Yuan Chang. (魏故諒儀大夫九元君墓誌銘)
@@ -8432,20 +8433,22 @@
 		death=yes
 	}
 }
-#1415757 = {
-#	name = "Guangle_name"
-#	female=yes
-#	dynasty = 1029300 #Tuoba
-#	religion = tengri_pagan
-#	culture = xianbei
-#	father = 1415756
-#	531.1.1={
-#		birth=yes
-#	}
-#	580.1.1={
-#		death=yes
-#	}
-#}
+1415757 = { #廣樂公主 Princess Guangle. Granddaughter of Yuan Kuang, married 誇呂. (北史/卷096)
+	name = "Guangle_name"
+	dynasty = 1029300 #Tuoba
+	religion = tengri_pagan
+	culture = xianbei
+	father = 1415756
+	female=yes
+	#birth and death dates unknown
+	521.1.1={
+		birth=yes
+	}
+	543.1.1 = { add_spouse = 247378 }
+	580.1.1={
+		death=yes
+	}
+}
 
 1415810= { #拓跋詰汾 Tuoba Jiefen
 	name = "Jiefen_srb_name"
@@ -9016,7 +9019,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415847
-	#spouse = longxi_li.0144
+	#spouse = longxi_li_0144
 	#birth and death dates unknown
 	451.1.1={
 		birth=yes
@@ -9031,7 +9034,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415285
-	mother = longxi_li.0195
+	mother = longxi_li_0195
 	female=yes
 	#birth and death dates unknown
 	519.1.1={
@@ -9086,7 +9089,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415285
-	mother = longxi_li.0195
+	mother = longxi_li_0195
 	female=yes
 	#birth and death dates unknown
 	516.1.1={
@@ -9105,7 +9108,6 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415619
-	trait = lustful
 	trait = lustful
 	female = yes
 	#birth and death dates unknown
@@ -9748,8 +9750,8 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415309
-	mother = langya_wang.094
-	#spouse = langya_wang.793 
+	mother = langya_wang_094
+	#spouse = langya_wang_793 
 	510.1.1={
 		birth=yes
 	}
@@ -9779,7 +9781,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415309
-	mother = langya_wang.094
+	mother = langya_wang_094
 	#birth date unknown
 	513.1.1={
 		birth=yes
@@ -9809,7 +9811,7 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415309
-	mother = langya_wang.094
+	mother = langya_wang_094
 	female = yes
 	#birth and death dates unknown
 	512.1.1={
@@ -9825,13 +9827,13 @@
 	religion = tengri_pagan
 	culture = xianbei
 	father = 1415309
-	mother = langya_wang.094
+	mother = langya_wang_094
 	female = yes
 	#birth and death dates unknown
 	519.1.1={
 		birth=yes
 	}
-	534.1.1 = { add_spouse = bohai_gao.027 }
+	534.1.1 = { add_spouse = bohai_gao_027 }
 	553.1.1 ={
 		death = yes
 	}
@@ -9889,7 +9891,7 @@
 	509.1.1={
 		birth=yes
 	}
-	529.1.1 = { add_spouse = bohai_gao.032 }
+	529.1.1 = { add_spouse = bohai_gao_032 }
 	560.1.1 = {
 		death = yes
 	}
@@ -10006,8 +10008,8 @@
 		death=yes
 	}
 }
-1416427 = { #元不疑 Yuan Funing. Eldest son of Yuan Daqian. (大唐故朝議郎行絳州龍門縣令上護軍元府君墓誌銘)
-	name = "Funing_name"
+1416427 = { #元不疑 Yuan Buning. Eldest son of Yuan Daqian. (大唐故朝議郎行絳州龍門縣令上護軍元府君墓誌銘)
+	name = "Buning_name2"
 	dynasty = 1029300 #Tuoba
 	religion = tengri_pagan
 	culture = xianbei
@@ -10021,8 +10023,8 @@
 		death=yes
 	}
 }
-1416428 = { #元不器 Yuan Fuqi. Second son of Yuan Daqian. (大唐故宣義郎前南郊齋郎吏部常選元府君墓誌銘)
-	name = "Fuqi_name"
+1416428 = { #元不器 Yuan Buqi. Second son of Yuan Daqian. (大唐故宣義郎前南郊齋郎吏部常選元府君墓誌銘)
+	name = "Buqi_name"
 	dynasty = 1029300 #Tuoba
 	religion = tengri_pagan
 	culture = xianbei
@@ -10061,7 +10063,7 @@
 	680.1.1={
 		birth=yes
 	}
-	695.1.1 = { add_spouse = longxi_li.0857 }
+	695.1.1 = { add_spouse = longxi_li_0857 }
 	740.1.1={
 		death=yes
 	}
@@ -11100,7 +11102,7 @@ henan_yuan_789 = { #元悰 Yuan Cong. Son of Yuan Mao. (元悰墓誌銘)
 	father = 1415380
 	#mother = 穆氏
 	#birth date unknown
-	5010.1.1={
+	500.1.1={
 		birth=yes
 	}
 	542.12.12={
@@ -11443,7 +11445,7 @@ henan_yuan_813 = { #東平公主 Princess Dongping. Daughter of Yuan Xiu. (魏�
 	528.1.1={
 		birth=yes
 	}
-	544.1.1 = { add_spouse = changli_murong.152 }
+	544.1.1 = { add_spouse = changli_murong_153 }
 	562.1.1={
 		death=yes
 	}
@@ -11993,5 +11995,1012 @@ henan_yuan_852 = { #元善應 Yuan Shanying. Son of Yuan Cizheng. (元和姓纂/
 	}
 	668.1.1={
 		death=yes
+	}
+}
+henan_yuan_853 = { #拓跋意烈 Tuoba Yilie. Eldest son of Tuoba Lizhen. (魏書/卷15) 廣平太守 until 398.5.2, on that day executed. (魏書/卷2)
+	dynasty = 1029300 #Tuoba
+	name = "Yilie_srb_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = 1415133
+	#birth date unknown
+	360.1.1 = {
+		birth=yes
+	}
+	398.5.2 = {
+		death = { death_reason = death_execution killer = 1415007 }
+	}
+}
+henan_yuan_854 = { #拓跋拔干 Tuoba Bagan. Eldest son of Tuoba Yilie. (魏書/卷15) On 太宗's enthronemnt made 勃海太守.(魏書/卷15)
+	dynasty = 1029300 #Tuoba
+	name = "Bagan_srb_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_853
+	#birth and death dates unknown
+	380.1.1 = {
+		birth=yes
+	}
+	420.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_855 = { #拓跋受洛 Tuoba Shouluo or 拓跋受拔 Tuoba Shuoba [short for 受洛拔 Shouluoba]. Eldest son of Tuoba Bagan. (魏書/卷15)
+	dynasty = 1029300 #Tuoba
+	name = "Shouluobo_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_854
+	#spouse = 河南穆氏 穆泰拔之女
+	#birth and death dates unknown
+	401.1.1 = {
+		birth=yes
+	}
+	463.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_856 = { #拓跋叱奴 Tuoba Chinu or 拓跋奴瑰 Tuoba Nugui [short for 叱奴瑰 Chinugui]. Son of Tuoba Shouluo. (魏書/卷15)
+	dynasty = 1029300 #Tuoba
+	name = "Chinugui_srb_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_855
+	#spouse = 遼東李氏 常山郡太守李捶之女
+	#birth and death dates unknown
+	423.1.1 = {
+		birth=yes
+	}
+	485.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_857 = { #元洪超 Yuan Hongchao. Son of Tuoba Chinu. (魏書/卷15)
+	dynasty = 1029300 #Tuoba
+	name = "Hongchao_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_856
+	#mother = 遼東李氏 常山郡太守李捶之女
+	#birth and death dates unknown
+	456.1.1 = {
+		birth=yes
+	}
+	511.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_858 = { #元睿 Yuan Rui, courtesy name 元洪哲 Yuan Hongzhe. Son of Tuoba Nugui. (魏故平遠將軍洛州刺史元使君墓志銘)
+	dynasty = 1029300 #Tuoba
+	name = "Rui_name5"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_856
+	#mother = 遼東李氏 常山郡太守李捶之女
+	#spouses = 趙國呂氏 恆農郡太守呂檀之女, 于氏 恆州刺史于兜之女
+	470.1.1 = {
+		birth=yes
+	}
+	514.8.6 = {
+		death = yes
+	}
+}
+henan_yuan_859 = { #拓跋勃 Tuoba Bo or 拓跋意勁 Tuoba Yijing. Second son of Tuoba Lizhen. (魏書/卷15)
+	dynasty = 1029300 #Tuoba
+	name = "Bo_srb_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = 1415133
+	#birth and death dates unknown
+	362.1.1 = {
+		birth=yes
+	}
+	415.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_860 = { #拓跋粟 Tuoba Su. Eldest son of Tuoba Bo. (魏書/卷15)
+	dynasty = 1029300 #Tuoba
+	name = "Su_name12"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_859
+	#birth and death dates unknown
+	391.1.1 = {
+		birth=yes
+	}
+	445.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_861 = { #拓跋渾 Tuoba Hun. Second son of Tuoba Bo. (魏書/卷15)
+	dynasty = 1029300 #Tuoba
+	name = "Hun_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_859
+	#birth and death dates unknown
+	393.1.1 = {
+		birth=yes
+	}
+	444.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_862 = { #拓跋庫汗 Tuoba Kuhan. Son of Tuoba Hun. (魏書/卷15)
+	dynasty = 1029300 #Tuoba
+	name = "Kuhan_srb_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_861
+	#birth and death dates unknown
+	420.1.1 = {
+		birth=yes
+	}
+	470.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_863 = { #拓跋古辰 Tuoba Guchen. Son of Tuoba Kuhan. (魏書/卷15)
+	dynasty = 1029300 #Tuoba
+	name = "Guchen_srb_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_862
+	#birth and death dates unknown
+	443.1.1 = {
+		birth=yes
+	}
+	501.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_864 = { #unnamed father of Yuan Zhen_name10
+	dynasty = 1029300 #Tuoba
+	name = "_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_863 #unknown but possible
+	#birth and death dates unknown
+	470.1.1 = {
+		birth=yes
+	}
+	532.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_865 = { #元禎 Yuan Zhen. Great-great-grandson of Yuan Bo. (元和姓纂/卷4) 5th generation descendant of Yuan Yijing. (新唐書/卷075下) 敷州刺史 during Wei. (隋書/卷62)
+	dynasty = 1029300 #Tuoba
+	name = "Zhen_name10"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_864
+	#birth and death dates unknown
+	501.1.1 = {
+		birth=yes
+	}
+	565.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_866 = { #元巖 Yuan Yan. Eldest son of Yuan Zhen. (新唐書/卷075下) At some point made 益州總管長史. (隋書/卷62)
+	dynasty = 1029300 #Tuoba
+	name = "Yan_name5"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_865
+	531.1.1 = {
+		birth=yes
+	}
+	593.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_867 = { #元弘 Yuan Hong. Son of Yuan Yan. (新唐書/卷075下 and 唐故武昌軍節度處置等使正議大夫檢校戶部尚書鄂州刺史兼御史大夫賜紫金魚袋贈尚書右僕射河南元公墓志銘) 北平太守 at some point. (隋書/卷62)
+	dynasty = 1029300 #Tuoba
+	name = "Hong_name3"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_866
+	#birth and death dates unknown
+	554.1.1 = {
+		birth=yes
+	}
+	625.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_868 = { #元義恭 Yuan Yigong. Eldest son of Yuan Hong. (故吏部侍郎元公碑 and 元和姓纂/卷4) Son of Yuan Lin. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Yigong_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_867
+	#birth and death dates unknown
+	573.1.1 = {
+		birth=yes
+	}
+	635.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_869 = { #元孝節 Yuan Xiaojie. Son of Yuan Yigong. (新唐書/卷075下) 黄州刺史 at some point. (故吏部侍郎元公碑 and 元和姓纂/卷4)
+	dynasty = 1029300 #Tuoba
+	name = "Xiaojie_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_868
+	#birth and death dates unknown
+	620.1.1 = {
+		birth=yes
+	}
+	692.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_870 = { #元通理 Yuan Tongli. Eldest son of Yuan Xiaojie. (新唐書/卷075下) Older brother of Yuan Xisheng. (故吏部侍郎元公碑)
+	dynasty = 1029300 #Tuoba
+	name = "Tongli_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_869
+	#birth and death dates unknown
+	650.1.1 = {
+		birth=yes
+	}
+	701.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_871 = { #元從 Yuan Cong. Eldest son of Yuan Tongli. (新唐書/卷075下) 夀州刺史 at some point. (故歙州長史隴西李府君墓誌銘 and 元和姓纂/卷4)
+	dynasty = 1029300 #Tuoba
+	name = "Cong_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_870
+	#birth and death dates unknown
+	689.1.1 = {
+		birth=yes
+	}
+	765.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_872 = { #元修 Yuan Xiu. Second son of Yuan Tongli. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Xiu_name9"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_870
+	#birth and death dates unknown
+	692.1.1 = {
+		birth=yes
+	}
+	745.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_873 = { #元希聲 Yuan Xisheng. Second son of Yuan Xiaojie. (新唐書/卷075下) (全唐文/卷0280/故吏部侍郎元公碑)
+	dynasty = 1029300 #Tuoba
+	name = "Xisheng_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_869
+	#spouse = liaodong_li_86
+	662.1.1 = {
+		birth=yes
+	}
+	707.11.1 = {
+		death = yes
+	}
+}
+henan_yuan_875 = { #元義端 Yuan Yiduan. Second son of Yuan Hong. (新唐書/卷075下 and 唐故武昌軍節度處置等使正議大夫檢校戶部尚書鄂州刺史兼御史大夫賜紫金魚袋贈尚書右僕射河南元公墓志銘) 魏州刺史 at some point. (隋書/卷62)
+	dynasty = 1029300 #Tuoba
+	name = "Yiduan_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_867
+	#birth and death dates unknown
+	581.1.1 = {
+		birth=yes
+	}
+	645.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_876 = { #元延壽 Yuan Yanshou. Eldest son of Yuan Yiduan. (新唐書/卷075下) 睦州刺史 at some point. (隋書/卷62)
+	dynasty = 1029300 #Tuoba
+	name = "Yanshou_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_875
+	#birth and death dates unknown
+	604.1.1 = {
+		birth=yes
+	}
+	662.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_877 = { #元愷 Yuan Kai. Son of Yuan Yanshou. (新唐書/卷075下) 通州刺史 at some point. (隋書/卷62)
+	dynasty = 1029300 #Tuoba
+	name = "Kai_name6"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_876
+	#birth and death dates unknown
+	632.1.1 = {
+		birth=yes
+	}
+	705.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_878 = { #元延福 Yuan Yanfu. Second son of Yuan Yiduan. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Yanfu_name2"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_875
+	#birth and death dates unknown
+	607.1.1 = {
+		birth=yes
+	}
+	659.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_879 = { #元怡 Yuan Yi. Son of Yuan Yanfu. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Yi_name14"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_878
+	#birth and death dates unknown
+	630.1.1 = {
+		birth=yes
+	}
+	691.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_880 = { #元偕 Yuan Jie. Eldest son of Yuan Yi. (新唐書/卷075下) 歸州刺史 at some point. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Jie_name5"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_879
+	#birth and death dates unknown
+	662.1.1 = {
+		birth=yes
+	}
+	715.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_881 = { #元伾 Yuan Pi. Second son of Yuan Yi. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Pi_name8"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_879
+	#birth and death dates unknown
+	665.1.1 = {
+		birth=yes
+	}
+	722.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_882 = { #元偉 Yuan Wei. Third son of Yuan Yi. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Wei_name14"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_879
+	#birth and death dates unknown
+	668.1.1 = {
+		birth=yes
+	}
+	731.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_883 = { #元延景 Yuan Yanjing. Third son of Yuan Yiduan. (新唐書/卷075下 and 唐故武昌軍節度處置等使正議大夫檢校戶部尚書鄂州刺史兼御史大夫賜紫金魚袋贈尚書右僕射河南元公墓志銘)
+	dynasty = 1029300 #Tuoba
+	name = "Yanjing_name3"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_875
+	#birth and death dates unknown
+	640.1.1 = {
+		birth=yes
+	}
+	701.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_884 = { #元悱/元誹 Yuan Fei. Son of Yuan Yanjing. (舊唐書/卷166 and 新唐書/卷075下 and 唐故武昌軍節度處置等使正議大夫檢校戶部尚書鄂州刺史兼御史大夫賜紫金魚袋贈尚書右僕射河南元公墓志銘)
+	dynasty = 1029300 #Tuoba
+	name = "Fei_name5"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_883
+	#birth and death dates unknown
+	690.1.1 = {
+		birth=yes
+	}
+	750.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_885 = { #元寬 Yuan Kuan. Son of Yuan Fei. (舊唐書/卷166 and 新唐書/卷075下 and 唐故武昌軍節度處置等使正議大夫檢校戶部尚書鄂州刺史兼御史大夫賜紫金魚袋贈尚書右僕射河南元公墓志銘) Died when Yuan Zhen was 8 years old. (舊唐書/卷166)
+	dynasty = 1029300 #Tuoba
+	name = "Kuan_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_884
+	#spouse = 陳留郡大夫人滎陽鄭氏 (747-806.10.31) second daughter of 睦州刺鄭濟 granddaughter of 涇陽縣令范陽盧平子 great-granddaughter of 鄭州刺史鄭遠思. (白氏長慶集/卷042/唐河南元府君夫人滎陽鄭氏墓志銘)
+	#birth date unknown
+	730.1.1 = {
+		birth=yes
+	}
+	786.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_886 = { #元泝 Yuan Su or 元沂 Yuan Yi. Eldest son of Yuan Kuan. (夏陽縣令陸翰妻河南元氏墓誌銘 and 新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Su_name13"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_885
+	#mother = 陳留郡大夫人滎陽鄭氏 (747-806.10.31) second daughter of 睦州刺鄭濟 granddaughter of 涇陽縣令范陽盧平子 great-granddaughter of 鄭州刺史鄭遠思. (白氏長慶集/卷042/唐河南元府君夫人滎陽鄭氏墓志銘)
+	#birth and death dates unknown
+	762.1.1 = {
+		birth=yes
+	}
+	815.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_887 = { #元秬 Yuan Ju. Second son of Yuan Kuan. (夏陽縣令陸翰妻河南元氏墓誌銘 and 新唐書/卷075下) (全唐文/卷0655/唐故朝議郎侍御史內供奉鹽鐵轉運河陰留後河南元君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "Ju_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_885
+	#mother = 陳留郡大夫人滎陽鄭氏 (747-806.10.31) second daughter of 睦州刺鄭濟 granddaughter of 涇陽縣令范陽盧平子 great-granddaughter of 鄭州刺史鄭遠思. (白氏長慶集/卷042/唐河南元府君夫人滎陽鄭氏墓志銘)
+	#spouse = 清河崔鄰女
+	#birth date unknown
+	764.1.1 = {
+		birth=yes
+	}
+	819.10.18 = {
+		death = yes
+	}
+}
+henan_yuan_888 = { #河南元氏 Lady Yuan. Eldest daughter of Yuan Kuan, in 783 married Lu Han. (全唐文/卷0655/夏陽縣令陸翰妻河南元氏墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_885
+	#mother = 陳留郡大夫人滎陽鄭氏 (747-806.10.31) second daughter of 睦州刺鄭濟 granddaughter of 涇陽縣令范陽盧平子 great-granddaughter of 鄭州刺史鄭遠思. (白氏長慶集/卷042/唐河南元府君夫人滎陽鄭氏墓志銘)
+	female = yes
+	766.1.1 = {
+		birth=yes
+	}
+	783.1.1 = { add_spouse = wujun_lu_435 }
+	800.1.4 = {
+		death = yes
+	}
+}
+henan_yuan_889 = { #元積 Yuan Ji. Third son of Yuan Kuan. (夏陽縣令陸翰妻河南元氏墓誌銘 and 新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Ji_name45"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_885
+	#mother = 陳陳留郡大夫人滎陽鄭氏 (747-806.10.31) second daughter of 睦州刺鄭濟 granddaughter of 涇陽縣令范陽盧平子 great-granddaughter of 鄭州刺史鄭遠思. (白氏長慶集/卷042/唐河南元府君夫人滎陽鄭氏墓志銘)
+	#birth and death dates unknown
+	770.1.1 = {
+		birth=yes
+	}
+	840.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_890 = { #元稹 Yuan Zhen. Fourth son of Yuan Kuan. (白氏長慶集/卷070/唐故武昌軍節度處置等使正議大夫檢校戶部尚書鄂州刺史兼御史大夫賜紫金魚袋贈尚書右僕射河南元公墓志銘) In 810 Zhuangyuan. (舊唐書/卷166) In 821.11.17 made 工部侍郎. (舊唐書/卷16) In 822.3.16 made also 同平章事. (舊唐書/卷16) 工部侍郎、平章事 until 822.6.27, on that day made 同州刺史. (舊唐書/卷16) 同州刺史 until 823.9.9, on that day made made 越州刺史浙東觀察使. (嘉泰會稽志/卷2) 浙東觀察使 in 827.10.12. (舊唐書/卷17上) 越州刺史、浙東觀察使 until 829.10.22, on that day made 尚書左丞. (舊唐書/卷17上) 尚書左丞 until 830.2.22, on that day made 檢校戶部尚書，充武昌軍節度、鄂岳蘄黃安申等州觀察使. (舊唐書/卷17下) 武昌軍節度使、檢校戶部尚書 until 831.9.14 (舊唐書/卷17下) or 831.9.3 (舊唐書/卷166 and 墓志銘), on that day died. (墓志銘)
+	dynasty = 1029300 #Tuoba
+	name = "Zhen_name3"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_885
+	#mother = 陳留郡大夫人滎陽鄭氏 (747-806.10.31) second daughter of 睦州刺鄭濟 granddaughter of 涇陽縣令范陽盧平子 great-granddaughter of 鄭州刺史鄭遠思. (白氏長慶集/卷042/唐河南元府君夫人滎陽鄭氏墓志銘)
+	#spouses = 京兆韋氏, 河東郡君裴氏
+	779.1.1 = {
+		birth=yes
+	}
+	810.1.1 = { trait = zhuangyuan }
+	831.9.3 = {
+		death = yes
+	}
+}
+henan_yuan_891 = { #元保子 Yuan Baozi. Eldest daughter of Yuan Zhen, married 韋絢. (白氏長慶集/卷070/唐故武昌軍節度處置等使正議大夫檢校戶部尚書鄂州刺史兼御史大夫賜紫金魚袋贈尚書右僕射河南元公墓志銘)
+	dynasty = 1029300 #Tuoba
+	name = "Baozi_name3"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_890
+	#mother = 京兆韋氏
+	female = yes
+	#birth and death dates unknown
+	800.1.1 = {
+		birth=yes
+	}
+	861.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_892 = { #元小迎 Yuan Xiaoying. Second daughter of Yuan Zhen, less that 15 years old in . (白氏長慶集/卷070/唐故武昌軍節度處置等使正議大夫檢校戶部尚書鄂州刺史兼御史大夫賜紫金魚袋贈尚書右僕射河南元公墓志銘)
+	dynasty = 1029300 #Tuoba
+	name = "Xiaoying_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_890
+	#mother = 河東郡君裴氏
+	female = yes
+	#birth and death dates unknown
+	818.1.1 = {
+		birth=yes
+	}
+	870.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_893 = { #元道衛 Yuan Daowei. Third daughter of Yuan Zhen, child in 831. (白氏長慶集/卷070/唐故武昌軍節度處置等使正議大夫檢校戶部尚書鄂州刺史兼御史大夫賜紫金魚袋贈尚書右僕射河南元公墓志銘)
+	dynasty = 1029300 #Tuoba
+	name = "Daowei_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_890
+	#mother = 河東郡君裴氏
+	female = yes
+	#birth and death dates unknown
+	820.1.1 = {
+		birth=yes
+	}
+	868.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_894 = { #元道扶 Yuan Daofu. Fourth daughter of Yuan Zhen, child in 831. (白氏長慶集/卷070/唐故武昌軍節度處置等使正議大夫檢校戶部尚書鄂州刺史兼御史大夫賜紫金魚袋贈尚書右僕射河南元公墓志銘)
+	dynasty = 1029300 #Tuoba
+	name = "Daofu_name3"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_890
+	#mother = 河東郡君裴氏
+	female = yes
+	#birth and death dates unknown
+	823.1.1 = {
+		birth=yes
+	}
+	865.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_895 = { #元道護 Yuan Daohu. Son of Yuan Zhen, 3 years old in 831. (白氏長慶集/卷070/唐故武昌軍節度處置等使正議大夫檢校戶部尚書鄂州刺史兼御史大夫賜紫金魚袋贈尚書右僕射河南元公墓志銘)
+	dynasty = 1029300 #Tuoba
+	name = "Daohu_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_890
+	#mother = 河東郡君裴氏
+	#birth and death dates unknown
+	829.1.1 = {
+		birth=yes
+	}
+	871.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_896 = { #元真一 Lady Zhenyi. Second daughter of Yuan Kuan, became a nun. (全唐文/卷0655/夏陽縣令陸翰妻河南元氏墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "Zhenyi_name4"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_885
+	#mother = 陳留郡大夫人滎陽鄭氏 (747-806.10.31) second daughter of 睦州刺鄭濟 granddaughter of 涇陽縣令范陽盧平子 great-granddaughter of 鄭州刺史鄭遠思. (白氏長慶集/卷042/唐河南元府君夫人滎陽鄭氏墓志銘)
+	female = yes
+	#birth and death dates unknown
+	769.1.1 = {
+		birth=yes
+	}
+	783.1.1 = { trait = devoted }
+	820.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_897 = { #元易簡 Yuan Yijian. Eldest son of Yuan Ju. (唐故朝議郎侍御史內供奉鹽鐵轉運河陰留後河南元君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "Yijian_name3"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_887
+	#mother = 清河崔鄰女
+	#birth and death dates unknown
+	785.1.1 = {
+		birth=yes
+	}
+	840.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_898 = { #元從簡 Yuan Congjian. Second son of Yuan Ju. (唐故朝議郎侍御史內供奉鹽鐵轉運河陰留後河南元君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "Congjian_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_887
+	#mother = 清河崔鄰女
+	#birth and death dates unknown
+	788.1.1 = {
+		birth=yes
+	}
+	837.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_899 = { #元行簡 Yuan Xingjian. Third son of Yuan Ju. (唐故朝議郎侍御史內供奉鹽鐵轉運河陰留後河南元君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "Xingjian_name2"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_887
+	#mother = 清河崔鄰女
+	#birth and death dates unknown
+	790.1.1 = {
+		birth=yes
+	}
+	845.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_900 = { #元宏簡 Yuan Hongjian. Fourth son of Yuan Ju. (唐故朝議郎侍御史內供奉鹽鐵轉運河陰留後河南元君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "Hongjian_name5"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_887
+	#mother = 清河崔鄰女
+	#birth and death dates unknown
+	792.1.1 = {
+		birth=yes
+	}
+	846.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_901 = { #河南元氏 Lady Yuan. Eldest daughter of Yuan Ju, married 劉中孚. (唐故朝議郎侍御史內供奉鹽鐵轉運河陰留後河南元君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_887
+	#mother = 清河崔鄰女
+	female = yes
+	#birth and death dates unknown
+	787.1.1 = {
+		birth=yes
+	}
+	832.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_902 = { #河南元氏 Lady Yuan. SEcond daughter of Yuan Ju, died young. (唐故朝議郎侍御史內供奉鹽鐵轉運河陰留後河南元君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_887
+	#mother = 清河崔鄰女
+	female = yes
+	#birth and death dates unknown
+	789.1.1 = {
+		birth=yes
+	}
+	820.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_903 = { #河南元氏 Lady Yuan. Third daughter of Yuan Ju, married 進士蘇京. (唐故朝議郎侍御史內供奉鹽鐵轉運河陰留後河南元君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_887
+	#mother = 清河崔鄰女
+	female = yes
+	#birth and death dates unknown
+	792.1.1 = {
+		birth=yes
+	}
+	854.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_904 = { #河南元氏 Lady Yuan. Fourth daughter of Yuan Ju, married 李殊 and died young. (唐故朝議郎侍御史內供奉鹽鐵轉運河陰留後河南元君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_887
+	#mother = 清河崔鄰女
+	female = yes
+	#birth and death dates unknown
+	795.1.1 = {
+		birth=yes
+	}
+	826.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_905 = { #元宵 Yuan Xiao. Second son of Yuan Fei. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Xiao_name12"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_884
+	#birth and death dates unknown
+	735.1.1 = {
+		birth=yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_906 = { #元延祚 Yuan Yanzuo. Fourth son of Yuan Yiduan. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Yanzuo_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_875
+	#birth and death dates unknown
+	643.1.1 = {
+		birth=yes
+	}
+	711.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_907 = { #元平叔 Yuan Pingshu. Son of Yuan Yanzuo. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Pingshu_name2"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_906
+	#birth and death dates unknown
+	679.1.1 = {
+		birth=yes
+	}
+	732.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_908 = { #元挹 Yuan Yi. Eldest son of Yuan Pingshu. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Yi_name71"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_907
+	#birth and death dates unknown
+	719.1.1 = {
+		birth=yes
+	}
+	775.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_909 = { #元注 Yuan Zhu. Eldest son of Yuan Yi. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Zhu_name10"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_908
+	#birth and death dates unknown
+	742.1.1 = {
+		birth=yes
+	}
+	801.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_910 = { #元洪 Yuan Hong. Second son of Yuan Yi. (新唐書/卷075下)  鄧州刺史 until 800.5.27. (資治通鑑/卷235) 饒州刺史 at some point. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Hong_name2"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_908
+	#birth and death dates unknown
+	745.1.1 = {
+		birth=yes
+	}
+	817.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_911 = { #元晦 Yuan Hui. Son of Yuan Hong. (新唐書/卷075下) Alive in 820.6.5. (唐故京兆府盩厔縣尉元君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "Hui_name18"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_910
+	#birth and death dates unknown
+	762.1.1 = {
+		birth=yes
+	}
+	835.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_912 = { #元錫 Yuan Xi. Third son of Yuan Yi. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Xi_name6"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_908
+	#birth and death dates unknown
+	748.1.1 = {
+		birth=yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_913 = { #元繇 Yuan Yao. Eldest son of Yuan Xi. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Yao_name7"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_912
+	#birth and death dates unknown
+	772.1.1 = {
+		birth=yes
+	}
+	831.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_914 = { #元復禮 Yuan Fuli. Second son of Yuan Xi. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Fuli_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_912
+	#birth and death dates unknown
+	775.1.1 = {
+		birth=yes
+	}
+	821.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_915 = { #元壽 Yuan Shou. Third son of Yuan Xi. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Shou_name3"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_912
+	#birth and death dates unknown
+	778.1.1 = {
+		birth=yes
+	}
+	832.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_916 = { #元琯 Yuan Guan. Fourth son of Yuan Xi. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Guan_name4"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_912
+	#birth and death dates unknown
+	781.1.1 = {
+		birth=yes
+	}
+	842.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_917 = { #元銑 Yuan Xian. Fourth son of Yuan Yi. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Xian_name13"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_908
+	#birth and death dates unknown
+	751.1.1 = {
+		birth=yes
+	}
+	802.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_918 = { #元撝 Yuan Hui. Second son of Yuan Pingshu. (新唐書/卷075下)
+	dynasty = 1029300 #Tuoba
+	name = "Hui_name7"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_907
+	#birth and death dates unknown
+	722.1.1 = {
+		birth=yes
+	}
+	771.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_919 = { #元持 Yuan Chi. Third son of Yuan Pingshu. (新唐書/卷075下) 岳州刺史 at some point. (唐故京兆府盩厔縣尉元君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "Chi_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_907
+	#spouse = 閻夫人
+	#birth and death dates unknown
+	724.1.1 = {
+		birth=yes
+	}
+	791.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_920 = { #元某 Yan Mou. Son of Yuan Chi. (全唐文/卷0654/唐故京兆府盩厔縣尉元君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_919
+	#mother = 閻夫人
+	#spouse = 隴西李氏
+	765.1.1 = {
+		birth=yes
+	}
+	820.5.16 = {
+		death = yes
+	}
+}
+henan_yuan_921 = { #元寄 Yuan Qi. Son of Yuan Xisheng. (故吏部侍郎元公碑) 夀州刺史 at some point. (元和姓纂/卷4)
+	dynasty = 1029300 #Tuoba
+	name = "Ji_name46"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_873
+	mother = liaodong_li_86
+	#birth and death dates unknown
+	684.1.1 = {
+		birth=yes
+	}
+	730.1.1 = {
+		death = yes
+	}
+}
+henan_yuan_922 = { #河南元氏 Lady Yuan. Daughter of Yuan Cong, married 李則, died being 68 before 827. (故歙州長史隴西李府君墓誌銘)
+	dynasty = 1029300 #Tuoba
+	name = "_name"
+	religion = tengri_pagan
+	culture = xianbei
+	father = henan_yuan_871
+	female = yes
+	#birth and death dates unknown
+	745.1.1 = {
+		birth=yes
+	}
+	762.1.1 = { add_spouse = longxi_li_2153 }
+	812.1.1 = {
+		death = yes
 	}
 }

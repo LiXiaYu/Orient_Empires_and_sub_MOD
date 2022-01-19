@@ -11,7 +11,7 @@
 #	religion = tengri_pagan
 #	culture=tuyuhun
 #	father=247382 # Fuyun
-#	mother=longxi_li_0990
+#	#mother=247388
 #	611.1.1={
 #		birth=yes
 #	}
@@ -19,7 +19,6 @@
 #		death=yes
 #	}
 #}
-
 #247344 = {
 #	name = "Asha Mangmorje"
 #	female=yes
@@ -608,17 +607,15 @@
 	}
 }
 
-247378 = { #夸呂 Kualü
+247378 = { #誇呂/夸呂 Kualü
 	name = "Kualv_name"
 	dynasty = 1000049610 #Thoghon
 	religion = tengri_pagan
 	culture=tuyuhun
 	father=247373
+	#spouse = 1415757
 	517.1.1={
 		birth=yes
-	}
-	543.1.1 = {
-		add_spouse=1415757
 	}
 	591.1.1={
 		death=yes
@@ -681,7 +678,7 @@
 		birth=yes
 	}
 	596.1.1={
-		add_spouse=longxi_li_0990
+		add_spouse=247388
 	}
 	597.1.1={
 		death={
@@ -700,7 +697,7 @@
 		birth=yes
 	}
 	597.1.1={
-		add_spouse=longxi_li_0990
+		add_spouse=247388
 	}
 	635.1.1={
 		death={
@@ -715,7 +712,7 @@
 	religion = tengri_pagan
 	culture=tuyuhun
 	father=247382
-	mother=longxi_li_0990
+	mother=247388
 	598.1.1={
 		birth=yes
 	}
@@ -730,7 +727,7 @@
 	religion = tengri_pagan
 	culture=tuyuhun
 	father=247382
-	mother=longxi_li_0990
+	mother=247388
 	604.1.1={
 		birth=yes
 	}
@@ -769,8 +766,8 @@
 		birth=yes
 	}
 	664.1.1={
-		add_spouse=247390
-		add_consort=247391
+		add_spouse=longxi_li_1280
+		make_concubine = character:longxi_li_1281
 	}
 	664.6.1={
 		death=yes
@@ -789,8 +786,8 @@
 		birth=yes
 	}
 	664.6.1={
-		add_spouse=247391
-		add_consort=247390
+		add_spouse=longxi_li_1281
+		make_concubine = character:longxi_li_1280
 	}
 	713.1.1={
 		death=yes
@@ -819,12 +816,12 @@
 	religion = tengri_pagan
 	culture=tuyuhun
 	father=247392
-	mother=247390
+	mother=longxi_li_1280
 	667.1.1={
 		birth=yes
 	}
 	689.1.1={
-		add_spouse=247722
+		add_spouse=longxi_li_1281
 	}
 	725.1.1={
 		death=yes
@@ -838,7 +835,7 @@
 	culture=tuyuhun
 	trait="child_of_concubine_male"
 	father=247392
-	mother=247391
+	mother=longxi_li_1281
 	671.1.1={
 		birth=yes
 	}
@@ -854,7 +851,7 @@
 	culture=tuyuhun
 	trait="child_of_concubine_male"
 	father=247392
-	mother=247391
+	mother=longxi_li_1281
 	#spouse = 博陵郡太夫人博陵崔氏
 	674.1.1={
 		birth=yes
@@ -929,7 +926,7 @@
 	religion = tengri_pagan
 	culture=tuyuhun
 	father=247392
-	mother=247391
+	mother=longxi_li_1281
 	#birth and death dates unknown
 	687.1.1={
 		birth=yes
@@ -945,7 +942,7 @@
 	religion = tengri_pagan
 	culture=tuyuhun
 	father=247395
-	mother=247722
+	mother=longxi_li_1281
 	690.8.17={
 		birth=yes
 	}
@@ -960,7 +957,7 @@
 	religion = tengri_pagan
 	culture=tuyuhun
 	father=247395
-	mother=247722
+	mother=longxi_li_1281
 	707.1.1={
 		birth=yes
 	}
@@ -975,7 +972,7 @@
 	religion = tengri_pagan
 	culture=tuyuhun
 	father=247395
-	mother=247722
+	mother=longxi_li_1281
 	708.1.1={
 		birth=yes
 	}
@@ -990,7 +987,7 @@
 	religion = tengri_pagan
 	culture=tuyuhun
 	father=247395
-	mother=247722
+	mother=longxi_li_1281
 	#birth date unknown
 	711.1.1={
 		birth=yes
@@ -1156,7 +1153,7 @@
 		add_spouse=1415875
 	}
 	344.9.1={
-		add_consort=1415842
+		make_concubine = character:1415842
 	}
 	348.10.25={
 		death=yes
@@ -2138,7 +2135,7 @@ death = yes
 	}
 }
 1415976 = { #慕容雲 Murong Yun or 高雲 Gao Yun/Go Un
-	name = "Un_name"
+	name = "Un_kor_name"
 	dynasty = 1000049504 #Go
 	religion=mahayana
 	culture="goguryeo"
@@ -2174,7 +2171,7 @@ death = yes
 	}
 }
 1415978 = { #高彭城 Gao Pengcheng/Go Paengseong
-	name = "Paengseong_name"
+	name = "Paengseong_kor_name"
 	dynasty = 105818 #Murong
 	religion = tengri_pagan
 	culture="goguryeo"
@@ -2927,7 +2924,7 @@ changli_murong_153 = { #慕容紹宗 Murong Shaozong. Son of Murong Yuan. (北�
 		birth=yes
 	}
 	549.5.31={
-		death=death_suicide #death suicide drowning
+		death= { death_reason = death_suicide } #death suicide drowning
 	}
 }
 changli_murong_154 = { #慕容保樂 Murong Baole. Older brother of Murong Shaozong. (北齊書/卷91) 樂平太守 at some point. (北齊書/卷91)
@@ -3542,7 +3539,7 @@ taiyuan_murong_008 = { #慕容延卿 Murong Yanqing. Younger brother of Murong Y
 }
 taiyuan_murong_009 = { #慕容德琛 Murong Dechen. Son of Murong Yanqing. (宋史/卷251) At some point made 知夔州. (宋史/卷251) In 1001 again made 知夔州. (宋史/卷251) In 景德 era made 知憲州. (宋史/卷251) 知憲州 until 1017. (宋史/卷251)
 	dynasty = 1000049608 #Taiyuan Murong
-	name = "Dechen_name"
+	name = "Dechen_name2"
 	religion = shangqing
 	culture = han
 	father = taiyuan_murong_008
@@ -3971,7 +3968,7 @@ taiyuan_murong_038 = { #慕容藴慈 Murong Yunci. Daughter of Murong Yanji, fir
 }
 taiyuan_murong_039 = { #慕容彥喜 Murong Yanxi. Sixth younger brother of Murong Yanfeng. (慕容叔孚墓誌銘)
 	dynasty = 1000049608 #Yixing Murong
-	name = "Yanxi_name6"
+	name = "Yanxi_name7"
 	religion = shangqing
 	culture = han
 	father = taiyuan_murong_013

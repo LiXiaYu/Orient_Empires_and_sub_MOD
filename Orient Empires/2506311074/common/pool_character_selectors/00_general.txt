@@ -1,0 +1,91 @@
+﻿pool_general = {
+	valid_character = {
+		is_capable_adult = yes
+		is_imprisoned = no
+		OR = {
+			has_culture = culture:han
+			AND = {
+				#exists = scope:base.primary_title.capital_province.culture
+				culture = scope:base.primary_title.capital_province.culture
+			}
+
+		}
+
+		trigger_if = {
+			limit = {
+				scope:base = { has_realm_law = female_only_law }
+			}
+			is_female = yes
+		}
+		trigger_if = {
+			limit = {
+				scope:base = { has_realm_law = male_only_law }
+			}
+			is_male = yes
+		}
+
+		OR = {
+			is_courtier_of = scope:base
+			AND = {
+				exists = dynasty
+				exists = scope:base.dynasty
+				dynasty = scope:base.dynasty				
+			}
+		}
+		has_trait = BureaucracyEmpire_lifestyle_bureaucrat
+	}
+	
+	character_score = {
+		base = 5
+		
+		modifier = {
+			add = 100
+			is_courtier_of = scope:base
+		}
+		modifier = {
+			add = { value = age max = 50 }
+		}
+		modifier = {
+			add = 30
+			AND = {
+				exists = dynasty
+				dynasty = {
+					any_dynasty_member = {
+						count > 10
+					}
+				}
+			}
+		}
+		modifier = {  #朝野不兼
+			highest_held_title_tier = tier_duchy
+			add = 0 	
+		}
+		modifier = {  #军力
+			add = { value = root.max_military_strength } 	
+		}
+		modifier = {
+			add = 20
+			has_education_diplomacy_trigger = yes
+		}
+		modifier = {
+			add = 20
+			has_education_martial_trigger = yes
+		}
+		modifier = {
+			factor = 100
+			is_male = yes
+		}	
+	}
+	
+	
+	config = {
+		background = commander
+		age = { 20 80 }
+	}
+	
+	selection_count = 5
+	
+	pool = faith
+	court = yes
+	gender = male
+}

@@ -7,9 +7,8 @@ k_makran = {
 }
 879.6.5 = { holder = 163164
 }
-901.1.1 = { holder = 0
+901.1.1 = { holder = 1235974 }
 	
-}
 # Ghaznavids
 #1059.1.1 = {
 #	holder = 144133 # Ibrahim
@@ -57,7 +56,6 @@ k_makran = {
 }
 1215.1.1 = { holder = 0
 }
-
 
 }
 
@@ -525,6 +523,9 @@ d_makran = {
 }
 780.1.1={ holder=0
 } 
+899.1.1 = { holder = 1230951
+	liege=0
+}
 1229.1.1 = {
 	liege = e_ilkhanate
 	government = tribal_government	
@@ -616,8 +617,7 @@ c_bampur = {
 	liege = d_kufichi
 	holder = 178018
 }
-899.1.1 = { holder = 1230951
-}
+899.1.1 = { holder = 1230951 liege = d_jabal_kufs }
 940.1.1 = { holder = 1230952
 }
 980.1.1 = { holder = 188544
@@ -691,8 +691,7 @@ c_jabal_kufs = {
 	liege = d_kufichi
 	holder = 178018
 }
-899.1.1 = { holder = 1230951
-}
+899.1.1 = { holder = 1230951 liege = d_jabal_kufs }
 940.1.1 = { holder = 1230952
 }
 980.1.1 = { holder = 188544
@@ -763,8 +762,7 @@ c_riqan = {
 	liege = d_kufichi
 	holder = 178018
 }
-899.1.1 = { holder = 1230951
-}
+899.1.1 = { holder = 1230951 liege = 0 }
 940.1.1 = { holder = 1230952
 }
 980.1.1 = { holder = 188544
@@ -833,9 +831,7 @@ d_jabal_kufs = {
 	liege = e_arabia
 	holder = 188604 # fictitious assignment
 }
-866.1.1 = { holder = 0
-}
-
+899.1.1 = { holder = 1230951 liege = 0 }
 
 }
 
@@ -869,11 +865,9 @@ d_sistan = {
 861.1.1 = { holder = 163101
 }
 879.6.5 = {
-	liege = k_makran
 	holder = 163164
 }
-901.1.1 = {
-	liege = 0
+900.1.1 = {
 	holder = 1235974
 }
 909.1.1 = { holder = 1235976
@@ -985,7 +979,7 @@ c_zaranj = {
 }
 879.6.5 = { holder = 163164
 }
-901.1.1 = { holder = 1235974
+900.1.1 = { holder = 1235974
 }
 909.1.1 = { holder = 1235976
 }
@@ -1056,7 +1050,7 @@ c_nih = {
 }
 879.6.5 = { holder = 163164
 }
-901.1.1 = { holder = 1235974
+900.1.1 = { holder = 1235974
 }
 909.1.1 = { holder = 1235976
 }
@@ -1128,7 +1122,7 @@ c_farah = {
 }
 879.6.5 = { holder = 163164
 }
-901.1.1 = { holder = 1235974
+900.1.1 = { holder = 1235974
 }
 909.1.1 = { holder = 1235976
 }
@@ -1223,7 +1217,7 @@ c_rudbar = {
 }
 879.6.5 = { holder = 163164
 }
-901.1.1 = { holder = 1235974
+900.1.1 = { holder = 1235974
 }
 909.1.1 = { holder = 1235976
 }
@@ -1338,7 +1332,7 @@ c_bost = {
 }
 879.6.5 = { holder = 163164
 }
-901.1.1 = { holder = 1235974
+900.1.1 = { holder = 1235974
 }
 909.1.1 = { holder = 1235976
 }

@@ -85,7 +85,8 @@
 	}
 }
 1412306 = { #朱邪赤心 Zhuye Chixin, Chinese name 李國昌 Li Guochang. In 869.11.24 made 大同軍節度使 and granted name. Before 870.12.26 was made 左金吾上將軍, on that day made 振武節度使. In 873.1.3 he was made 大同軍防禦使, but refused to go. In 878.5.6 once again made 大同節度使, but refused and killed the envoy. In 883.9.15 made 代北節度使.
-	dynasty_house = house_Li-Zhuye
+	#dynasty_house = house_Li-Zhuye
+	dynasty =1000049851 #Zhuye
 	name = "Chixin_name"
 	culture = shatuo
 	religion = tengri_pagan
@@ -201,13 +202,10 @@
 	870.1.1 = { add_spouse = 1400804 add_trait = one_eyed }
 	882.1.1 = {
 		effect = {
-			add_pressed_claim = d_yunzhong
-			add_pressed_claim = d_hedong
-			add_pressed_claim = d_zhenwu
 			spawn_army = {
 				name = event_troop_default_name
 				levies = 2000
-				men_at_arms = {
+				men_at_arms = { 
 					type = gendarme
 					stacks = 2
 				}
@@ -1058,7 +1056,7 @@
 }
 1412357 = { #壽安公主 Princss Shou'an
 	dynasty_house = house_Li-Zhuye
-	name = "Shou'an_name"
+	name = "Shouan_name"
 	culture = shatuo
 	religion = tengri_pagan
 	father=1412344
@@ -1125,17 +1123,23 @@
 	religion = tengri_pagan
 	father=1412360
 	mother=1400813
+	trait = education_martial_prowess_4
 	#birth and death date unknown
 	885.2.11={
 		birth=yes
 	}
-	900.1.1={
+	900.1.1={		
 		dynasty = 1000049851
+		dynasty_house = house_Li-Zhuye
 		set_father = 1412344
 		effect = { 
 			set_real_father = 1412360 
 		}
 		#trait = adopted
+		add_trait = aggressive_attacker
+	}
+	934.1.1 = {
+		add_trait = kinslayer_1
 	}
 	937.1.11={
 		death={death_reason=death_suicide_immolation }
@@ -1333,10 +1337,10 @@
 	culture = sogdian
 	religion = mazdayasna
 	father=1412371
-	employer=1412310
 	#birth and death dates unknown
 	873.1.1={
 		birth=yes
+		employer=1412310
 	}
 	921.1.1={
 		death=yes
@@ -1348,10 +1352,10 @@
 	culture = sogdian
 	religion = mazdayasna
 	father=1412371
-	employer=1412310
 	#birth and death dates unknown
 	875.1.1={
 		birth=yes
+		employer=1412310
 	}
 	934.1.1={
 		death=yes
@@ -1363,10 +1367,10 @@
 	culture = sogdian
 	religion = mazdayasna
 	father=1412372
-	employer=1412344
 	trait = education_martial_4
 	892.3.30={
 		birth=yes
+		employer=1412344
 	}
 	936.11.28 = {
 	}
@@ -1413,7 +1417,7 @@
 	religion = mazdayasna
 	father=1412377
 	#birth and death dates unknown
-	905.1.1={
+	915.1.1={
 		birth=yes
 	}
 	943.1.1={
@@ -1447,7 +1451,7 @@
 	}
 	941.1.1={
 		trait=ill
-		death={death_reason = yes }
+		death = yes
 	}
 }
 1412381 = { #石曦 Shi Xi. 太祖征晋，曦領兵二千人自泽、潞除道至太原，壅汾水灌其城，又益兵千人，部攻遼州。俄知雄州，代，为潭州钤辖。開寶八年，領兵败南唐軍二千余于袁州，平梅山、板仓诸洞蛮寇，俘馘数千人。太平興國中，歷右神武、右羽林大將軍，连知孟、襄二州，遷領诚州刺史。雍熙四年，改知霸州兼部署。会陳廷山谋以平戎軍叛入北边，曦察知之，与侯延濟定计，禽廷山以獻。录其功，加領本州团练使、同知镇州。淳化二年，移原州，遷右龍武軍大將軍。被病请告，诏特给全奉。四年，卒，年七十四，赗赙加等。
@@ -1541,7 +1545,7 @@
 	religion = mazdayasna
 	father=1412375
 	#birth and death dates unknown
-	925.1.1={
+	935.1.1={  #942年，高祖卧疾，宰相冯道入见卧内，重睿尚幼，高祖呼出使拜道于前，因以宦者抱持寘道怀中
 		birth=yes
 	}
 	947.1.1={
@@ -1555,10 +1559,10 @@
 	religion = mazdayasna
 	father=1412372
 	#spouse = guoxian_an_002
-	employer=1412344
 	trait = education_martial_3
 	890.1.1={
 		birth=yes
+		employer=1412344
 	}
 	915.1.1={
 		death=yes
@@ -1709,10 +1713,10 @@
 	culture = shatuo
 	religion = tengri_pagan
 	father = 1412395
-	employer = 1412310
 	#birth and death dates unknown
 	880.1.1={
 		birth=yes
+		employer = 1412310
 	}
 	910.1.1={
 		death=yes
@@ -1731,9 +1735,9 @@
 	religion = tengri_pagan
 	father = 1412396
 	mother = later_han_an_001
-	employer = 1412344
 	895.3.4={
 		birth=yes
+		employer = 1412344
 	}
 	919.10.27 = {
 		employer = 1412375
@@ -1746,7 +1750,7 @@
 		trait=ill
 	}
 	948.3.10={
-		death={death_reason=yes }
+		death = yes
 		#name = "Gaozu"
 		#effect = {
 		#	#set_character_flag = given_temple_name_by_script
@@ -2146,10 +2150,11 @@
 	religion = mazdayasna
 	culture = sogdian
 	father=1412421
-	employer = 1412310
+	
 	#birth date unknown
 	868.1.1 = {
 		birth = yes
+		employer = 1412310
 	}
 	930.7.10 = {
 		death=yes
@@ -2161,10 +2166,11 @@
 	religion = mazdayasna
 	culture = sogdian
 	father=1412421
-	employer = 1412310
+	
 	#birth and death dates unknown
 	866.1.1 = {
 		birth = yes
+		employer = 1412310
 	}
 	890.3.14 = {
 		death=yes
@@ -2353,7 +2359,7 @@
 		death={death_reason = death_execution killer = 194326 } #Sliced and eaten.
 	}
 }
-1412436 = { #楊承信 Yang Chengxin or 楊信 Yang Xin. In 947.1.26 made 平盧節度使. (資治通鑑/卷286) 青州節度使 until 947.8.10, on that day made 安州節度使. (舊五代史/卷100) 安州節度使 until 950.4.24, on that day made 鄜州節度使. (舊五代史/卷103) In 957.4.26 made 壽州節度使. (舊五代史/卷117) 忠正節度使 until 960.6.13, on that day returned to court. (續資治通鑑長編/卷001) In 960.9.2 made 河中節度使. (續資治通鑑長編/卷001)
+1412436 = { #楊承信 Yang Chengxin or 楊信 Yang Xin. In 947.1.26 made 平盧節度使. (資治通鑑/卷286) 青州節度使 until 947.8.10, on that day made 安州節度使. (舊五代史/卷100) 安州節度使 until 950.4.24, on that day made 鄜州節度使. (舊五代史/卷103) 鄜州刺史 in 951.3.1, on that day made 同平章事 by Later Zhou. (舊五代史/卷110) In 957.4.26 made 壽州節度使. (舊五代史/卷117) 忠正節度使 until 960.6.13, on that day returned to court. (續資治通鑑長編/卷001) In 960.9.2 made 河中節度使. (續資治通鑑長編/卷001)
 	dynasty =1000049857 #Yang
 	name = "Chengxin_name"
 	culture = shatuo
@@ -2484,11 +2490,11 @@
 	culture = sogdian
 	religion = mazdayasna
 	father = 1412443
-	employer = 1412310
 	trait = education_martial_2
 	#birth and death dates unknown
 	850.1.1={
 		birth=yes
+		employer = 1412310
 	}
 	895.2.23 = { 
 		effect = {
@@ -2508,11 +2514,11 @@
 	culture = sogdian
 	religion = mazdayasna
 	father = 1412443
-	employer = 1412310
 	trait = education_martial_2
 	#birth and death dates unknown
 	855.1.1={
 		birth=yes
+		employer = 1412310
 	}
 	895.2.23 = { 
 		effect = {
@@ -2532,12 +2538,13 @@
 	culture = sogdian
 	religion = mazdayasna
 	father = 1412443
-	employer = 1412310
+	
 	trait = education_martial_2
 	trait = brave
 	#birth and death dates unknown
 	860.1.1={
 		birth=yes
+		employer = 1412310
 	}
 	893.1.1={
 		death={death_reason=death_battle killer = "Zhu Xuan" }
@@ -2549,12 +2556,12 @@
 	culture = sogdian
 	religion = mazdayasna
 	father = 1412446
-	employer = 1412344
 	trait = education_martial_2
 	trait = brave
 	#birth date unknown
 	887.1.1={
 		birth=yes
+		employer = 1412344
 	}
 	931.6.25={
 		death={death_reason=death_murder killer = 1412454}
@@ -2961,9 +2968,10 @@
 	culture = shatuo
 	religion = tengri_pagan
 	trait = education_martial_3
-	employer = 1412310
+	
 	871.1.1={
 		birth=yes
+		employer = 1412310
 	}
 	912.7.18 = { employer = 1400476 }
 	913.3.27 = { employer = 1400481 }
@@ -3040,14 +3048,15 @@
 	culture = shatuo
 	religion = tengri_pagan
 	trait = education_martial_2
-	employer = 1412306
+	
 	#birth date unknown
 	858.1.1={
 		birth=yes
+		employer = 1412306
 	}
 	922.5.1={
 		trait = ill
-		death={death_reason = yes }
+		death = yes
 	}
 }
 1412479 = { #李彥球 Li Yanqiu
@@ -3069,12 +3078,13 @@
 	name = "Jingsi_name2"
 	culture = shatuo
 	religion = tengri_pagan
-	employer = 1412310
+	
 	trait = education_martial_3
 	trait = brave
 	trait = arrogant
 	858.1.1={
 		birth=yes
+		employer = 1412310
 	}
 	894.4.30={
 		death={death_reason = death_execution_dismemberment killer = 1412310 }
@@ -3681,10 +3691,10 @@ jincheng_yao_007 = { #藥永圖 Yao Yongtu. Nephew of Yao Jineng. (前礠州刺�
 	name = "Quan_name4" 
 	culture = sogdian
 	religion = mazdayasna
-	employer = 1412389
 	#birth and death dates unknown
 	906.1.1={
 		birth=yes
+		employer = 1412389
 	}
 	947.1.11 = { employer = 194326 }
 	960.1.1={
@@ -3763,10 +3773,10 @@ jincheng_yao_007 = { #藥永圖 Yao Yongtu. Nephew of Yao Jineng. (前礠州刺�
 	trait = education_martial_3
 	trait = education_martial_prowess_3
 	trait = brave
-	employer = 1412310
 	#birth and death dates unknown
 	841.1.1 = {
 		birth = yes
+		employer = 1412310
 	}
 	896.1.1 = { employer = 1406062 }
 	897.3.9 = { employer = 1407163 }

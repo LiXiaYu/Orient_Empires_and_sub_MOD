@@ -212,6 +212,10 @@
 	name = "dynn_Norfolk"
 	culture = "anglo_saxon"
 }
+106 = {
+	name = "dynn_Plantagenet"
+	culture = "norman"
+}
 109 = {
 	name = "dynn_Brusastad"
 	culture = "norwegian"
@@ -3390,7 +3394,7 @@ danebeaumont = {
 }
 20071 = {
 	name = "dynn_ProgonoviC_"
-	culture = "arberian"
+	culture = "serbian"
 }
 20072 = {
 	name = "dynn_Kamonas"
@@ -6556,10 +6560,10 @@ danebeaumont = {
 	name = "dynn_KosaC_a"
 	culture = "bosnian"
 }
-1062030 = {
-	name = "dynn_VukC_iC_2"
-	culture = "carantanian"
-}
+#1062030 = {
+#	name = "dynn_VukC_iC_2"
+#	culture = "bosnian"
+#}
 
 2001048 = {
 	name = "dynn_Kromsky"
@@ -6978,7 +6982,10 @@ danebeaumont = {
 	name = "dynn_PR_emyslid"
 	culture = "czech"
 }
-
+507 = {
+	name = "dynn_Bagrationi"
+	culture = "georgian"
+}
 510 = {
 	name = "dynn_Kamateros"
 	culture = "greek"
@@ -7719,6 +7726,11 @@ frauenfeld = {
 	culture = "swedish"
 	motto = dynn_Oltner_motto
 }
+874 = {
+	name = "dynn_Anward"
+	culture = "swedish"
+	motto = dynn_Anward_motto
+}
 885 = {
 	name = "dynn_Frary"
 	culture = "anglo_saxon"
@@ -8055,7 +8067,7 @@ frauenfeld = {
 	forced_coa_religiongroup = "muslim"
 }
 
-quraysh = {
+7297 = {
 	name = "dynn_quraysh"
 	culture = "bedouin"
 	forced_coa_religiongroup = "muslim"
@@ -9569,7 +9581,10 @@ quraysh = {
 	name = "dynn_Voiteh"
 	culture = "bulgarian"
 }
-
+25201 = {
+	name = "dynn_Kvirikian"
+	culture = "turkish"
+}
 25202 = {
 	name = "dynn_Hephaistos"
 	culture = "greek"
@@ -10505,6 +10520,10 @@ quraysh = {
 	name = "dynn_Tarchaneiotes"
 	culture = "greek"
 }
+101146 = {
+	name = "dynn_Tornikes"
+	culture = "greek"
+}
 101149 = {
 	name = "dynn_Tzamplakon"
 	culture = "greek"
@@ -10601,7 +10620,10 @@ quraysh = {
 	name = "dynn_Philokales"
 	culture = "greek"
 }
-
+101510 = {
+	name = "dynn_Taronites"
+	culture = "greek"
+}
 101515 = {
 	name = "dynn_Thrakesios"
 	culture = "greek"
@@ -12409,11 +12431,11 @@ quraysh = {
 }
 9603 = {
 	name = "dynn_SlavomI_rid"
-	culture = "carantanian"
+	culture = "bosnian"
 }
 9604 = {
 	name = "dynn_Draslavid"
-	culture = "carantanian"
+	culture = "bosnian"
 }
 1042070 = {
 	name = "dynn_Mihran"
@@ -15139,10 +15161,6 @@ quraysh = {
 1045074 = {
 	name = "dynn_Kashgar"
 	culture = "sogdian"
-}
-507 = {
-	name = "dynn_Bagrationi"
-	culture = "georgian"
 }
 1045076 = {
 	name = "dynn_Charkliq"
@@ -18119,7 +18137,7 @@ salimid = {
 	culture = "kashmiri" #Dardic
 }
 2003038 = {
-	name = "dynn_KhA_pula" #Khápula
+	name = "dynn_KhA_pula" #Khapula
 	culture = "kashmiri" #Dardic
 }
 2003039 = {
@@ -20038,6 +20056,31 @@ easteregg_dynasty_0065 = { #Fictitious
 	culture = prussian
 	motto = dynn_Cywinski_motto
 }
+
+easteregg_dynasty_0066 = { #Fictitious
+	name = "dynn_Kaltsogiannis"
+	culture = greek
+	motto = dynn_Kaltsogiannis_motto
+}
+
+easteregg_dynasty_0067 = { #Fictitious
+	name = "dynn_Springmountain"
+	culture = norse
+	motto = dynn_Springmountain_motto
+}
+
+easteregg_dynasty_0068 = { #Fictitious
+	name = "dynn_CederslA_tt"
+	culture = norse
+	motto = dynn_CederslA_tt_motto
+}
+
+easteregg_dynasty_0069 = { #Fictitious
+    name = "dynn_Borg"
+    culture = swedish
+    motto = dynn_Borg_motto
+}
+
 #1062023 = {		# Placeholder TODO_CD
 #	name = "Krems"
 #	culture = "franconian"
@@ -21465,12 +21508,11 @@ strange = {
 	culture = kirghiz
 
 }
-1000048028 =
-{
-	name = "Li"
-	culture = han
-	
-}
+#1000048028 ={
+#	name = "Li"
+#	culture = han
+#	
+#}
 1062550 = {
 	name = "Sripadarayid"
 	culture = kannada
@@ -21516,11 +21558,7 @@ strange = {
 	culture = "mongol"
 
 }
-1100024 = {
-	name = "Khöndlöngiin"
-	culture = mongol
 
-}
 1100025 = {
 	name = "Kharvaach"
 	culture = mongol
@@ -21545,20 +21583,13 @@ strange = {
 	culture = mongol
 	
 }
-1062519 = {
-	name = "Erevid"
-	culture = mongol
-	
-}
+
 1062520 = {
 	name = "Uriankhai"
 	culture = mongol
 	
 }
-7379 = {
-	name="Jochid"
-	culture = "mongol"
-}
+
 1062559 = {
 	name = "Udaysan"
 	culture = rajput
@@ -21644,7 +21675,7 @@ strange = {
 
 }
 100642 = {
-	name="Ustádh-Hormuzí"
+	name="Ustadh-Hormuzí"
 	culture = "persian"
 }
 1029011 = {
@@ -21675,8 +21706,7 @@ strange = {
 	culture="assyrian"
 
 }
-1063112=
-{
+1063112 = {
 	name="Varazhnuni"
 	culture="armenian"
 
@@ -21689,13 +21719,11 @@ strange = {
 	name="Dobrynich"
 	culture = "russian"
 }
-1045036=
-{
+1045036 = {
 	name="Buzhansky"
 	culture="volhynian"
 }
-1063569=
-{
+1063569 = {
 	name="Sursuvul"
 	culture="bulgarian"
 	
@@ -21704,8 +21732,7 @@ strange = {
 	name = "Ohrid"
 	culture = bulgarian
 }
-1063118=
-{
+1063118 = {
 	name="Visevic"
 	culture="serbian"
 	
@@ -21728,13 +21755,11 @@ strange = {
 	culture = malinke
 }
 
-19029=
-{
+19029 = {
 	name="Kacic"
 	culture="croatian"
 }
-1045032=
-{
+1045032= {
 	name="Drevl"
 	culture="severian"
 }
@@ -21766,12 +21791,10 @@ strange = {
 5071 = {
 	name="de Melun"
 	culture = "frankish"
-
 }
 1062435 = {
 	name = "Rashid"
 	culture = bedouin
-
 }
 805 = {
 	name="Siconulf" #de salerno ?
@@ -21782,8 +21805,7 @@ strange = {
 	name="Bajkam"
 	culture = "turkish"
 }
-1030009=
-{
+1030009={
 	name="Konare"
 	culture="malinke"
 }
@@ -21802,8 +21824,7 @@ strange = {
 
 720 = {
 	name="Agoult" #seigneurs de Sault
-	culture ="occitan"
-		
+	culture ="occitan"		
 }
 189 = {
 	name="Aineidas"
@@ -21813,14 +21834,12 @@ strange = {
 	name = "Platypodes"
 	culture = greek
 }
-1063119=
-{
+1063119={
 	name="Gongyles"
 	culture="greek"
 	
 }
-1063111=
-{
+1063111={
 	name="Rhabdouchos"
 	culture="greek"
 	
@@ -21835,7 +21854,7 @@ strange = {
 }
 # Nubian and Ethiopian
 
-1000101200= {
+1000101200 = {
 	name="Piye"
 	culture = nubian
 }
@@ -21921,87 +21940,87 @@ strange = {
 }
 1000101530 = {
 	name="dynn_Strmski"
-	culture = carantanian
+	culture = "bosnian"
 }
 1000101531 = {
 	name="dynn_Erbergi"
-	culture = carantanian
+	culture = "bosnian"
 }
 1000101532 = {
 	name="dynn_Visnjegorski"
-	culture = carantanian
+	culture = "bosnian"
 }
 1000101533 = {
 	name="dynn_Ortenburski"
-	culture = carantanian
+	culture = "bosnian"
 }
 1000101534 = {
 	name="dynn_Egkh"
-	culture = carantanian
+	culture = "bosnian"
 }
 1000101535 = {
 	name="dynn_Ljubljanski"
-	culture = carantanian
+	culture = "bosnian"
 }
 1000101536 = {
 	name="dynn_Kranjski"
-	culture = carantanian
+	culture = "bosnian"
 }
 1000101537 = {
 	name="dynn_Celjski"
-	culture = carantanian
+	culture = "bosnian"
 }
 1000101538 = {
 	name="dynn_Goriski"
-	culture = carantanian
+	culture = "bosnian"
 }
 1062175 = {
 	name = "dynn_Carantania"
-	culture = carantanian
+	culture = "bosnian"
 }
 1062176 = {
 	name = "dynn_Pribic"
-	culture = carantanian
+	culture = "bosnian"
 }
 1062177 = {
 	name = "dynn_Ivkovic"
-	culture = carantanian
+	culture = "bosnian"
 }
 1062178 = {
 	name = "dynn_Preradic"
-	culture = carantanian
+	culture = "bosnian"
 }
 1062179 = {
 	name = "dynn_Ivkovic"
-	culture = carantanian
+	culture = "bosnian"
 }
 1062180 = {
 	name = "dynn_Bojanic"
-	culture = carantanian
+	culture = "bosnian"
 }
 1062181 = {
 	name = "dynn_Rajkovic"
-	culture = carantanian
+	culture = "bosnian"
 }
 1062182 = {
 	name = "dynn_Milenic"
-	culture = carantanian
+	culture = "bosnian"
 }
 1062183 = {
 	name = "dynn_Bogoslavic"
-	culture = carantanian
+	culture = "bosnian"
 }
 1062274 = {
 	name = "dynn_Premizic"
-	culture = carantanian
+	culture = "bosnian"
 }
 1062275 = {
 	name = "dynn_Marizic"
-	culture = carantanian
+	culture = "bosnian"
 }
 1062030 = {
 	name = "dynn_Vukcic"
-	culture = "carantanian"
+	culture = "bosnian"
 }
 101830 = {
 	name="di Malaspina"
@@ -22019,11 +22038,11 @@ strange = {
 	name="de Medici"
 	culture ="italian"
 }
-106 = {
-	name = "dynn_Plantagenet"
-	culture = "english"
-	motto = dynn_Plantagenet_motto # Quoted from Richard I's nickname 
-}
+#106 = {
+#	name = "dynn_Plantagenet"
+#	culture = "english"
+#	motto = dynn_Plantagenet_motto # Quoted from Richard I's nickname 
+#}
 513 = {
 	name="Ordelaffi"
 	culture ="italian"
@@ -22379,7 +22398,7 @@ strange = {
 	culture = bedouin
 }
 1062487 = {
-	name = "al-Rá'iqí"
+	name = "al-Ra'iqí"
 	culture = khazar
 }
 1062411 = {
@@ -22412,11 +22431,11 @@ strange = {
 	culture = levantine
 }
 1062416 = {
-	name = "Al-Mádhará'í"
+	name = "Al-Madhara'í"
 	culture = levantine
 }
 1062421 = {
-	name = "al-Furátí"
+	name = "al-Furatí"
 	culture = levantine
 }
 1062430 = {
@@ -22428,7 +22447,7 @@ strange = {
 	culture = levantine
 }
 1062488 = {
-	name = "al-Makání"
+	name = "al-Makaní"
 	culture= turkish
 	
 }
@@ -22461,7 +22480,7 @@ strange = {
 
 }
 478 = {
-	name="Ásbirningar" #Vagnsdottir
+	name="asbirningar" #Vagnsdottir
 	culture ="norwegian"
 
 }
@@ -22527,66 +22546,59 @@ strange = {
 
 1000101410 = {
 	name="dynn_Kastrioti"
-	culture = arberian
+	culture = serbian
 }
 1000101411 = {
 	name="dynn_Jonima"
-	culture = arberian
+	culture = serbian
 }
 1000101412 = {
 	name="dynn_Blinishti"
-	culture = arberian
+	culture = serbian
 }
 1000101413 = {
 	name="dynn_Araniti"
-	culture = arberian
+	culture = serbian
 }
 1000101414 = {
 	name="dynn_Spani"
-	culture = arberian
+	culture = serbian
 }
 1000101415 = {
 	name="dynn_Zenevisi"
-	culture = arberian
+	culture = serbian
 }
 1000101416 = {
 	name="dynn_Gropa"
-	culture = arberian
+	culture = serbian
 }
 1059955={
 	name="dynn_Thopia"
-	culture="arberian"
-	
+	culture = "serbian"
 }
 1059954={
 	name="dynn_Muzaka"
-	culture="arberian"
-	
+	culture = "serbian"	
 }
 1059953={
 	name="Blenisti"
-	culture="arberian"
-	
+	culture = "serbian"
 }
 1059952={
 	name="dynn_Dukagjini"
-	culture="arberian"
-	
+	culture = "serbian"
 }
 1059949={
 	name="dynn_Zaccaria"
-	culture="arberian"
-	
+	culture = "serbian"
 }
 1059948={
 	name="dynn_Arianiti"
-	culture="arberian"
-	
+	culture = "serbian"
 }
 1059946={
 	name="dynn_Zanebisha"
-	culture="arberian"
-	
+	culture = "serbian"
 }
 15003 = {
 	name="dynn_Muzaka"
@@ -22600,124 +22612,124 @@ strange = {
 
 1000103830 = {
 	name="dynn_Fayyumi"
-	culture = egyptian_coptic
+	culture = egyptian
 }
 1000103831 = {
 	name="dynn_Dumyati"
-	culture = egyptian_coptic
+	culture = egyptian
 }
 1000103832 = {
 	name="dynn_Turayk"
-	culture = egyptian_coptic
+	culture = egyptian
 }
 1000103833 = {
 	name="dynn_Iskandari"
-	culture = egyptian_coptic
+	culture = egyptian
 }
 1000103834 = {
 	name="dynn_Fustati"
-	culture = egyptian_coptic
+	culture = egyptian
 }
 1000103835 = {
 	name="dynn_Aswani"
-	culture = egyptian_coptic
+	culture = egyptian
 }
 1000103836 = {
 	name="dynn_Asyuti"
-	culture = egyptian_coptic
+	culture = egyptian
 }
 1000103837 = {
 	name="dynn_Nasturusi"
-	culture = egyptian_coptic
+	culture = egyptian
 }
 1000103838 = {
 	name="dynn_Fahdi"
-	culture = egyptian_coptic
+	culture = egyptian
 }
 1000103839 = {
     name="dynn_Kazzazi"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 
 1059036 = {
 	name="dynn_Haroun" 
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059037 = {
 	name="dynn_Zaia"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059038 = {
 	name="dynn_Abderahman"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059039 = {
 	name="dynn_Merkourios"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059040 = {
 	name="dynn_Bayomi"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059041 = {
 	name="dynn_Quolta"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059042 = {
 	name="dynn_Babnouda"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059043 = {
 	name="dynn_Barsanouphios"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059044 = {
 	name="dynn_Apion"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059045 = {
 	name="dynn_Paphnoutios"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059046 = {
 	name="dynn_Shenouti"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059047 = {
 	name="dynn_Papnoute"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059048 = {
 	name="dynn_Shanouda"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059049 = {
 	name="dynn_Ruweis"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059050 = {
 	name="dynn_Amoun"
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 1059071 = {
 	name="dynn_Bashmur" 
-	culture = egyptian_coptic
+	culture = egyptian
 	
 }
 
@@ -22743,10 +22755,6 @@ blacksheep = {
 
 1061019 = {
 	name="Tiveri"
-	culture="volhynian"
-}
-1061020 = {
-	name ="Dniprich"
 	culture="volhynian"
 }
 1061021 = {
@@ -23000,22 +23008,27 @@ blacksheep = {
 }
 1062128 = {
 	name = "Prodanelli"
-	culture = dalmatian
+	#culture = dalmatian
+	culture = greek
 }
 1062085 = {
 	name = "Babalio"
-	culture = dalmatian
+	#culture = dalmatian
+	culture = greek
 }
 1062086 = {
 	name = "Benessa"
-	culture = dalmatian
+	#culture = dalmatian
+	culture = greek
 }
 1062087 = {
 	name = "Bucignolo"
-	culture = dalmatian
+	#culture = dalmatian
+	culture = greek
 }
 1062088 = {
 	name = "Bonda"
-	culture = dalmatian
+	#culture = dalmatian
+	culture = greek
 }
 #END ADDED

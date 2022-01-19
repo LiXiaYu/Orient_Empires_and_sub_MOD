@@ -44,6 +44,9 @@ innovation_viking_tradition = {
 			this = culture:swedish
 			this = culture:norwegian
 			this = culture:danish
+			
+			# Frankish
+			this = culture:norman
 		}
 	}
 
@@ -71,6 +74,9 @@ innovation_hird = {
 			this = culture:anglo_saxon
 			this = culture:old_saxon
 			this = culture:frisian
+			
+			# Frankish
+			this = culture:norman
 		}
 	}
 
@@ -353,6 +359,8 @@ innovation_compound_bows = {
 			this = culture:naiman
 			this = culture:kerait
 			this = culture:khitan
+			this = culture:qay
+			this = culture:evenk
 			this = culture:tuyuhun
 			this = culture:jurchen
 
@@ -693,26 +701,15 @@ innovation_repeating_crossbow = {
 	icon = @special_maa_02
 	
 	potential = {
-		this.culture_group = culture_group:chinese_group
+		OR = {
+			this.culture_group = culture_group:chinese_group
+			this.culture_group = culture_group:goryeo_group
+			this = culture:shatuo
+			this = culture:khitan
+		}
 	}
 	
 	unlock_maa = chu_ko_nu
-	
-	flag = global_maa
-}
-
-innovation_centralization_of_authority = {
-	group = culture_group_regional
-	culture_era = culture_era_tribal
-	icon = @majesty_01
-	
-	potential = {
-		this.culture_group = culture_group:chinese_group
-	}
-	
-	modifier = {
-		development_growth_factor = 0.1
-	}
 
 	unlock_law = high_partition_succession_law
 	unlock_law = single_heir_dynasty_house
@@ -722,9 +719,40 @@ innovation_centralization_of_authority = {
   	custom = unlock_tribal_economic_buildings
   	custom = unlock_tribal_military_buildings
 	custom = unlock_tribal_fortification_buildings
+	
+	flag = global_maa
+}
+
+innovation_centralization_of_authority = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	icon = @majesty_01
+	
+	potential = {
+		OR = {
+			this.culture_group = culture_group:chinese_group
+			this = culture:shatuo
+			this = culture:khitan
+		}
+	}
+	
+	modifier = {
+		development_growth_factor = 0.1
+	}
+
+	unlock_maa = china_centre_jj
+	unlock_maa = china_west_modao
+	unlock_maa = thunder
+
+	unlock_casus_belli = de_jure_cb
+	custom = multiple_claim_wars
+	custom = multiple_claim_wars_others
 	custom = unlock_early_medieval_economic_buildings
 	custom = unlock_early_medieval_military_buildings
 	custom = unlock_early_medieval_fortification_buildings
+	custom = unlock_high_medieval_economic_buildings
+	custom = unlock_high_medieval_military_buildings
+	custom = unlock_high_medieval_fortification_buildings
 	custom = unlocks_sailable_major_rivers
  	custom = unlock_march_contract
 	custom = unlock_scutage_contract
@@ -741,16 +769,22 @@ innovation_mongolic_group = {
 	icon = @special_maa_01
 	
 	potential = {
-		this.culture_group = culture_group:mongolic_group
+		OR = {
+			this.culture_group = culture_group:mongolic_group
+			this = culture:shatuo
+			this = culture:uyghur
+			this = culture:yughur
+		}
 	}
 	
 	modifier = {
 		heavy_cavalry_damage_mult = 0.1
 		light_cavalry_damage_mult = 0.1
 		skirmishers_damage_mult = 0.1
+		army_maintenance_mult = -0.5
 	}
-	
-	
+
+	unlock_maa = mangudai	
 	flag = global_maa
 }
 
@@ -767,8 +801,7 @@ innovation_goryeo_group = {
 		skirmishers_screen_mult = 0.1
 		skirmishers_toughness_mult = 0.1
 	}
-	
-	
+
 	flag = global_maa
 }
 
@@ -778,14 +811,17 @@ innovation_nanman_group = {
 	icon = @maa_02
 	
 	potential = {
-		this.culture_group = culture_group:nanman_group
+		OR = {
+			this.culture_group = culture_group:nanman_group
+			this.culture_group = culture_group:mon_group
+		}
 	}
 	
 	modifier = {
 		skirmishers_damage_mult = 0.1
 	}
 	
-	unlock_maa = war_elephant
+	unlock_maa = china_south_wd
 	
 	flag = global_maa
 }
@@ -793,16 +829,39 @@ innovation_nanman_group = {
 innovation_tunguse_group = {
 	group = culture_group_regional
 	culture_era = culture_era_tribal
-	icon = @maa_01
+	icon = @maa_02
 	
 	potential = {
-		this.culture_group = culture_group:tunguse_group
+		OR = {
+			this.culture_group = culture_group:tunguse_group
+			this.culture_group = culture_group:ainu_group
+			this.culture_group = culture_group:goryeo_group
+		}
 	}
 	
 	modifier = {
 		skirmishers_damage_mult = 0.2
 	}
-		
+	unlock_maa = asia_tunguse_ss
+
+	flag = global_maa
+}
+
+innovation_yamato_group = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	icon = @maa_01
+	
+	potential = {
+		this.culture_group = culture_group:yamato_group
+	}
+	
+	modifier = {
+		skirmishers_damage_mult = 0.2
+		levy_reinforcement_rate = 0.2
+	}
+	unlock_maa = samurai
+
 	flag = global_maa
 }
 
@@ -819,6 +878,32 @@ innovation_yues_group = {
 		levy_reinforcement_rate = 0.1
 	}
 	
+	unlock_maa = china_east_ms
+
 	flag = global_maa
 }
 
+innovation_java_group = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	icon = @maa_02
+	
+	potential = {
+		OR = {
+			this.culture_group = culture_group:java_group
+			this.culture_group = culture_group:chamic_group
+		}
+	}
+	
+	modifier = {
+		embarkation_cost_mult = -0.90
+		levy_reinforcement_rate = 0.1
+		naval_movement_speed_mult = 0.25
+	}
+	
+	unlock_maa = java_warrior
+	custom = unlocks_naval_raiding
+	custom = unlocks_sailable_major_rivers
+
+	flag = global_maa
+}

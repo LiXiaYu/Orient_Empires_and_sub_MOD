@@ -1,12 +1,13 @@
 ﻿k_silla = { #新罗/新羅
 	867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 	1066.1.1 = { change_development_level = 18 }
 	846.1.1 = {
 		government = feudal_government
 	}
 	
 	#Gyeongju Bak
-	1.1.1 = { holder = 1900004 } #Hyeokgeose
+	1.1.1 = { holder = gyeongju_bak_001 } #Hyeokgeose
 	4.1.1 = { holder = 1900005 } #Namhae
 	24.1.1 = { holder = 1900010 } #Yuri
 	#Gyeongju Seok
@@ -70,22 +71,31 @@
 	924.9.2 = { holder = 1900059 } #Gyeong'ae
 	#Gyeongju Gim
 	927.10.29 = { holder = 1900372 } #Gyeongsun
-	935.12.1 = { holder = 0 }
+	#935.12.1 = { holder = 0 }
+}
+
+d_majin= { #摩震/泰封
+	901.1.1 = { holder = 1900549 name = "Goryeo" } #Gung Ye
+	#Majin
+	904.1.1 = { name = "Majin" }
+	#Taebong
+	911.1.1 = { name = "Taebong" }
 }
 
 k_goryeo = { #高丽/高麗/後高句麗/摩震/泰封
 	867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 	1066.1.1 = { change_development_level = 18 }
 	846.1.1 = {
 		government = feudal_government
 	}
 	
 	#Goryeo
-	901.1.1 = { holder = 1900549 name = "Goryeo" } #Gung Ye
+	#901.1.1 = { holder = 1900549 name = "Goryeo" } #Gung Ye
 	#Majin
-	904.1.1 = { name = "Majin" }
+	#904.1.1 = { name = "Majin" }
 	#Taebong
-	911.1.1 = { name = "Taebong" }
+	#911.1.1 = { name = "Taebong" }
 	#Goryeo
 	918.7.24 = { holder = 1900573 name = "Goryeo" } #Taejo, Wang Geon
 	943.7.4 = { holder = 1900580 } #Hyejong, Wang Mu
@@ -125,14 +135,15 @@ k_goryeo = { #高丽/高麗/後高句麗/摩震/泰封
 	1374.10.27 = { holder = 1900921 } #Wang U
 	1388.12.29 = { holder = 1900922 } #Wang Chang
 	1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-	1392.7.13 = { holder = 0 } #I Seonggye
-	1392.8.5 = { holder = 0 }
+	#1392.7.13 = { holder = 0 } #I Seonggye
+	#1392.8.5 = { holder = 0 }
 	
 }
 
 
 d_dongya = {  #东濊/江原道
 	867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 	1066.1.1 = { change_development_level = 18 }
 	676.1.1 = {
 		liege = k_silla	
@@ -144,19 +155,17 @@ d_dongya = {  #东濊/江原道
 	
 	c_hexizhou = {  #何瑟罗州/河西/溟州/悉直
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		#Silla
 		861.3.15 = { holder = 1900361 liege = k_silla } #Gyeongmun
 		875.8.12 = { holder = 1900363 } #Heongang
 		886.8.8 = { holder = 1900364 } #Jeonggang
 		887.7.28 = { holder = 1900365 } #Jinseong
-		897.12.31 = { holder = 1900366 } #Hyogong
-		912.4.20 = { holder = 1900051 } #Sindeok
-		917.7.22 = { holder = 1900058 } #Gyeongmyeong
-		924.9.2 = { holder = 1900059 } #Gyeong'ae
-		927.10.29 = { holder = 1900372 } #Gyeongsun
+		#Taebong
+		891.1.1 = { holder = 1900549 liege = 0 } #Gung Ye
 		#Goryeo
-		935.12.1 = { holder = 1900573 liege = k_goryeo } #Taejo, Wang Geon
+		918.7.24 = { holder = 1900573 liege = k_goryeo } #Taejo, Wang Geon
 		943.7.4 = { holder = 1900580 } #Hyejong, Wang Mu
 		945.10.23 = { holder = 1900587 } #Jeongjong, Wang Yo
 		949.4.13 = { holder = 1900590 } #Gwangjong, Wang So
@@ -194,11 +203,12 @@ d_dongya = {  #东濊/江原道
 		1374.10.27 = { holder = 1900921 } #Wang U
 		1388.12.29 = { holder = 1900922 } #Wang Chang
 		1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-		1392.7.13 = { holder = 0 } #I Seonggye
-		1392.8.5 = { holder = 0 }
+		#1392.7.13 = { holder = 0 } #I Seonggye
+		#1392.8.5 = { holder = 0 }
 	}
 	c_shouruozhou = { #首若州/朔州/比列忽州
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		#Silla
 		861.3.15 = { holder = 1900361 liege = k_silla } #Gyeongmun
@@ -207,9 +217,8 @@ d_dongya = {  #东濊/江原道
 		887.7.28 = { holder = 1900365 } #Jinseong
 		#Taebong
 		895.8.24 = { holder = 1900549 liege = 0 } #Gung Ye
-		901.1.1 = { liege = k_goryeo }
 		#Goryeo
-		918.7.24 = { holder = 1900573 } #Taejo, Wang Geon
+		918.7.24 = { holder = 1900573 liege = k_goryeo } #Taejo, Wang Geon
 		943.7.4 = { holder = 1900580 } #Hyejong, Wang Mu
 		945.10.23 = { holder = 1900587 } #Jeongjong, Wang Yo
 		949.4.13 = { holder = 1900590 } #Gwangjong, Wang So
@@ -247,13 +256,14 @@ d_dongya = {  #东濊/江原道
 		1374.10.27 = { holder = 1900921 } #Wang U
 		1388.12.29 = { holder = 1900922 } #Wang Chang
 		1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-		1392.7.13 = { holder = 0 } #I Seonggye
-		1392.8.5 = { holder = 0 }
+		#1392.7.13 = { holder = 0 } #I Seonggye
+		#1392.8.5 = { holder = 0 }
 
 	}
 
 d_goguryeo = {  #高句丽
 	867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 	1066.1.1 = { change_development_level = 18 }
 	676.1.1 = {
 		liege = k_silla
@@ -266,6 +276,7 @@ d_goguryeo = {  #高句丽
 	
 	c_hanju = {  #汉山州/汉州/京畿道
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		
 		#Silla
@@ -275,7 +286,7 @@ d_goguryeo = {  #高句丽
 		887.7.28 = { holder = 1900365 } #Jinseong
 		890.1.1 = { holder = 1900572 } #Wang Ryung - Sachan until 896
 		#Tabeong
-		896.1.1 = { holder = 1900573 liege = 0 } #Wang Geon - made Seongju
+		896.1.1 = { holder = 1900573 liege = d_majin } #Wang Geon - made Seongju
 		#Goryeo
 		935.12.1 = { holder = 1900573 liege = k_goryeo } #Taejo, Wang Geon
 		943.7.4 = { holder = 1900580 } #Hyejong, Wang Mu
@@ -315,22 +326,21 @@ d_goguryeo = {  #高句丽
 		1374.10.27 = { holder = 1900921 } #Wang U
 		1388.12.29 = { holder = 1900922 } #Wang Chang
 		1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-		1392.7.13 = { holder = 0 } #I Seonggye
-		1392.8.5 = { holder = 0 }
+		#1392.7.13 = { holder = 0 } #I Seonggye
+		#1392.8.5 = { holder = 0 }
 	}
 	c_hwanghae = { #黄海道
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		#Silla
 		861.3.15 = { holder = 1900361 liege = k_silla } #Gyeongmun
 		875.8.12 = { holder = 1900363 } #Heongang
 		886.8.8 = { holder = 1900364 } #Jeonggang
 		887.7.28 = { holder = 1900365 } #Jinseong
-		897.12.31 = { holder = 1900366 } #Hyogong
-		912.4.20 = { holder = 1900051 } #Sindeok
-		917.7.22 = { holder = 1900058 } #Gyeongmyeong
-		924.9.2 = { holder = 1900059 } #Gyeong'ae
-		927.10.29 = { holder = 1900372 } #Gyeongsun
+		890.1.1 = { holder = 1900572 } #Wang Ryung - Sachan until 896
+		#Tabeong
+		896.1.1 = { holder = 1900573 liege = d_majin } #Wang Geon - made Seongju
 		#Goryeo
 		935.12.1 = { holder = 1900573 liege = k_goryeo } #Taejo, Wang Geon
 		943.7.4 = { holder = 1900580 } #Hyejong, Wang Mu
@@ -370,24 +380,24 @@ d_goguryeo = {  #高句丽
 		1374.10.27 = { holder = 1900921 } #Wang U
 		1388.12.29 = { holder = 1900922 } #Wang Chang
 		1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-		1392.7.13 = { holder = 0 } #I Seonggye
-		1392.8.5 = { holder = 0 }
+		#1392.7.13 = { holder = 0 } #I Seonggye
+		#1392.8.5 = { holder = 0 }
 	}
 
 
 d_baekje = {  #百济
 	867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 	1066.1.1 = { change_development_level = 18 }
 	676.1.1 = {
 		liege = k_silla	
 	}
-	900.1.1 = {	
-		liege = k_goryeo
-	}
+	892.1.1 = { holder = 1900555 liege = 0 }
 }
 
 	c_xiongshanzhou = { #熊川州/所夫里 高麗公州
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		#Silla
 		861.3.15 = { holder = 1900361 liege = k_silla } #Gyeongmun
@@ -398,7 +408,7 @@ d_baekje = {  #百济
 		912.4.20 = { holder = 1900051 } #Sindeok
 		917.7.22 = { holder = 1900058 } #Gyeongmyeong
 		#Baekje
-		918.1.1 = { holder = 1900555 liege = k_baekje } #Gyeon Hwon
+		918.1.1 = { holder = 1900555 liege = d_baekje } #Gyeon Hwon
 		935.4.6 = { holder = 1900561 } #Gyeon Singeom
 		#Goryeo
 		934.10.11 = { holder = 1900573 liege = k_goryeo } #Taejo, Wang Geon - conquered by Goryeo
@@ -439,11 +449,12 @@ d_baekje = {  #百济
 		1374.10.27 = { holder = 1900921 } #Wang U
 		1388.12.29 = { holder = 1900922 } #Wang Chang
 		1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-		1392.7.13 = { holder = 0 } #I Seonggye
-		1392.8.5 = { holder = 0 }
+		#1392.7.13 = { holder = 0 } #I Seonggye
+		#1392.8.5 = { holder = 0 }
 	}
 	c_wanshanzhou = { #完山州/全州
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		#Silla
 		861.3.15 = { holder = 1900361 liege = k_silla } #Gyeongmun
@@ -451,7 +462,7 @@ d_baekje = {  #百济
 		886.8.8 = { holder = 1900364 } #Jeonggang
 		887.7.28 = { holder = 1900365 } #Jinseong
 		#Baekje
-		892.1.1 = { holder = 1900555 liege = k_baekje } #Gyeon Hwon
+		892.1.1 = { holder = 1900555 liege = d_baekje } #Gyeon Hwon
 		935.4.6 = { holder = 1900561 } #Gyeon Singeom
 		#Goryeo
 		936.9.26 = { holder = 1900573 liege = k_goryeo } #Taejo, Wang Geon
@@ -492,11 +503,12 @@ d_baekje = {  #百济
 		1374.10.27 = { holder = 1900921 } #Wang U
 		1388.12.29 = { holder = 1900922 } #Wang Chang
 		1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-		1392.7.13 = { holder = 0 } #I Seonggye
-		1392.8.5 = { holder = 0 }
+		#1392.7.13 = { holder = 0 } #I Seonggye
+		#1392.8.5 = { holder = 0 }
 	}			
 	c_faluozhou = { #武珍州/发罗, 高麗光州
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		#Silla
 		861.3.15 = { holder = 1900361 liege = k_silla } #Gyeongmun
@@ -504,7 +516,7 @@ d_baekje = {  #百济
 		886.8.8 = { holder = 1900364 } #Jeonggang
 		887.7.28 = { holder = 1900365 } #Jinseong
 		#Baekje
-		892.1.1 = { holder = 1900591 liege = k_baekje } #Ji Hwon - lord around 907
+		892.1.1 = { holder = 1900591 liege = d_baekje } #Ji Hwon - lord around 907
 		920.1.1 = { holder = 1900563 } #Gyeon Ryonggeom - lord until 936.9.26
 		#Goryeo
 		936.9.26 = { holder = 1900573 liege = k_goryeo } #Taejo, Wang Geon
@@ -545,11 +557,12 @@ d_baekje = {  #百济
 		1374.10.27 = { holder = 1900921 } #Wang U
 		1388.12.29 = { holder = 1900922 } #Wang Chang
 		1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-		1392.7.13 = { holder = 0 } #I Seonggye
-		1392.8.5 = { holder = 0 }
+		#1392.7.13 = { holder = 0 } #I Seonggye
+		#1392.8.5 = { holder = 0 }
 	}
 	c_danluo = {  #耽罗, 高麗濟州
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		867.1.1 = { 
 			de_jure_liege = 0 
@@ -558,6 +571,7 @@ d_baekje = {  #百济
 
 d_sila = { #新罗/庆尚道
 	867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 	1066.1.1 = { change_development_level = 18 }
 	
 	#Silla
@@ -609,13 +623,14 @@ d_sila = { #新罗/庆尚道
 	1374.10.27 = { holder = 1900921 } #Wang U
 	1388.12.29 = { holder = 1900922 } #Wang Chang
 	1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-	1392.7.13 = { holder = 0 } #I Seonggye
-	1392.8.5 = { holder = 0 }
+	#1392.7.13 = { holder = 0 } #I Seonggye
+	#1392.8.5 = { holder = 0 }
 }
 
 	
 	c_shaliangzhou = { #京州
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		#Silla
 		861.3.15 = { holder = 1900361 liege = k_silla } #Gyeongmun
@@ -666,11 +681,12 @@ d_sila = { #新罗/庆尚道
 		1374.10.27 = { holder = 1900921 } #Wang U
 		1388.12.29 = { holder = 1900922 } #Wang Chang
 		1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-		1392.7.13 = { holder = 0 } #I Seonggye
-		1392.8.5 = { holder = 0 }		
+		#1392.7.13 = { holder = 0 } #I Seonggye
+		#1392.8.5 = { holder = 0 }		
 	}
 	c_dalseong = { #达伐
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		#Silla
 		861.3.15 = { holder = 1900361 liege = k_silla } #Gyeongmun
@@ -721,11 +737,12 @@ d_sila = { #新罗/庆尚道
 		1374.10.27 = { holder = 1900921 } #Wang U
 		1388.12.29 = { holder = 1900922 } #Wang Chang
 		1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-		1392.7.13 = { holder = 0 } #I Seonggye
-		1392.8.5 = { holder = 0 }		
+		#1392.7.13 = { holder = 0 } #I Seonggye
+		#1392.8.5 = { holder = 0 }		
 	}
 	c_shangfazhou = {   #沙伐州/尚州
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		#Silla
 		861.3.15 = { holder = 1900361 liege = k_silla } #Gyeongmun
@@ -776,12 +793,13 @@ d_sila = { #新罗/庆尚道
 		1374.10.27 = { holder = 1900921 } #Wang U
 		1388.12.29 = { holder = 1900922 } #Wang Chang
 		1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-		1392.7.13 = { holder = 0 } #I Seonggye
-		1392.8.5 = { holder = 0 }		
+		#1392.7.13 = { holder = 0 } #I Seonggye
+		#1392.8.5 = { holder = 0 }		
 	}
 
 d_gaya = {   #迦倻
 	867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 	1066.1.1 = { change_development_level = 18 }
 	676.1.1 = {
 		liege = k_silla
@@ -793,10 +811,11 @@ d_gaya = {   #迦倻
 	
 	c_gayaa = {   #迦倻
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		#Silla
 		825.1.1 = { holder = 1900321 } #Gim Heun - Zongguan around this time
-		830.1.1 = { holder = 0 }
+		#830.1.1 = { holder = 0 }
 		861.3.15 = { holder = 1900361 liege = k_silla } #Gyeongmun
 		875.8.12 = { holder = 1900363 } #Heongang
 		886.8.8 = { holder = 1900364 } #Jeonggang
@@ -807,7 +826,7 @@ d_gaya = {   #迦倻
 		924.9.2 = { holder = 1900059 } #Gyeong'ae
 		927.10.29 = { holder = 1900372 } #Gyeongsun
 		#Baekje
-		928.5.25 = { holder = 1900562 liege = k_baekje } #Gyeon Ryanggeom - lord until 936.9.26
+		928.5.25 = { holder = 1900562 liege = d_baekje } #Gyeon Ryanggeom - lord until 936.9.26
 		#Goryeo
 		936.9.26 = { holder = 1900573 liege = k_goryeo } #Taejo, Wang Geon
 		943.7.4 = { holder = 1900580 } #Hyejong, Wang Mu
@@ -849,16 +868,17 @@ d_gaya = {   #迦倻
 		1374.10.27 = { holder = 1900921 } #Wang U
 		1388.12.29 = { holder = 1900922 } #Wang Chang
 		1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-		1392.7.13 = { holder = 0 } #I Seonggye
-		1392.8.5 = { holder = 0 }	
+		#1392.7.13 = { holder = 0 } #I Seonggye
+		#1392.8.5 = { holder = 0 }	
 	}
 	c_juliezhou = {  #居烈州/菁州/康州
 		867.1.1 = { change_development_level = 12 }
+936.1.1 = { change_development_level = 16 }
 		1066.1.1 = { change_development_level = 18 }
 		
 		#Silla
 		825.1.1 = { holder = 1900321 } #Gim Heun - Zongguan around this time
-		830.1.1 = { holder = 0 }
+		#830.1.1 = { holder = 0 }
 		861.3.15 = { holder = 1900361 liege = k_silla } #Gyeongmun
 		875.8.12 = { holder = 1900363 } #Heongang
 		886.8.8 = { holder = 1900364 } #Jeonggang
@@ -869,7 +889,7 @@ d_gaya = {   #迦倻
 		924.9.2 = { holder = 1900059 } #Gyeong'ae
 		927.10.29 = { holder = 1900372 } #Gyeongsun
 		#Baekje
-		928.5.25 = { holder = 1900562 liege = k_baekje } #Gyeon Ryanggeom - lord until 936.9.26
+		928.5.25 = { holder = 1900562 liege = d_baekje } #Gyeon Ryanggeom - lord until 936.9.26
 		#Goryeo
 		936.9.26 = { holder = 1900573 liege = k_goryeo } #Taejo, Wang Geon
 		943.7.4 = { holder = 1900580 } #Hyejong, Wang Mu
@@ -911,6 +931,6 @@ d_gaya = {   #迦倻
 		1374.10.27 = { holder = 1900921 } #Wang U
 		1388.12.29 = { holder = 1900922 } #Wang Chang
 		1389.12.2 = { holder = 1900804 } #Gongyang, Wang Yo
-		1392.7.13 = { holder = 0 } #I Seonggye
-		1392.8.5 = { holder = 0 }	
+		#1392.7.13 = { holder = 0 } #I Seonggye
+		#1392.8.5 = { holder = 0 }	
 }

@@ -585,7 +585,7 @@
 	culture = qay
 	father = 1410642 #Unknown but possible
 	#Birth and death dates unknown
-	1030.1.1 = {
+	1020.1.1 = {
 		birth = yes
 	}
 	1080.1.1 = {
@@ -599,7 +599,7 @@
 	culture = qay
 	father = 1410644 #Unknown but possible
 	#Birth and death dates unknown
-	1033.1.1 = {
+	1043.1.1 = {
 		birth = yes
 	}
 	1086.1.1 = {
@@ -613,7 +613,7 @@
 	culture = qay
 	father = 1410644 #Unknown but possible
 	#Birth and death dates unknown
-	1033.1.1 = {
+	1046.1.1 = {
 		birth = yes
 	}
 	1086.1.1 = {
@@ -627,7 +627,7 @@
 	culture = qay
 	father = 1410644 #Unknown but possible
 	#Birth and death dates unknown
-	1036.1.1 = {
+	1049.1.1 = {
 		birth = yes
 	}
 	1106.12.4 = {
@@ -726,7 +726,7 @@
 }
 1410654 = { #蕭福延 Xiao Fuyan. 5th generation descendant of Heluen. 彰聖節度使 in 1055.1.26. (續資治通鑑長編/卷177) 懐徳軍節度使 until 1058.2.27, on that day his grandmother died and he retired. (續資治通鑑長編/卷187)
 	dynasty = 1000049160 #Derar
-	name = "Fuyan_name2" 
+	name = "Fuyan_name3" 
 	religion = tengri_pagan
 	culture = qay
 	father = 1410662
@@ -873,7 +873,7 @@
 	name = "Yenin_name" 
 	religion = tengri_pagan
 	culture = qay
-	father = 1410683
+	father = 1410663
 	#Birth and death dates unknown
 	993.1.1 = {
 		birth = yes

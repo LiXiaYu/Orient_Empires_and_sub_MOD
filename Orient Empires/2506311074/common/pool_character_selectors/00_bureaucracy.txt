@@ -1,12 +1,12 @@
-﻿pool_bureaucracy_succession = {
+﻿pool_bureaucrat = {
 	valid_character = {
 		is_capable_adult = yes
-		
+		is_imprisoned = no
 		OR = {
 			has_culture = culture:han
 			AND = {
-				exists = scope:base.primary_title.title_province.culture
-				culture = scope:base.primary_title.title_province.culture
+				#exists = scope:base.primary_title.capital_province.culture
+				culture = scope:base.primary_title.capital_province.culture
 			}
 
 		}
@@ -26,11 +26,11 @@
 
 		OR = {
 			is_lowborn = yes
+			is_courtier_of = scope:base
 			AND = {
 				exists = dynasty
 				exists = scope:base.dynasty
-				dynasty = scope:base.dynasty
-				is_courtier_of = scope:base
+				dynasty = scope:base.dynasty				
 			}
 			AND = {
 				exists = dynasty
@@ -42,9 +42,6 @@
 			}
 		}
 		has_trait = BureaucracyEmpire_lifestyle_bureaucrat
-		is_claimant = no
-		is_imprisoned = no
-		is_betrothed = yes
 	}
 	
 	character_score = {
@@ -97,11 +94,11 @@
 	
 	
 	config = {
-		background = clergy
+		background = bureaucrat
 		age = { 20 80 }
 	}
 	
-	selection_count = 15
+	selection_count = 5
 	
 	pool = faith
 	court = yes

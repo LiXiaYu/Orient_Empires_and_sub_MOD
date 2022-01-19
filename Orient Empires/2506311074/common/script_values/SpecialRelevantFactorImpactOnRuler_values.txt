@@ -1,0 +1,19 @@
+﻿############################## SpecialRelevantFactorImpactOnRuler_values
+# by 往来天地间 WangLaiTianDiJian
+# SpecialRelevantFactorImpactOnRuler
+
+#WLTDJ20220109
+
+
+
+SpecialRelevantFactorImpactOnRuler_learning_culture_progress_value = {
+	value = 0
+	if = {
+		limit = { culture = { exists = var:WLTDJ_learning_culture_progress } }
+		add = culture.var:WLTDJ_learning_culture_progress
+	}
+}
+
+
+SpecialRelevantFactorImpactOnRuler_tribute_interval_year = 3 #朝贡要钱事件间隔
+

@@ -2,8 +2,7 @@ k_kabulistan = {
 	867.1.1 = {	change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
 
-	
-999.6.1 = {
+	999.6.1 = {
 	
 		effect = {
 			set_capital_county = title:c_ghazna
@@ -37,8 +36,7 @@ k_kabulistan = {
 }
 1118.1.1 = { holder = 144137 # Bahram Shah
 
-		#liege = e_persia #Would be a tributary
-		de_jure_liege = e_none				
+		#liege = e_persia #Would be a tributary		
 		
 }
 1152.1.1 = { holder = 144138 # Khusraw Shah

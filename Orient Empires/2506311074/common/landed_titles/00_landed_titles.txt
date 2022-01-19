@@ -174,6 +174,8 @@ d_sunni = {
 	always_follows_primary_heir = yes
 	destroy_if_invalid_heir = yes
 	can_be_named_after_dynasty = no
+	capital = c_baghdad
+
 }
 
 d_shiite = {
@@ -358,6 +360,25 @@ e_mongol_empire = {
 	}
 
 	capital = c_karakorum
+
+	cultural_names = {
+		han = k_xia_east
+		uyghur = cn_great_uyghur
+		yughur = cn_great_uyghur
+		khitan = cn_great_khitan
+		qay = cn_yan
+		jurchen = cn_jin
+		siber = cn_siber
+		balhae = cn_jin
+		heishui = cn_qing
+		hexi = k_xia
+		shatuo = cn_tang
+		sogdian = cn_jinn
+		hebei = cn_yan
+		tuyuhun = cn_yan
+		tangut = cn_xia
+		goguryeo = cn_goguryeo
+	}
 }
 
 e_kara_khitai = { #aka Western Liao / Great Liao
@@ -954,7 +975,7 @@ k_upper_lorraine = { # Oberlothringen
 	
 	}
 		
-k_geats = { # Gautaríki
+k_geats = { # Gautariki
 	color = { 208 191 99 }
 	capital = c_ostergotland # Östergötland # Ostrogothia
 
@@ -968,23 +989,6 @@ k_duklja = { # Duklja
 k_kerman = { # Kermán
 	color = { 205 70 255 }
 	capital = c_kirman # Kermán # Kerman
-}
-
-k_tsongkha = {
-		color = { 50 60 105 }
-		color2 = { 255 255 255 }
-		
-		capital = c_shanzhou
-		
-}
-
-k_liao = {
-	color = { 33 202 156 }
-	color2= { 255 255 255 }
-		can_be_named_after_dynasty = no
-		capital = c_karakorum
-		
-	
 }
 		
 		
@@ -1215,7 +1219,7 @@ d_vanand = { # Vanand
 
 d_meshketi = { # Meskheti
 	color = { 99 152 44 }
-	capital = c_samtskhe # Samtskhe # Meskheti
+	#capital = c_samtskhe # Samtskhe # Meskheti
 }
 
 d_eretnid = { # Eretna
@@ -1238,12 +1242,12 @@ d_saruhan = { # Saruhan
 
 d_aydin = { # Aydin
 	color = { 238 43 172 }
-	capital = c_ionia # Ionía # Ephesos # Tralleis
+	capital = c_ionia # Ionia # Ephesos # Tralleis
 }
 
 d_hamid = { # Hamid
 	color = { 144 66 189 }
-	capital = c_pisidia # Pisidía # Sozopolis
+	capital = c_pisidia # Pisidia # Sozopolis
 
 }
 
@@ -1306,7 +1310,7 @@ d_vitebsk = { # Vitebsk
 d_karasi = { # Qarasi
 	color = { 88 144 77 }
 	
-	capital = c_mysia # Mysía # Akhyraous
+	capital = c_mysia # Mysia # Akhyraous
 
 }
 
@@ -1633,7 +1637,7 @@ d_sala = { # Sala
 d_barghawata = { # Tamasna # Sala
 	color = { 35 160 62 }
 	color2 = { 255 255 255 }
-	capital = c_asfi # Asfí # Asfî
+	capital = c_asfi # Asfi # Asfî
 	de_jure_drift_disabled = yes
 }
 
@@ -1686,7 +1690,7 @@ d_zughba = { # Banu Zughba
 
 d_lawata = { # Lawata
 	color = { 122 53 19 }
-	capital = c_awjila # Awjíla
+	capital = c_awjila # Awjila
 	de_jure_drift_disabled = yes
 
 }
@@ -35382,6 +35386,10 @@ e_tartaria = {
 					
 					color = { 105 20 20 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_rehai
+					}
 				}
 				b_kegen = {
 					province = 7167
@@ -35428,6 +35436,10 @@ e_tartaria = {
 					
 					color = { 115 15 30 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_chuimuonian
+					}
 				}
 				b_kurdai = {
 					province = 7161
@@ -35546,6 +35558,10 @@ e_tartaria = {
 					
 					color = { 90 40 15 }
 					color2= { 255 255 255 }
+										
+					cultural_names = {
+						han = cn_zhaofeng
+					}
 				}
 			}
 			c_guzkol = {
@@ -35612,6 +35628,10 @@ e_tartaria = {
 				color = { 125 80 35 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					han = cn_yinshanzhou
+				}
+				
 				b_emil = {
 					province = 7187
 					
@@ -35641,6 +35661,11 @@ e_tartaria = {
 				color = { 90 70 25 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					khitan = cn_boluo
+					mongol = cn_boluo
+				}
+				
 				b_jinsko = {
 					province = 7197
 					
@@ -35658,6 +35683,10 @@ e_tartaria = {
 					
 					color = { 90 70 25 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_xilin
+					}
 				}
 				b_dahyansi = {
 					province = 7196
@@ -35707,17 +35736,32 @@ e_tartaria = {
 				color = { 60 20 20 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					mongol = cn_ili_mongol
+					khitan = cn_ili_khitan
+				}
+				
 				b_iliq = {
 					province = 7199
 					
 					color = { 60 20 20 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_ili_mongol
+						khitan = cn_ili_khitan
+					}
 				}
 				b_almaliq = {
 					province = 1425
 					
 					color = { 60 20 20 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_almaliq
+						khitan = cn_almaliq
+					}
 				}
 				b_junzi = {
 					province = 7200
@@ -35753,11 +35797,19 @@ e_tartaria = {
 				color = { 75 35 10 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					han = cn_yuhe
+				}
+				
 				b_ghulja = {
 					province = 7202
 					
 					color = { 75 35 10 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_yuhe
+					}
 				}
 				b_iren-chabirga = {
 					province = 7205
@@ -37279,8 +37331,13 @@ e_tartaria = {
 		
 		cultural_names = {
 			uyghur = cn_great_uyghur
-                                                yughur = cn_great_uyghur
+            yughur = cn_great_uyghur
 			han = cn_beiting
+			naiman = d_naiman
+			kerait = d_khereid
+			mongol = d_tatars
+			oirat = d_oirat
+			tuyuhun = cn_tuyuhun
 		}
 		
 		d_kara_khoja = {
@@ -37292,6 +37349,7 @@ e_tartaria = {
 			cultural_names = {
 				uyghur = cn_qocho
 				han = cn_gaochan
+				mongol = cn_kara_khoja
 			}
 			
 			c_kara_khoja = {
@@ -37300,7 +37358,10 @@ e_tartaria = {
 				
 				cultural_names = {
 					uyghur = cn_qocho
-					han = cn_gaochan
+					#han = cn_gaochan
+					han = cn_xizhou
+					khitan = cn_hezhou
+					mongol = cn_kara_khoja
 				}
 				
 				b_kara_khoja = {
@@ -37310,8 +37371,10 @@ e_tartaria = {
 					color2= { 255 255 255 }
 					
 					cultural_names = {
-						uyghur = cn_qocho
+						#uyghur = cn_qocho
+						uyghur = cn_qocho_b
 						han = cn_gaochan
+						mongol = cn_kara_khoja
 					}
 				}
 				b_yarkhoto = {
@@ -37331,7 +37394,8 @@ e_tartaria = {
 					color2= { 255 255 255 }
 					
 					cultural_names = {
-						han = cn_tulufan
+						#han = cn_tulufan
+						mongol = cn_turpan
 					}
 				}
 				b_yidu = {
@@ -37346,8 +37410,16 @@ e_tartaria = {
 				color2= { 255 255 255 }
 				
 				cultural_names = {
-					mongol = cn_urumqi
-					han = cn_yizhou
+					mongol = cn_beshbalik
+					khitan = cn_beshbalik_khitan
+					uyghur = cn_futu
+					karluk = cn_futu
+					turkish = cn_futu
+					kirghiz = cn_futu
+					yughur = cn_futu
+					shatuo = cn_futu
+					ongud = cn_futu
+					han = cn_tingzhou
 				}
 				
 				b_beshbalik = {
@@ -37357,8 +37429,8 @@ e_tartaria = {
 					color2= { 255 255 255 }
 					
 					cultural_names = {
-						mongol = cn_urumqi
-						han = cn_beiting
+						#mongol = cn_beshbalik
+						han = cn_jingsai
 					}
 				}
 				b_fukang = {
@@ -37384,7 +37456,16 @@ e_tartaria = {
 					color2= { 255 255 255 }
 					
 					cultural_names = {
-						han = cn_yulishi
+						#han = cn_yulishi
+						han = cn_houting
+						mongol = cn_beshbalik
+						khitan = cn_beshbalik_khitan
+						uyghur = cn_futu
+						karluk = cn_futu
+						kirghiz = cn_futu
+						yughur = cn_futu
+						shatuo = cn_futu
+						ongud = cn_futu
 					}
 				}
 				b_beilu = {
@@ -37405,7 +37486,16 @@ e_tartaria = {
 				color2= { 255 255 255 }
 				
 				cultural_names = {
-					han = cn_changji
+					han = cn_xihai
+					mongol = cn_yangjibaliq
+					khitan = cn_changbala
+					uyghur = cn_zhangbali
+					karluk = cn_zhangbali
+					turkish = cn_zhangbali
+					kirghiz = cn_zhangbali
+					yughur = cn_zhangbali
+					shatuo = cn_zhangbali
+					ongud = cn_zhangbali
 				}
 				
 				b_yangjibalik = {
@@ -37416,6 +37506,15 @@ e_tartaria = {
 					
 					cultural_names = {
 						han = cn_changji
+						mongol = cn_yangjibaliq
+						khitan = cn_yangjibaliq
+						uyghur = cn_yangjibaliq
+						karluk = cn_yangjibaliq
+						turkish = cn_yangjibaliq
+						kirghiz = cn_yangjibaliq
+						yughur = cn_yangjibaliq
+						shatuo = cn_yangjibaliq
+						ongud = cn_yangjibaliq
 					}
 				}
 				b_bugur = {
@@ -37425,8 +37524,16 @@ e_tartaria = {
 					color2= { 255 255 255 }
 					
 					cultural_names = {
-						han = cn_luntai
+						#han = cn_luntai
 						mongol = cn_bu_gu_r
+						khitan = cn_changbala
+						uyghur = cn_zhangbali
+						karluk = cn_zhangbali
+						turkish = cn_zhangbali
+						kirghiz = cn_zhangbali
+						yughur = cn_zhangbali
+						shatuo = cn_zhangbali
+						ongud = cn_zhangbali
 					}
 				}
 				b_manas = {
@@ -37434,23 +37541,41 @@ e_tartaria = {
 					
 					color = { 115 60 80 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_manas
+						khitan = cn_manas
+					}
 				}
 				b_wutanzili = {
 					province = 7467
 					
 					color = { 115 60 80 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_donglin
+					}
 				}
 				b_wusu = {
 					province = 7468
 					
 					color = { 115 60 80 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_yehe
+						#mongol = cn_lamazhao
+					}
 				}
 			}
 			c_barkul = {
 				color = { 110 40 135 }
 				color2= { 255 255 255 }
+				
+				cultural_names = {
+					mongol = cn_baersikuo
+				}
 				
 				b_barkul = {
 					province = 7469
@@ -37481,6 +37606,19 @@ e_tartaria = {
 				color = { 180 75 105 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					mongol = cn_qumul
+					khitan = cn_qumul
+					#uyghur = cn_qumul
+					karluk = cn_qumul
+					turkish = cn_qumul
+					kirghiz = cn_qumul
+					#yughur = cn_qumul
+					shatuo = cn_qumul
+					ongud = cn_qumul
+					han = cn_yizhou
+				}
+				
 				b_hami = {
 					province = 7458
 					
@@ -37488,8 +37626,15 @@ e_tartaria = {
 					color2= { 255 255 255 }
 					
 					cultural_names = {
-						han = cn_yizhou
+						mongol = cn_qumul
+						khitan = cn_qumul
 						uyghur = cn_qumul
+						karluk = cn_qumul
+						turkish = cn_qumul
+						kirghiz = cn_qumul
+						yughur = cn_qumul
+						shatuo = cn_qumul
+						ongud = cn_qumul
 					}
 				}
 				b_minggam = {
@@ -37503,6 +37648,10 @@ e_tartaria = {
 					
 					color = { 180 75 105 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_chalamtum
+					}
 				}
 				b_urtu_bulak = {
 					province = 9619
@@ -37609,6 +37758,10 @@ e_tartaria = {
 					
 					color = { 60 60 160 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_yizelibasi
+					}
 				}
 			}
 			c_agairik = {
@@ -37835,11 +37988,19 @@ e_tartaria = {
 				color = { 30 10 90 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					mongol = cn_xiecheshan
+				}
+				
 				b_boro_burgasu = {
 					province = 7509
 					
 					color = { 30 10 90 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_tuergushe
+					}
 				}
 				b_suchatu = {
 					province = 7510
@@ -37852,6 +38013,10 @@ e_tartaria = {
 					
 					color = { 30 10 90 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_kuoli
+					}
 				}
 			}
 		}
@@ -37879,9 +38044,9 @@ e_turan = {
 		
 		capital = c_khotan
 
-                                 cultural_names = {
-                                                                uyghur = cn_great_uyghur
-				han = cn_anxi
+        cultural_names = {
+            uyghur = cn_great_uyghur
+			han = cn_anxi
 		}	
 		
 		ai_primary_priority = {
@@ -37899,15 +38064,30 @@ e_turan = {
 			
 			capital = c_khotan # Khotan
 			
+			cultural_names = {
+				mongol = cn_woduan
+				khitan = cn_woduan
+			}
+			
 			c_khotan = {
 				color = { 110 170 190 }
 				color2= { 255 255 255 }
+				
+				cultural_names = {
+					mongol = cn_woduan
+					khitan = cn_woduan
+				}
 				
 				b_khotan = {
 					province = 1440
 					
 					color = { 110 170 190 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_woduan
+						khitan = cn_woduan
+					}
 				}
 				b_lafak = {
 					province = 9607
@@ -37920,6 +38100,10 @@ e_turan = {
 					
 					color = { 110 170 190 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_gancheng
+					}
 				}
 				b_bugaiwilik = {
 					province = 9609
@@ -37949,6 +38133,10 @@ e_turan = {
 			c_karghalik = {
 				color = { 120 145 175 }
 				color2= { 255 255 255 }
+
+				cultural_names = {
+					han = cn_zhuba
+				}
 				
 				b_karghalik = {
 					province = 9616
@@ -37961,12 +38149,27 @@ e_turan = {
 					
 					color = { 120 145 175 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_anjunzhou
+						uyghur = cn_zhawa
+						karluk = cn_zhawa
+						turkish = cn_zhawa
+						kirghiz = cn_zhawa
+						yughur = cn_zhawa
+						shatuo = cn_zhawa
+						ongud = cn_zhawa
+					}
 				}
 				b_guma = {
 					province = 9614
 					
 					color = { 120 145 175 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_pishan
+					}
 				}
 				b_kehan = {
 					province = 9615
@@ -37990,6 +38193,10 @@ e_turan = {
 					
 					color = { 50 110 190 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_jingjue
+					}
 				}
 				b_niya = {
 					province = 9605
@@ -38002,11 +38209,36 @@ e_turan = {
 				color = { 80 125 200 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					uyghur = cn_yuechang
+					karluk = cn_yuechang
+					turkish = cn_yuechang
+					kirghiz = cn_yuechang
+					yughur = cn_yuechang
+					shatuo = cn_yuechang
+					ongud = cn_yuechang
+					mongol = cn_shezhen_khitan
+					khitan = cn_shezhen_khitan
+				}
+				
 				b_cherchen = {
 					province = 1441
 					
 					color = { 80 125 200 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						uyghur = cn_yuechang
+						karluk = cn_yuechang
+						turkish = cn_yuechang
+						kirghiz = cn_yuechang
+						yughur = cn_yuechang
+						shatuo = cn_yuechang
+						ongud = cn_yuechang
+						mongol = cn_shezhen_khitan
+						khitan = cn_shezhen_khitan
+						han = cn_boxian
+					}
 				}
 				b_saca = {
 					province = 9602
@@ -38029,21 +38261,42 @@ e_turan = {
 			
 			capital = c_kashgar # Kashgar
 			
+			cultural_names = {
+				mongol = cn_kashgar
+				khitan = cn_kashgar
+			}
+			
 			c_kashgar = {
 				color = { 70 120 180 }
 				color2= { 255 255 255 }
+				
+				cultural_names = {
+					mongol = cn_kashgar
+					khitan = cn_kashgar
+					han = cn_shule
+				}
 				
 				b_kashgar = {
 					province = 1439
 					
 					color = { 70 120 180 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_kashgar
+						khitan = cn_kashgar
+						han = cn_shule
+					}
 				}
 				b_yopurga = {
 					province = 7960
 					
 					color = { 70 120 180 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_yopurga
+					}
 				}
 				b_yengi_xahar = {
 					province = 7961
@@ -38092,11 +38345,36 @@ e_turan = {
 				color = { 35 80 140 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					uyghur = cn_yarkand_turkic
+					karluk = cn_yarkand_turkic
+					turkish = cn_yarkand_turkic
+					kirghiz = cn_yarkand_turkic
+					yughur = cn_yarkand_turkic
+					shatuo = cn_yarkand_turkic
+					ongud = cn_yarkand_turkic
+					mongol = cn_yarkand_turkic
+					khitan = cn_yarkand_khitan
+				}
+				
 				b_yarkand = {
 					province = 1438
 					
 					color = { 35 80 140 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						uyghur = cn_yarkand_turkic
+						karluk = cn_yarkand_turkic
+						turkish = cn_yarkand_turkic
+						kirghiz = cn_yarkand_turkic
+						yughur = cn_yarkand_turkic
+						shatuo = cn_yarkand_turkic
+						ongud = cn_yarkand_turkic
+						mongol = cn_yarkand_turkic
+						khitan = cn_yarkand_khitan
+						han = cn_huangqu
+					}
 				}
 				b_yengisar = {
 					province = 7958
@@ -38129,17 +38407,39 @@ e_turan = {
 				color = { 70 150 185 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					mongol = cn_kucha
+					khitan = cn_kucha_khitan
+				}
+				
 				b_kucha = {
 					province = 1444
 					
 					color = { 70 150 185 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_kucha
+						khitan = cn_kucha_khitan
+					}
 				}
 				b_jigdalik = {
 					province = 7974
 					
 					color = { 70 150 185 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						uyghur = cn_baiyin
+						karluk = cn_baiyin
+						turkish = cn_baiyin
+						kirghiz = cn_baiyin
+						yughur = cn_baiyin
+						shatuo = cn_baiyin
+						ongud = cn_baiyin
+						mongol = cn_baiyin
+						khitan = cn_baiyin
+					}
 				}
 				b_duldulokur = {
 					province = 7975
@@ -38164,17 +38464,39 @@ e_turan = {
 				color = { 90 200 230 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					han = cn_gumo_wensu
+					khitan = cn_hunbasheng
+					mongol = cn_aksu
+				}
+				
 				b_aksu_mongolia = {
 					province = 1445
 
 					color = { 90 200 230 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						khitan = cn_hunbasheng
+						mongol = cn_aksu
+						bodpa = cn_bohuan_tibet
+						zhangzhung = cn_bohuan_tibet
+						sumpa = cn_bohuan_tibet
+						tsangpa = cn_bohuan_tibet
+						kirati = cn_bohuan_tibet
+						lhomon = cn_bohuan_tibet
+					}
 				}
 				b_barchuk = {
 					province = 7970
 					
 					color = { 90 200 230 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_barchuk
+						khitan = cn_barchuk
+					}
 				}
 				b_tumshuk = {
 					province = 7971
@@ -38187,6 +38509,11 @@ e_turan = {
 					
 					color = { 90 200 230 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_uch
+						khitan = cn_uch
+					}
 				}
 				b_stwerap = {
 					province = 7973
@@ -38214,11 +38541,35 @@ e_turan = {
 				color = { 93 165 240 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					mongol = cn_suolimi
+					khitan = cn_suolimi
+					uyghur = cn_suolimi
+					karluk = cn_suolimi
+					turkish = cn_suolimi
+					kirghiz = cn_suolimi
+					yughur = cn_suolimi
+					shatuo = cn_suolimi
+					ongud = cn_suolimi
+				}
+				
 				b_karashar = {
 					province = 1443
 					
 					color = { 93 165 240 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_suolimi
+						khitan = cn_suolimi
+						uyghur = cn_suolimi
+						karluk = cn_suolimi
+						turkish = cn_suolimi
+						kirghiz = cn_suolimi
+						yughur = cn_suolimi
+						shatuo = cn_suolimi
+						ongud = cn_suolimi
+					}
 				}
 				b_bosten = {
 					province = 7983
@@ -38231,6 +38582,10 @@ e_turan = {
 					
 					color = { 93 165 240 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_yinshan
+					}
 				}
 				b_korla = {
 					province = 7988
@@ -38250,6 +38605,11 @@ e_turan = {
 				color = { 45 180 180 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					mongol = cn_kunlv
+					khitan = cn_kunlv
+				}
+
 				b_luntai = {
 					province = 7980
 					
@@ -38339,17 +38699,29 @@ e_turan = {
 				color = { 70 200 230 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					han = cn_xiyu
+				}
+				
 				b_loulan = {
 					province = 1447
 					
 					color = { 70 200 230 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_haitou
+					}
 				}
 				b_tikenik = {
 					province = 7991
 					
 					color = { 70 200 230 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_tonghai
+					}
 				}
 				b_argan = {
 					province = 7992
@@ -38379,6 +38751,10 @@ e_turan = {
 					
 					color = { 135 240 250 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_puchanghai
+					}
 				}
 				b_nanhu_TARIM = {
 					province = 7997
@@ -38396,6 +38772,10 @@ e_turan = {
 			c_kumtag = {
 				color = { 70 95 200 }
 				color2= { 255 255 255 }
+				
+				cultural_names = {
+					han = cn_bailongdui
+				}
 				
 				b_kumtag = {
 					province = 7994
@@ -38998,11 +39378,21 @@ e_turan = {
 				color = { 250 250 50 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					khitan = cn_chah_khitan
+					mongol = cn_chah_khitan
+				}
+				
 				b_chah = {
 					province = 1186
 					
 					color = { 250 250 50 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						khitan = cn_chah_khitan
+						mongol = cn_chah_khitan
+					}
 				}
 				b_sayram = {
 					province = 7135
@@ -39116,11 +39506,35 @@ e_turan = {
 				color = { 210 145 50 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					uyghur = cn_balashagun
+					karluk = cn_balashagun
+					turkish = cn_balashagun
+					kirghiz = cn_balashagun
+					yughur = cn_balashagun
+					shatuo = cn_balashagun
+					ongud = cn_balashagun
+					mongol = cn_husiwoerduo
+					khitan = cn_husiwoerduo
+				}
+				
 				b_balasaghun = {
 					province = 7154
 					
 					color = { 210 145 50 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						uyghur = cn_balashagun
+						karluk = cn_balashagun
+						turkish = cn_balashagun
+						kirghiz = cn_balashagun
+						yughur = cn_balashagun
+						shatuo = cn_balashagun
+						ongud = cn_balashagun
+						mongol = cn_husiwoerduo
+						khitan = cn_husiwoerduo
+					}
 				}
 				b_narin = {
 					province = 7152
@@ -39133,6 +39547,11 @@ e_turan = {
 					
 					color = { 210 145 50 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						khitan = cn_barskhan
+						mongol = cn_barskhan
+					}
 				}
 				b_pishkek = {
 					province = 7147
@@ -39145,11 +39564,19 @@ e_turan = {
 				color = { 175 125 25 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					mongol = cn_tokmak
+				}
+				
 				b_suyab = {
 					province = 1424
 					
 					color = { 175 125 25 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_tokmak
+					}
 				}
 				b_nevaket = {
 					province = 7144
@@ -39179,6 +39606,10 @@ e_turan = {
 					
 					color = { 180 155 15 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_xueshan
+					}
 				}
 				
 				b_sayaq = {
@@ -39244,6 +39675,11 @@ e_turan = {
 				color = { 190 130 35 }
 				color2= { 255 255 255 }
 				
+				cultural_names = {
+					mongol = cn_atibasheng
+					khitan = cn_atibasheng
+				}
+				
 				b_cherik = {
 					province = 7151
 					
@@ -39285,12 +39721,56 @@ e_turan = {
 			c_bukhara = {
 				color = { 33 188 88 }
 				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					mongol = cn_puhua
+					khitan = cn_puhua
+					uyghur = cn_puhualuo
+					karluk = cn_puhualuo
+					turkish = cn_puhualuo
+					pecheneg = cn_puhualuo
+					cuman = cn_puhualuo
+					khazar = cn_puhualuo
+					bolghar = cn_puhualuo
+					bashkir = cn_puhualuo
+					avar = cn_puhualuo
+					kipchak = cn_puhualuo
+					laktan = cn_puhualuo
+					kirghiz = cn_puhualuo
+					yughur = cn_puhualuo
+					uriankhai = cn_puhualuo
+					chuvash = cn_puhualuo
+					shatuo = cn_puhualuo
+					ongud = cn_puhualuo
+				}
 			
 				b_bukhara = {
 					province = 4394
 
 					color = { 33 188 88 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_puhua
+						khitan = cn_puhua
+						uyghur = cn_puhualuo
+						karluk = cn_puhualuo
+						turkish = cn_puhualuo
+						pecheneg = cn_puhualuo
+						cuman = cn_puhualuo
+						khazar = cn_puhualuo
+						bolghar = cn_puhualuo
+						bashkir = cn_puhualuo
+						avar = cn_puhualuo
+						kipchak = cn_puhualuo
+						laktan = cn_puhualuo
+						kirghiz = cn_puhualuo
+						yughur = cn_puhualuo
+						uriankhai = cn_puhualuo
+						chuvash = cn_puhualuo
+						shatuo = cn_puhualuo
+						ongud = cn_puhualuo
+					}
 				}
 				b_varakhsha = {
 					province = 4395
@@ -39315,6 +39795,10 @@ e_turan = {
 
 					color = { 33 188 88 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_dongan
+					}
 				}
 			}
 			c_kishsh = {
@@ -39362,11 +39846,21 @@ e_turan = {
 				color = { 40 175 75 }
 				color2 = { 255 255 255 }
 			
+				cultural_names = {
+					mongol = cn_nakhshab
+					khitan = cn_nakhshab
+				}
+	
 				b_nakhshab = {
 					province = 4390
 
 					color = { 40 175 75 }
 					color2 = { 255 255 255 }
+										
+					cultural_names = {
+						mongol = cn_nakhshab
+						khitan = cn_nakhshab
+					}
 				}
 				b_nawqad_qureish = {
 					province = 4389
@@ -39690,6 +40184,27 @@ e_turan = {
 
 					color = { 50 170 15 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						khitan = cn_dieermi
+						uyghur = cn_teiermi
+						karluk = cn_teiermi
+						turkish = cn_teiermi
+						pecheneg = cn_teiermi
+						cuman = cn_teiermi
+						khazar = cn_teiermi
+						bolghar = cn_teiermi
+						bashkir = cn_teiermi
+						avar = cn_teiermi
+						kipchak = cn_teiermi
+						laktan = cn_teiermi
+						kirghiz = cn_teiermi
+						yughur = cn_teiermi
+						uriankhai = cn_teiermi
+						chuvash = cn_teiermi
+						shatuo = cn_teiermi
+						ongud = cn_teiermi
+					}
 				}
 				b_rigar = {
 					province = 4370
@@ -39781,6 +40296,10 @@ e_turan = {
 
 					color = { 30 185 125 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_dongcao
+					}
 				}
 				b_kurkath = {
 					province = 4416
@@ -39823,6 +40342,10 @@ e_turan = {
 			c_ferghana = {
 				color = { 55 166 88 }
 				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					han = cn_xiuxun
+				}
 			
 				b_akhsikath = {
 					province = 4438
@@ -39859,6 +40382,11 @@ e_turan = {
 
 					color = { 55 166 88 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						khitan = cn_kesan
+						mongol = cn_kesan_2
+					}
 				}
 			}
 			c_khojand = {
@@ -39888,6 +40416,10 @@ e_turan = {
 
 					color = { 55 165 75 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_babu
+					}
 				}
 				b_afrasiyab = {
 					province = 903
@@ -40009,15 +40541,46 @@ e_turan = {
 			
 			capital = c_gurganj	#	Gurganj
 			
+			cultural_names = {
+				mongol = cn_khorezm
+				khitan = cn_khorezm
+				han = cn_huoxun
+				uyghur = cn_khorezm
+				karluk = cn_khorezm
+				turkish = cn_khorezm
+				pecheneg = cn_khorezm
+				cuman = cn_khorezm
+				khazar = cn_khorezm
+				bolghar = cn_khorezm
+				bashkir = cn_khorezm
+				avar = cn_khorezm
+				kipchak = cn_khorezm
+				laktan = cn_khorezm
+				kirghiz = cn_khorezm
+				yughur = cn_khorezm
+				uriankhai = cn_khorezm
+				chuvash = cn_khorezm
+				shatuo = cn_khorezm
+				ongud = cn_khorezm
+			}
+			
 			c_gurganj = {
 				color = { 75 195 105 }
 				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					khitan = cn_yulijian
+				}
 			
 				b_gurganj = {
 					province = 4456
 
 					color = { 75 195 105 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						khitan = cn_yulijian
+					}
 				}
 				b_nazvar = {
 					province = 4454
@@ -40858,6 +41421,10 @@ e_persia = {
 					
 					color = { 190 231 118 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						khitan = cn_kewenzhai
+					}
 				}
 				b_sad_khaniya = {
 					province = 4764
@@ -41735,6 +42302,10 @@ e_persia = {
 
 					color = { 9 185 202 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_lvao
+					}
 				}
 				b_faryab = {
 					province = 4250
@@ -41890,15 +42461,27 @@ e_persia = {
 			
 			capital = c_herat # Herat
 			
+			cultural_names = {
+				mongol = cn_herat
+			}
+			
 			c_herat = {
 				color = { 2 220 210 }
 				color2 = { 255 255 255 }
+			
+				cultural_names = {
+					mongol = cn_herat
+				}
 			
 				b_herat = {
 					province = 4215
 
 					color = { 2 220 210 }
 					color2 = { 255 255 255 }
+										
+					cultural_names = {
+						mongol = cn_herat
+					}
 				}
 				b_karukh = {
 					province = 4216
@@ -42021,12 +42604,22 @@ e_persia = {
 			c_balkh = {
 				color = { 23 179 162 }
 				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					mongol = cn_balihei
+					khitan = cn_balihei
+				}
 			
 				b_balkh = {
 					province = 4335
 
 					color = { 23 179 162 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_balihei
+						khitan = cn_balihei
+					}
 				}
 				b_ribat-i-el-kif = {
 					province = 4334
@@ -42115,6 +42708,28 @@ e_persia = {
 
 					color = { 20 170 160 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						khitan = cn_talihan
+						mongol = cn_talihan
+						uyghur = cn_talihan
+						karluk = cn_talihan
+						turkish = cn_talihan
+						pecheneg = cn_talihan
+						cuman = cn_talihan
+						khazar = cn_talihan
+						bolghar = cn_talihan
+						bashkir = cn_talihan
+						avar = cn_talihan
+						kipchak = cn_talihan
+						laktan = cn_talihan
+						kirghiz = cn_talihan
+						yughur = cn_talihan
+						uriankhai = cn_talihan
+						chuvash = cn_talihan
+						shatuo = cn_talihan
+						ongud = cn_talihan
+					}
 				}
 			}
 		}
@@ -43270,15 +43885,32 @@ e_persia = {
 			
 			capital = c_kabul # Kabul
 			
+			cultural_names = {
+				mongol = cn_kebuli
+				khitan = cn_kebuli
+			}
+			
 			c_kabul = {
 				color = { 135 90 30 }
 				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					mongol = cn_kebuli
+					khitan = cn_kebuli
+					han = cn_xiliu
+				}
 
 				b_kabul = {
 					province = 4504
 
 					color = { 135 90 30 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_kebuli
+						khitan = cn_kebuli
+						han = cn_huwen
+					}
 				}
 				b_sukawand = {
 					province = 4503
@@ -43302,12 +43934,24 @@ e_persia = {
 			c_bamian = {
 				color = { 150 75 0 }
 				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					mongol = cn_bamian
+					khitan = cn_bamian
+					han = cn_xiefeng
+				}
 			
 				b_bamiyan = {
 					province = 4343
 
 					color = { 150 75 0 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_bamian
+						khitan = cn_bamian
+						han = cn_fanyan
+					}
 				}
 				b_sakalkand = {
 					province = 4342
@@ -43320,6 +43964,28 @@ e_persia = {
 
 					color = { 150 75 0 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_parwan
+						khitan = cn_parwan
+						uyghur = cn_parwan
+						karluk = cn_parwan
+						turkish = cn_parwan
+						pecheneg = cn_parwan
+						cuman = cn_parwan
+						khazar = cn_parwan
+						bolghar = cn_parwan
+						bashkir = cn_parwan
+						avar = cn_parwan
+						kipchak = cn_parwan
+						laktan = cn_parwan
+						kirghiz = cn_parwan
+						yughur = cn_parwan
+						uriankhai = cn_parwan
+						chuvash = cn_parwan
+						shatuo = cn_parwan
+						ongud = cn_parwan
+					}
 				}
 				b_panjhir = {
 					province = 4345
@@ -43362,11 +44028,21 @@ e_persia = {
 				color = { 175 110 50 }
 				color2 = { 255 255 255 }
 				
+				cultural_names = {
+					mongol = cn_gejining
+					han = cn_tiaozhi
+				}
+				
 				b_ghazna = {
 					province = 4500
 
 					color = { 175 110 50 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						mongol = cn_gejining
+						han = cn_hexina
+					}
 				}
 				b_gardiz = {
 					province = 4501
@@ -45769,7 +46445,7 @@ e_carpathia = {
 						mogyer = cn_arva
 					}
 				}
-				b_twardosczino = { #Tvrdošín/Tvrdosin
+				b_twardosczino = { #Tvrdošin/Tvrdosin
 					province = 3810
 					
 					color = { 255 40 65 }
@@ -45781,7 +46457,7 @@ e_carpathia = {
 					}
 				}
 			}
-			c_trenscen = {	#Trenčín
+			c_trenscen = {	#Trenčin
 				color = { 205 85 100 }
 				color2 = { 255 255 255 }
 				
@@ -70572,6 +71248,10 @@ e_rajastan = {
 					
 					color = { 250 60 20 }
 					color2= { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_conglin
+					}
 				}
 			}
 			c_yasin = {
@@ -75843,7 +76523,7 @@ e_tibet = {
 					tsangpa = cn_qingtang
 					lhomon = cn_qingtang
 					sumpa = cn_qingtang
-					zhangzhung = cn_qingtang
+					zhangzhung = cn_qingtang					
 				}
 				
 				b_rusar_huangzhong = { #Huangzhong
@@ -75851,6 +76531,10 @@ e_tibet = {
 					
 					color = { 36 22 54 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_linbo
+					}
 				}
 				b_xining = {
 					province = 9422
@@ -75897,6 +76581,7 @@ e_tibet = {
 						lhomon = cn_drotsang
 						sumpa = cn_drotsang
 						zhangzhung = cn_drotsang
+						han = cn_weirong
 					}
 				}
 				b_serkok = { #Chengguan
@@ -75904,6 +76589,10 @@ e_tibet = {
 					
 					color = { 70 47 99 }
 					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						han = cn_gemen
+					}
 				}
 			}
 		}
@@ -75920,6 +76609,7 @@ e_tibet = {
 				lhomon = cn_tsongonpo
 				sumpa = cn_tsongonpo
 				zhangzhung = cn_tsongonpo
+				han = cn_qinghai
 			}
 			
 			c_fuqi = {
@@ -75969,6 +76659,11 @@ e_tibet = {
 				
 				cultural_names = {
 					han = cn_gonghe
+					bodpa = cn_yamotang
+					tsangpa = cn_yamotang
+					lhomon = cn_yamotang
+					sumpa = cn_yamotang
+					zhangzhung = cn_yamotang
 				}
 				
 				b_qabqa = { #Qiabuqia
@@ -75979,6 +76674,11 @@ e_tibet = {
 					
 					cultural_names = {
 						han = cn_qiabuqia
+						bodpa = cn_moli
+						tsangpa = cn_moli
+						lhomon = cn_moli
+						sumpa = cn_moli
+						zhangzhung = cn_moli
 					}
 				}
 				b_changzhi = { #Jiangxigou
@@ -76035,11 +76735,19 @@ e_tibet = {
 				color = { 68 18 176 }
 				color2 = { 255 255 255 }
 				
+				cultural_names = {
+					mongol = cn_delhihot
+				}
+	
 				b_derlenka = { #Delingha/Delhihot
 					province = 9399
 					
 					color = { 68 18 176 }
 					color2 = { 255 255 255 }
+										
+					cultural_names = {
+						mongol = cn_delhihot
+					}
 				}
 				b_conak = { #Halahu
 					province = 9468
@@ -76096,15 +76804,28 @@ e_tibet = {
 			
 			capital = c_nagormo
 			
+			cultural_names = {
+				han = cn_qiangzhong
+				mongol = cn_golmud
+			}
+		
 			c_nagormo = { #Golmud/Ge'ermu
 				color = { 88 30 212 }
 				color2 = { 255 255 255 }
 				
+				cultural_names = {
+					mongol = cn_golmud
+				}
+			
 				b_nagormo = { #Golmud/Ge'ermu
 					province = 9396
 					
 					color = { 88 30 212 }
 					color2 = { 255 255 255 }
+										
+					cultural_names = {
+						mongol = cn_golmud
+					}
 				}
 				b_dagelhe = { #Dagele
 					province = 9400
@@ -76450,11 +77171,19 @@ e_tibet = {
 				color = { 12 55 99 }
 				color2 = { 255 255 255 }
 				
+				cultural_names = {
+					han = cn_qingxiuchuan
+				}
+		
 				b_ngoring = {
 					province = 9401
 					
 					color = { 12 55 99 }
 					color2 = { 255 255 255 }
+										
+					cultural_names = {
+						han = cn_qingxiuchuan
+					}
 				}
 				b_mato = {
 					province = 9386
@@ -76485,7 +77214,8 @@ e_tibet = {
 			capital = c_barkam
 			
 			cultural_names = {
-				han = cn_jiarong
+				han = cn_baoning
+				mongol = cn_songpan_yuan
 				tangut = cn_ryarong
 				qiang = cn_ryarong
 			}
@@ -76580,6 +77310,7 @@ e_tibet = {
 				cultural_names = {
 					han = cn_mao
 					qiang = cn_shgvini
+					bodpa = cn_shgvini
 				}
 				
 				b_maowun = { #Fengyi/Shgvini
@@ -76661,7 +77392,7 @@ e_tibet = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						han = cn_ruoergai
+						han = cn_kuozhou
 					}
 				}
 				b_yunglro = { #Jiuzhaigou
@@ -76680,8 +77411,9 @@ e_tibet = {
 				color2 = { 255 255 255 }
 				
 				cultural_names = {
-					han = cn_jinchuan
-					qiang = cn_gvugvean
+					#han = cn_jinchuan
+					#qiang = cn_gvugvean
+					han = cn_dongnv
 				}
 				
 				b_quqen = { #Jinchuan
@@ -76739,6 +77471,7 @@ e_tibet = {
 			
 			cultural_names = {
 				han = cn_mingzheng
+				mongol = cn_lamaer
 			}
 			
 			c_chakla = {
@@ -76746,7 +77479,8 @@ e_tibet = {
 				color2 = { 255 255 255 }
 				
 				cultural_names = {
-					han = cn_mingzheng
+					han = cn_mingzheng_2
+					mongol = cn_lamaer
 				}
 				
 				b_darzedo = {
@@ -76801,7 +77535,7 @@ e_tibet = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						han = cn_tagong
+						han = cn_tagong_2
 					}
 				}
 				b_gyezil = {
@@ -76820,7 +77554,7 @@ e_tibet = {
 				color2 = { 255 255 255 }
 				
 				cultural_names = {
-					han = cn_daofu
+					han = cn_daofu_0
 				}
 				
 				b_dawu = {
@@ -76859,7 +77593,7 @@ e_tibet = {
 				color2 = { 255 255 255 }
 				
 				cultural_names = {
-					han = cn_seda
+					han = cn_seda_0
 				}
 				
 				b_sertar = {
@@ -76906,7 +77640,7 @@ e_tibet = {
 				color2 = { 255 255 255 }
 				
 				cultural_names = {
-					han = cn_maqin
+					han = cn_maqin_0
 				}
 				
 				b_maqen = {
@@ -76936,6 +77670,11 @@ e_tibet = {
 				
 				cultural_names = {
 					han = cn_maduo
+					bodpa = cn_madoi
+					tsangpa = cn_madoi
+					lhomon = cn_madoi
+					sumpa = cn_madoi
+					zhangzhung = cn_madoi
 				}
 				
 				b_madoi = {
@@ -76946,6 +77685,11 @@ e_tibet = {
 					
 					cultural_names = {
 						han = cn_maduo
+						bodpa = cn_madoi
+						tsangpa = cn_madoi
+						lhomon = cn_madoi
+						sumpa = cn_madoi
+						zhangzhung = cn_madoi
 					}
 				}
 				b_dzogenrabar = {
@@ -77031,7 +77775,7 @@ e_tibet = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						han = cn_tongren
+						han = cn_tongren_zhenwei
 					}
 				}
 				b_jainca = { #Jainzha
@@ -77081,6 +77825,11 @@ e_tibet = {
 					
 					cultural_names = {
 						han = cn_tongde
+						bodpa = cn_dushan
+						tsangpa = cn_dushan
+						lhomon = cn_dushan
+						sumpa = cn_dushan
+						zhangzhung = cn_dushan
 					}
 				}
 			}
@@ -77099,7 +77848,7 @@ e_tibet = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						han = cn_zeku
+						han = cn_zeku_2
 					}
 				}
 				b_yegainnyin = { #Henan
@@ -77130,7 +77879,7 @@ e_tibet = {
 				color2 = { 255 255 255 }
 				
 				cultural_names = {
-					han = cn_zhouni
+					han = cn_taozhou
 				}
 				
 				b_jone = { #Zhouni
@@ -77140,7 +77889,8 @@ e_tibet = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						han = cn_zhouni
+						#han = cn_zhouni
+						han = cn_meixiang
 					}
 				}
 				b_linten = { #Lintan
@@ -77208,7 +77958,8 @@ e_tibet = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						han = cn_diebu
+						#han = cn_diebu
+						han = cn_diezhou
 					}
 				}
 				b_zhugqu = { #Zhouqu
@@ -77228,6 +77979,12 @@ e_tibet = {
 				
 				cultural_names = {
 					han = cn_maqu
+					bodpa = cn_maqu_tibet
+					tsangpa = cn_maqu_tibet
+					lhomon = cn_maqu_tibet
+					sumpa = cn_maqu_tibet
+					zhangzhung = cn_maqu_tibet
+					mongol = cn_maqu_tibet
 				}
 				
 				b_maqu = { #Maqu
@@ -77237,7 +77994,13 @@ e_tibet = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						han = cn_maqu
+						han = cn_maqu_2
+						bodpa = cn_maqu_tibet
+						tsangpa = cn_maqu_tibet
+						lhomon = cn_maqu_tibet
+						sumpa = cn_maqu_tibet
+						zhangzhung = cn_maqu_tibet
+						mongol = cn_maqu_tibet
 					}
 				}
 				b_murje = { #Muxihe
@@ -78394,67 +79157,67 @@ e_tibet = {
 }
 
 # OBSOLETE TITLES
-k_adiukru = {
-	color = { 180 220 189 }
-	color2 = { 255 255 255 }
-	
-	capital = c_attie
-	
-	can_create = { always = no }
-}
-k_toro = {
-	color = { 110 40 57 }
-	color2 = { 255 255 255 }
-	
-	capital = c_toro
-	
-	can_create = { always = no }
-}
-k_winideheim = {
-	color = { 158 102 36 }
-	color2 = { 200 0 0 }
-
-	capital = c_praha # Praha
-	
-	can_create = { always = no }
-}
-
-#Blanked. Required for various things
-
-d_lower_bosna = {
-			color = { 180 85 120 }
-			color2 = { 255 255 255 }
-}
-
-d_taranto = {
-			color = { 180 85 120 }
-			color2 = { 255 255 255 }
-}
-		
-d_durazzo = {
-			color = { 180 85 120 }
-			color2 = { 255 255 255 }
-}
-
-k_shirvan = {
-	color = { 80 105 230 }
-	color2 = { 255 255 255 }
-	
-	capital = c_shirvan
-}
-
-k_khwarezmia = {
-	color = { 255 67 20 }
-	color2 = { 255 255 255 }
-	
-	can_create = {
-		trigger_if = {
-			limit = {
-				is_ai = yes
-			}
-			NOT = { culture = culture:mongol }
-		}
-	}
-	
-	capital = c_gurganj	#	Gurganj
-}
+#k_adiukru = {
+#	color = { 180 220 189 }
+#	color2 = { 255 255 255 }
+#	
+#	capital = c_attie
+#	
+#	can_create = { always = no }
+#}
+#k_toro = {
+#	color = { 110 40 57 }
+#	color2 = { 255 255 255 }
+#	
+#	capital = c_toro
+#	
+#	can_create = { always = no }
+#}
+#k_winideheim = {
+#	color = { 158 102 36 }
+#	color2 = { 200 0 0 }
+#
+#	capital = c_praha # Praha
+#	
+#	can_create = { always = no }
+#}
+#
+##Blanked. Required for various things
+#
+#d_lower_bosna = {
+#			color = { 180 85 120 }
+#			color2 = { 255 255 255 }
+#}
+#
+#d_taranto = {
+#			color = { 180 85 120 }
+#			color2 = { 255 255 255 }
+#}
+#		
+#d_durazzo = {
+#			color = { 180 85 120 }
+#			color2 = { 255 255 255 }
+#}
+#
+#k_shirvan = {
+#	color = { 80 105 230 }
+#	color2 = { 255 255 255 }
+#	
+#	capital = c_shirvan
+#}
+#
+#k_khwarezmia = {
+#	color = { 255 67 20 }
+#	color2 = { 255 255 255 }
+#	
+#	can_create = {
+#		trigger_if = {
+#			limit = {
+#				is_ai = yes
+#			}
+#			NOT = { culture = culture:mongol }
+#		}
+#	}
+#	
+#	capital = c_gurganj	#	Gurganj
+#}

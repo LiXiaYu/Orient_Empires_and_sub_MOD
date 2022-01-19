@@ -2740,7 +2740,7 @@
 		death = yes
 	}
 }
-1406465 = { #韋襄 Wei Xiang
+1406465 = { #韋襄 Wei Xiang. 潁州刺史 before 809.11.23. (唐故銀青光祿大夫守吏部尚書兼御史大夫充諸道鹽鐵轉運等使上柱國趙郡開國公贈尚書右僕射李公墓誌銘)
 	dynasty = 1055025 #Jingzhao Wei
 	name = "Xiang_name16"
 	religion = pagan
@@ -2751,7 +2751,7 @@
 	742.1.1 = {
 		birth = yes
 	}
-	761.1.1 = {
+	811.1.1 = {
 		death = yes
 	}
 }
@@ -3455,6 +3455,7 @@
 	religion = pagan
 	culture = han
 	father = 1406470
+	female = yes
 	648.1.1 = {
 		birth = yes
 	}
@@ -5438,20 +5439,20 @@
 		death = yes
 	}
 }
-247999 = { #韋賢妃 Consort Wei
+247999 = { #韋賢妃 Consort Wei. Daughter of 永穆公主, consort of 唐代宗. (大唐故賢妃京兆韋氏墓誌銘)
 	female = yes
 	dynasty = 1055025 # Wei
 	name = "_name"
 	religion = pagan
 	culture = han
 	father = 1405663
-	mother = 1405702
+	mother = longxi_li_1266
 	# spouse = # Emperor Dezong
 	#birth dates unknown
 	750.1.1 = {
 		birth = yes
 	}
-	809.1.1 = {
+	809.5.18 = {
 		death = yes
 	}
 }
@@ -5504,7 +5505,7 @@
 		death = { death_reason = death_execution killer = 1401138 }
 	}
 }
-jingzhao_wei.384 = { #京兆韋氏 Lady Wei. Daughter of Wei Yue, married 元虔蓋. Died being 56 years old, buried in 646.12.26. (隋故萬金府鷹揚郎將元君墓誌銘)
+jingzhao_wei_384 = { #京兆韋氏 Lady Wei. Daughter of Wei Yue, married 元虔蓋. Died being 56 years old, buried in 646.12.26. (隋故萬金府鷹揚郎將元君墓誌銘)
 	dynasty = 1055025 #Jingzhao Wei
 	name = "_name"
 	religion = pagan
@@ -5517,6 +5518,36 @@ jingzhao_wei.384 = { #京兆韋氏 Lady Wei. Daughter of Wei Yue, married 元虔
 	}
 	586.1.1 = { add_spouse = 1415527 }
 	635.1.1 = {
+		death = yes
+	}
+}
+jingzhao_wei_385 = { #京兆韋氏 Lady Wei. Daughter of Wei Xiang, married Li Xun. (唐故銀青光祿大夫守吏部尚書兼御史大夫充諸道鹽鐵轉運等使上柱國趙郡開國公贈尚書右僕射李公墓誌銘)
+	dynasty = 1055025 #Jingzhao Wei
+	name = "_name"
+	religion = pagan
+	culture = han
+	father = 1406465
+	#birth and death dates unknown
+	765.1.1 = {
+		birth = yes
+	}
+	784.1.1 = { add_spouse = zhaojun_li_296 }
+	790.1.1 = {
+		death = yes
+	}
+}
+jingzhao_wei_386 = { #京兆韋氏 Lady Wei. 從祖妹 of Lady Wei, married Li Xun after her death. (唐故銀青光祿大夫守吏部尚書兼御史大夫充諸道鹽鐵轉運等使上柱國趙郡開國公贈尚書右僕射李公墓誌銘)
+	dynasty = 1055025 #Jingzhao Wei
+	name = "_name"
+	religion = pagan
+	culture = han
+	father = 1406448 #unknown but possible
+	#birth and death dates unknown
+	773.1.1 = {
+		birth = yes
+	}
+	792.1.1 = { add_spouse = zhaojun_li_296 }
+	824.1.1 = {
 		death = yes
 	}
 }
