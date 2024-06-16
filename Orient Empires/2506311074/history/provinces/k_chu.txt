@@ -1,4 +1,4 @@
-#k_chu
+﻿#k_chu
 #d_jingxiang
 #c_junzhou
 #b_Wudang 
@@ -73,7 +73,7 @@
 #b_Tangzhou_Miyang 
 10007 = {
 	culture = han
-	religion = pagan
+	religion = hmong
 	holding = castle_holding	
 	1066.1.1 = { 
 		religion = lixue
@@ -196,7 +196,7 @@
 #b_Jingshan_Yingzhou 
 10018 = {
 	culture = yi
-	religion = pagan
+	religion = hmong
 	holding = castle_holding
 	1066.1.1 = { 
 		religion = jingshi
@@ -213,7 +213,7 @@
 #b_Mianyang_Fuzhou 
 10020 = {
 	culture = yi
-	religion = pagan
+	religion = hmong
 	holding = castle_holding
 	1066.1.1 = { 
 		religion = jingshi
@@ -236,7 +236,7 @@
 #b_Yidu_chu
 10026 = {
 	culture = yi
-	religion = pagan
+	religion = hmong
 	holding = castle_holding			
 }
 #b_Yiling_Xiazhou 
@@ -256,7 +256,7 @@
 #b_Liyang_Lizhou 
 10276 = {
 	culture = yi
-	religion = pagan
+	religion = hmong
 		holding = castle_holding			
 	}
 #b_Shimen_Pushui 
@@ -299,6 +299,7 @@
 	culture = han
 	religion = shangqing
 	holding = castle_holding
+	special_building = huanghelou
 	1066.1.1 = { 
 		religion = jingshi
 	}			
@@ -314,7 +315,7 @@
 10269 = {
 
 			
-	holding = city_holding
+	holding = castle_holding
 }
 #b_Mianzhou_Hanyang 
 10142 = {
@@ -409,6 +410,7 @@
 	culture = han
 	religion = shangqing
 	holding = castle_holding
+	special_building = yueyanglou_1
 	1066.1.1 = { 
 		religion = jingshi
 	}			
@@ -446,7 +448,6 @@
 }
 #b_Yiyang_Tanzhou 
 10282 = {
-
 			
 	holding = city_holding
 }
@@ -473,9 +474,12 @@
 #b_Hengyang_Hengzhou 
 10288 = {
 	culture = yi
-	religion = pagan
-	holding = tribal_holding			
-	}
+	religion = hmong
+	holding = tribal_holding	
+	882.1.1 = { 
+		holding = castle_holding	
+	}		
+}	
 #b_Hengshan_Xiangtan 
 10287 = {
 
@@ -499,9 +503,12 @@
 #b_Chenzhou_Chenxian 
 10291 = {
 	culture = yi
-	religion = pagan
-		holding = tribal_holding				
-	}
+	religion = hmong
+		holding = tribal_holding
+		882.1.1 = { 
+			holding = castle_holding	
+		}				
+}
 #b_Rucheng_Luyang 
 10292 = {
 
@@ -510,22 +517,26 @@
 }
 #b_Guiyang_Pingyang 
 10293 = {
-
 			
 	holding = tribal_holding
+	882.1.1 = { 
+		holding = castle_holding	
+	}	
 }
 
 #c_lianzhou
 #b_Lianzhou_Guiyang 
 10294 = {
 	culture = yi
-	religion = pagan
-		holding = tribal_holding				
-	}
+	religion = hmong
+		holding = tribal_holding	
+		882.1.1 = { 
+			holding = castle_holding	
+		}			
+}	
 #b_Lianshan 
 10295 = {
-
-			
+		
 	holding = none
 }
 
@@ -533,7 +544,7 @@
 #b_Yingdao_Daozhou 
 10297 = {
 	culture = yi
-	religion = pagan
+	religion = hmong
 	holding = tribal_holding				
 }
 #b_Jianghua_Mengzhuqiao 
@@ -552,9 +563,13 @@
 #b_Yongzhou_Lingling 
 10299 = {
 	culture = yi
-	religion = pagan
-		holding = tribal_holding				
-	}
+	religion = hmong
+		holding = tribal_holding
+		882.1.1 = { 
+			holding = castle_holding
+			religion = lixue	
+		}				
+	}	
 #b_Guanyang_Quanzhou 
 10300 = {
 
@@ -566,7 +581,7 @@
 #b_Shaozhou_Shaoyang 
 10302 = {
 	culture = yi
-	religion = pagan
+	religion = hmong
 	holding = tribal_holding			
 }
 #b_Wugang_Chengbu 

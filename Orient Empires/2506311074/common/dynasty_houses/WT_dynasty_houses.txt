@@ -1,0 +1,281 @@
+﻿
+# Bohai Gao
+house_bohai_gao = { #渤海高氏
+	name = dynn_Gao1
+	dynasty = bohai_gao_dyn
+	motto = house_bohai_gao_motto
+}
+house_youzhou_gao = { #幽州高氏
+	name = dynn_Gao1
+	dynasty = bohai_gao_dyn
+	motto = house_youzhou_gao_motto
+}
+
+## Fufeng Ma
+house_yingxing_zhao = { #嬴姓趙氏
+	name = dynn_Zhao1
+	dynasty = fufeng_ma_dyn
+	motto = house_yingxing_zhao_motto
+}
+house_fufeng_ma = { #扶風馬氏
+	name = dynn_Ma1
+	dynasty = fufeng_ma_dyn
+	motto = house_fufeng_ma_motto
+}
+house_yuancheng_ma = { #元城馬氏
+	name = dynn_Ma1
+	dynasty = fufeng_ma_dyn
+	motto = house_yuancheng_ma_motto
+}
+house_qinghe_ma = { #清河馬氏
+	name = dynn_Ma1
+	dynasty = fufeng_ma_dyn
+	motto = house_qinghe_ma_motto
+}
+house_daming_ma = { #大名馬氏
+	name = dynn_Ma1
+	dynasty = fufeng_ma_dyn
+	motto = house_daming_ma_motto
+}
+house_hefei_ma = { #合肥馬氏
+	name = dynn_Ma1
+	dynasty = fufeng_ma_dyn
+	motto = house_hefei_ma_motto
+}
+
+#Longxi Li
+house_fanyang_li = { #范陽李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_fanyang_li_motto
+}
+house_dunqiu_li = { #頓丘李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_dunqiu_li_motto
+}
+house_bohai_li = { #渤海李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_bohai_li_motto
+}
+house_shengong_li = { #申公李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_shengong_li_motto
+}
+house_danyang_li = { #丹楊李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_danyang_li_motto
+}
+house_anyi_li = { #安邑李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_anyi_li_motto
+}
+house_zhenyuan_jiangjun_li = { #鎮遠將軍房李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_zhenyuan_jiangjun_li_motto
+}
+house_pingliang_li = { #平涼李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_pingliang_li_motto
+}
+house_guzang_li = { #姑臧李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_guzang_li_motto
+}
+house_dunhuang_li = { #敦煌李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_dunhuang_li_motto
+}
+house_pushe_li = { #僕射李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_pushe_li_motto
+}
+house_jiangjun_li = { #絳郡李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_jiangjun_li_motto
+}
+house_wuyang_li = { #武陽李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_wuyang_li_motto
+}
+house_xiangzhou_li = { #襄州李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_xiangzhou_li_motto
+}
+house_nantang_li = { #南唐李氏
+	name = dynn_Li1
+	dynasty = longxi_li_dyn
+	motto = house_nantang_li_motto
+}
+#Zhaojun Li
+house_yingchuan_li = { #潁川李氏
+	name = dynn_Li1
+	dynasty = zhaojun_li_dyn
+	motto = house_yingchuan_li_motto
+}
+house_zhaojun_li = { #趙郡李氏
+	name = dynn_Li1
+	dynasty = zhaojun_li_dyn
+	motto = house_zhaojun_li_motto
+}
+house_nanzu_zhaojun_li = { #南祖趙郡李氏
+	name = dynn_Li1
+	dynasty = zhaojun_li_dyn
+	motto = house_nanzu_zhaojun_li_motto
+}
+house_dongzu_zhaojun_li = { #東祖趙郡李氏
+	name = dynn_Li1
+	dynasty = zhaojun_li_dyn
+	motto = house_dongzu_zhaojun_li_motto
+}
+house_xizu_zhaojun_li = { #西祖趙郡李氏
+	name = dynn_Li1
+	dynasty = zhaojun_li_dyn
+	motto = house_xizu_zhaojun_li_motto
+}
+house_qiaojun_li = { #譙郡李氏
+	name = dynn_Li1
+	dynasty = zhaojun_li_dyn
+	motto = house_qiaojun_li_motto
+}
+house_wuxi_li = { #無錫李氏
+	name = dynn_Li1
+	dynasty = zhaojun_li_dyn
+	motto = house_wuxi_li_motto
+}
+#Shenxian Wang
+house_sanhuai_wang = { #三槐王氏
+	name = dynn_Wang1
+	dynasty = shenxian_wang_dyn
+	motto = house_sanhuai_wang_motto
+}
+#Anding Liang
+house_xucheng_liang = { #須城梁氏
+	name = dynn_Liang1
+	dynasty = anding_liang_dyn
+	motto = house_xucheng_liang_motto
+}
+#Huangdi Ren
+house_le_an_ren = { #樂安任氏
+	name = dynn_Ren1
+	dynasty = huangdi_ren_dyn
+	motto = house_le_an_ren_motto
+}
+house_weinan_ren = { #渭南任氏
+	name = dynn_Ren1
+	dynasty = huangdi_ren_dyn
+	motto = house_weinan_ren_motto
+}
+house_zhongmou_ren = { #中牟任氏
+	name = dynn_Ren1
+	dynasty = huangdi_ren_dyn
+	motto = house_zhongmou_ren_motto
+}
+#Bohai Diao
+house_le_an_diao = { #樂安刁氏
+	name = dynn_Diao1
+	dynasty = bohai_diao_dyn
+	motto = house_bohai_diao_motto
+}
+house_danyang_diao = { #丹陽刁氏
+	name = dynn_Diao1
+	dynasty = bohai_diao_dyn
+	motto = house_danyang_diao_motto
+}
+house_shangcai_diao = { #上蔡刁氏
+	name = dynn_Diao1
+	dynasty = bohai_diao_dyn
+	motto = house_shangcai_diao_motto
+}
+#Langya Wang
+house_xianyang_wang = { #咸陽王氏
+	name = dynn_Wang1
+	dynasty = langya_wang_dyn
+	motto = house_xianyang_wang_motto
+}
+house_kaifeng_wang = { #開封王氏
+	name = dynn_Wang1
+	dynasty = langya_wang_dyn
+	motto = house_kaifeng_wang_motto
+}
+house_anhua_wang = { #安化王氏
+	name = dynn_Wang1
+	dynasty = langya_wang_dyn
+	motto = house_anhua_wang_motto
+}
+house_donglai_wang = { #東萊王氏
+	name = dynn_Wang1
+	dynasty = langya_wang_dyn
+	motto = house_donglai_wang_motto
+}
+house_jiangdu_wang = { #江都王氏
+	name = dynn_Wang1
+	dynasty = langya_wang_dyn
+	motto = house_jiangdu_wang_motto
+}
+house_anyang_wang = { #安陽王氏
+	name = dynn_Wang1
+	dynasty = anyang_wang_dyn
+	motto = house_anyang_wang_motto
+}
+#Jingzhao Du
+house_xianyang_du = { #襄陽杜氏
+	name = dynn_Du1
+	dynasty = jingzhao_du_dyn
+	motto = house_xianyang_du_motto
+}
+house_huanshui_du = { #洹水杜氏
+	name = dynn_Du1
+	dynasty = jingzhao_du_dyn
+	motto = house_huanshui_du_motto
+}
+house_puyang_du = { #濮陽杜氏
+	name = dynn_Du1
+	dynasty = jingzhao_du_dyn
+	motto = house_puyang_du_motto
+}
+#Chenliu Cai
+house_jiyang_cai = { #濟陽蔡氏
+	name = dynn_Cai1
+	dynasty = chenliu_cai_dyn
+	motto = house_jiyang_cai_motto
+}
+house_xianyou_cai = { #仙遊蔡氏
+	name = dynn_Cai1
+	dynasty = chenliu_cai_dyn
+	motto = house_xianyou_cai_motto
+}
+house_jinjiang_cai = { #晉江蔡氏
+	name = dynn_Cai1
+	dynasty = chenliu_cai_dyn
+	motto = house_jinjiang_cai_motto
+}
+house_liucheng_cai = { #柳城蔡氏
+	name = dynn_Cai1
+	dynasty = chenliu_cai_dyn
+	motto = house_liucheng_cai_motto
+}
+#Tianshui Zhao
+house_guixin_zhao = { #歸信趙氏
+	name = dynn_Zhao1
+	dynasty = jingzhao_zhao_dyn
+	motto = house_guixin_zhao_motto
+}
+#Langzhong Chen
+house_xiangfu_chen = { #祥符陳氏
+	name = dynn_Chen1
+	dynasty = langzhong_chen_dyn
+	motto = house_xiangfu_chen_motto
+}

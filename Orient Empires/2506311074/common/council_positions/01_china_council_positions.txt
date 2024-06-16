@@ -6,7 +6,8 @@
 
 	modifier = {
 		intrigue = 3
-		monthly_income = 3
+		#monthly_income = 3
+		tax_mult = 0.15
 	}
 
 	council_owner_modifier = {
@@ -43,6 +44,7 @@
 		got_council_position_effect = yes
 		china_get_council_salary_effect = yes
 		BureaucracyEmpire_bureaucracy_get_position_effect = yes
+		add_trait = eunuch
 		add_character_flag = {
 			flag = in_council
 			years = 5
@@ -65,7 +67,8 @@ councillor_zongbo = { #宗伯
 	modifier = {
 		monthly_dynasty_prestige_mult = 0.1
 		player_heir_opinion = 5
-		monthly_income = 3
+		#monthly_income = 3
+		tax_mult = 0.15
 	}
 	council_owner_modifier = {
 		name = task_advisor_chengxiangl_modifier
@@ -115,12 +118,13 @@ councillor_hanlin = { #翰林院使
 		county_opinion_add = 5
 		monthly_learning_lifestyle_xp_gain_mult = 0.05
 		scale = council_scaled_by_liege_tier
+		tax_mult = 0.15
 	}
 	modifier = {
 		clergy_opinion = 15
 		monthly_piety = 1
-		monthly_income = 3
-		scale = council_scaled_monthly_income
+		#monthly_income = 3
+		#scale = council_scaled_monthly_income
 	}
 	council_owner_modifier = {
 		name = task_advisor_chengxiangl_modifier
@@ -169,17 +173,18 @@ councillor_hanlin = { #翰林院使
 ##################################
 
 councillor_tongpingzhang = { #同平章事
-	skill = diplomacy
+	skill = learning
 	name = tongpingzhang
 	tooltip = tongpingzhang_desc
 	#can_change_once  = yes
-	#can_fire = { has_government = imperial_government }
-	can_reassign = yes
+	#can_fire = { has_realm_law = crown_authority_1 }
+	#can_reassign = { has_realm_law = crown_authority_1 }
 
 	modifier = {
 		name = councillor_chancellor_modifier
 		fellow_vassal_opinion = 5
-		monthly_income = 3
+		#monthly_income = 3
+		tax_mult = 0.15
 		monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
 		scale = council_scaled_by_liege_tier
 	}
@@ -187,7 +192,7 @@ councillor_tongpingzhang = { #同平章事
 	modifier = {
 		name = councillor_chancellor_modifier
 		monthly_prestige = 1
-		scale = council_scaled_monthly_income
+		#scale = council_scaled_monthly_income
 	}
 	council_owner_modifier = {
 		name = task_advisor_chengxiangl_modifier
@@ -223,16 +228,27 @@ councillor_shumishi = { #枢密使
 	skill = martial
 	name = shumishi
 	tooltip = shumishi_desc
-	#can_reassign = { has_government = imperial_government }
-	#can_change_once = { has_government = imperial_government }
-	#can_change_once  = yes
+	can_fire = {
+		OR = {
+			has_realm_law = crown_authority_2
+			has_realm_law = crown_authority_3
+		}
+	}
+	can_reassign = {
+		OR = {
+			has_realm_law = crown_authority_2
+			has_realm_law = crown_authority_3
+		}
+	}
+	#can_change_once = { has_realm_law = crown_authority_1 }
 	modifier = {
 		name = councillor_marshal_modifier
 		prowess = 1
 		army_maintenance_mult = -0.05
 		monthly_martial_lifestyle_xp_gain_mult = 0.05
 		levy_size = 0.05
-		monthly_income = 3
+		tax_mult = 0.15
+		#monthly_income = 3
 		scale = council_scaled_by_liege_tier
 	}
 	council_owner_modifier = {
@@ -272,13 +288,14 @@ councillor_canzhi = { #参知政事
 	tooltip = canzhi_desc
 
 	#inherit = no
-	can_fire = yes
-	can_reassign = yes
+	#can_fire = { has_realm_law = crown_authority_1 }
+	#can_reassign = { has_realm_law = crown_authority_1 }
 
 	modifier = {
 		name = councillor_steward_modifier
-		monthly_income = 3
-		scale = council_scaled_monthly_income
+		#monthly_income = 3
+		tax_mult = 0.15
+		#scale = council_scaled_monthly_income
 	}
 
 	modifier = {
@@ -338,7 +355,8 @@ councillor_china_1 = { #尚书左仆射
 	modifier = {
 		name = councillor_chancellor_modifier
 		fellow_vassal_opinion = 5
-		monthly_income = 5
+		#monthly_income = 5
+		tax_mult = 0.15
 		monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
 		scale = council_scaled_by_liege_tier
 	}
@@ -346,7 +364,7 @@ councillor_china_1 = { #尚书左仆射
 	modifier = {
 		name = councillor_chancellor_modifier
 		monthly_prestige = 1
-		scale = council_scaled_monthly_income
+		#scale = council_scaled_monthly_income
 	}
 
 	council_owner_modifier = {
@@ -398,7 +416,8 @@ councillor_china_2 = { #尚书右仆射
 	modifier = {
 		name = councillor_chancellor_modifier
 		fellow_vassal_opinion = 5
-		monthly_income = 5
+		#monthly_income = 5
+		tax_mult = 0.15
 		monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
 		scale = council_scaled_by_liege_tier
 	}
@@ -406,7 +425,7 @@ councillor_china_2 = { #尚书右仆射
 	modifier = {
 		name = councillor_chancellor_modifier
 		monthly_prestige = 1
-		scale = council_scaled_monthly_income
+		#scale = council_scaled_monthly_income
 	}
 
 	council_owner_modifier = {
@@ -459,7 +478,8 @@ councillor_liebu = { #吏部
 	modifier = {
 		name = councillor_chancellor_modifier
 		fellow_vassal_opinion = 5
-		monthly_income = 3.5
+		tax_mult = 0.15
+		#monthly_income = 3.5
 		monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
 		scale = council_scaled_by_liege_tier
 	}
@@ -467,7 +487,7 @@ councillor_liebu = { #吏部
 	modifier = {
 		name = councillor_chancellor_modifier
 		monthly_prestige = 1
-		scale = council_scaled_monthly_income
+		#scale = council_scaled_monthly_income
 	}
 
 	council_owner_modifier = {
@@ -519,7 +539,8 @@ councillor_bingbu = { #兵部
 	modifier = {
 		name = councillor_chancellor_modifier
 		fellow_vassal_opinion = 5
-		monthly_income = 3.5
+		tax_mult = 0.15
+		#monthly_income = 3.5
 		monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
 		scale = council_scaled_by_liege_tier
 	}
@@ -527,7 +548,7 @@ councillor_bingbu = { #兵部
 	modifier = {
 		name = councillor_chancellor_modifier
 		monthly_prestige = 1
-		scale = council_scaled_monthly_income
+		#scale = council_scaled_monthly_income
 	}
 
 	council_owner_modifier = {
@@ -579,7 +600,8 @@ councillor_libu = { #礼部
 	modifier = {
 		name = councillor_chancellor_modifier
 		fellow_vassal_opinion = 5
-		monthly_income = 3.5
+		#monthly_income = 3.5
+		tax_mult = 0.15
 		monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
 		scale = council_scaled_by_liege_tier
 	}
@@ -587,7 +609,7 @@ councillor_libu = { #礼部
 	modifier = {
 		name = councillor_chancellor_modifier
 		monthly_prestige = 1
-		scale = council_scaled_monthly_income
+		#scale = council_scaled_monthly_income
 	}
 
 	council_owner_modifier = {
@@ -639,7 +661,8 @@ councillor_hubu = { #户部
 	modifier = {
 		name = councillor_chancellor_modifier
 		fellow_vassal_opinion = 5
-		monthly_income = 3.5
+		#monthly_income = 3.5
+		tax_mult = 0.15
 		monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
 		scale = council_scaled_by_liege_tier
 	}
@@ -647,7 +670,7 @@ councillor_hubu = { #户部
 	modifier = {
 		name = councillor_chancellor_modifier
 		monthly_prestige = 1
-		scale = council_scaled_monthly_income
+		#scale = council_scaled_monthly_income
 	}
 
 	council_owner_modifier = {
@@ -657,6 +680,10 @@ councillor_hubu = { #户部
 	}
 	valid_position = {
 		OR = {
+			AND = {
+				has_government = imperial_government 
+				highest_held_title_tier = tier_empire
+			}
 		   has_title = title:e_celestia
 		   has_title = title:e_tang
 		   has_title = title:e_song
@@ -695,7 +722,8 @@ councillor_xingbu = { #刑部
 	modifier = {
 		name = councillor_chancellor_modifier
 		fellow_vassal_opinion = 5
-		monthly_income = 3.5
+		#monthly_income = 3.5
+		tax_mult = 0.15
 		monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
 		scale = council_scaled_by_liege_tier
 	}
@@ -703,7 +731,7 @@ councillor_xingbu = { #刑部
 	modifier = {
 		name = councillor_chancellor_modifier
 		monthly_prestige = 1
-		scale = council_scaled_monthly_income
+		#scale = council_scaled_monthly_income
 	}
 
 	council_owner_modifier = {
@@ -755,7 +783,8 @@ councillor_gongbu = { #工部
 	modifier = {
 		name = councillor_chancellor_modifier
 		fellow_vassal_opinion = 5
-		monthly_income = 3.5
+		#monthly_income = 3.5
+		tax_mult = 0.15
 		monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
 		scale = council_scaled_by_liege_tier
 	}
@@ -763,7 +792,8 @@ councillor_gongbu = { #工部
 	modifier = {
 		name = councillor_chancellor_modifier
 		monthly_prestige = 1
-		scale = council_scaled_monthly_income
+		#scale = council_scaled_monthly_income
+		tax_mult = 0.15
 	}
 
 	council_owner_modifier = {

@@ -68,6 +68,7 @@
     culture = yi
 	religion = pagan 
 	holding = castle_holding
+	special_building_slot = shaozhou_mines_01
 }
 #b_Nanxiongzhou_Baochang
 10364 = {
@@ -295,6 +296,9 @@
     culture = pu
 	religion = pagan 
 	holding = castle_holding
+	882.1.1 = { 
+		religion = lixue
+	}
 }
 #b_Xiangzhou_Laibin
 10400 = {

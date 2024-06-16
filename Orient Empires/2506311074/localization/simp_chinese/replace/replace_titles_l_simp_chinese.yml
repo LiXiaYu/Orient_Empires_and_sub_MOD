@@ -1,10 +1,14 @@
 ﻿l_simp_chinese:
 
- e_caspian-pontic_steppe:0 "可萨"
- e_caspian-pontic_steppe_adj:0 "可萨"
+ e_caspian-pontic_steppe:0 "哈扎尔帝国"
+ e_caspian-pontic_steppe_adj:0 "哈扎尔帝国"
+ e_mongolia:0 "蒙兀"
+ e_mongolia_adj:0 "蒙兀"
+
  k_mongolia:0 "铁勒" #北阻卜
  k_mongolia_adj:0 "铁勒" #北阻卜
-
+ k_buryatia:0 "骨利干" 
+ k_buryatia_adj:0 "骨利干"
  k_oghuz_il:0 "乌古斯"
  k_oghuz_il_adj:0 "乌古斯"
  k_syr_darya:0 "濛池"
@@ -320,6 +324,7 @@
 
 
  d_karashar:0 "焉耆"
+ c_karashar:0 "唆里迷"
  b_karashar:0 "唆里迷"
 
  c_charkliq:0 "鄯善"
@@ -601,8 +606,3 @@
  world_steppe:0 "内亚"
  world_steppe_east:0 "鞑靼"
  world_steppe_west:0 "突兰"
-
- turkish:1 "突骑施"
- turkish_collective_noun:2 "突骑施"
- avar:0 "柔然"
- avar_collective_noun:1 "柔然"

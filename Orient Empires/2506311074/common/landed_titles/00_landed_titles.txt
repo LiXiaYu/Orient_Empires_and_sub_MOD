@@ -187,6 +187,18 @@ d_shiite = {
 	can_be_named_after_dynasty = no
 }
 
+d_zaydi = {
+	color = { 40 160 40 }
+	definite_form = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_be_named_after_dynasty = no	
+	
+	capital = c_mecca
+}
+
 d_masmudi = {
 	color = { 80 160 120 }
 	color2 = { 220 220 0 }
@@ -198,20 +210,37 @@ d_masmudi = {
 	can_be_named_after_dynasty = no
 }
 
-e_golden_horde = {
-	color = { 243 180 17 }
+e_golden_horde = { #White Horde
+	color = { 234 235 220 }
 
 	definite_form = yes
+	can_be_named_after_dynasty = no
 
-	capital = c_karakorum
+	capital = c_itil
+	can_create_on_partition = { always = no }
+				 
+}
+
+e_blue_horde = { #Blue Horde
+	color = { 97 101 133 }
+
+	definite_form = yes
+	can_be_named_after_dynasty = no
+
+	capital = c_sighnaq
+	can_create_on_partition = { always = no }
+				 
 }
 
 e_ilkhanate = {
+
 	color = { 140 180 20 }
 
 	definite_form = yes
+	can_be_named_after_dynasty = no
 
 	capital = c_tabriz
+	can_create_on_partition = { always = no }
 }
 
 e_chagatai = {
@@ -219,8 +248,10 @@ e_chagatai = {
 	color2 = { 0 250 250 }
 
 	definite_form = yes
+	can_be_named_after_dynasty = no
 
 	capital = c_samarkand
+	can_create_on_partition = { always = no }
 }
 
 e_black_horde = {
@@ -228,8 +259,10 @@ e_black_horde = {
 	color2 = { 0 250 250 }
 
 	definite_form = yes
+	can_be_named_after_dynasty = no
 
 	capital = c_delhi
+	can_create_on_partition = { always = no }
 }
 
 e_white_horde = {
@@ -237,8 +270,10 @@ e_white_horde = {
 	color2 = { 0 250 250 }
 
 	definite_form = yes
+	can_be_named_after_dynasty = no
 
 	capital = c_praha
+	can_create_on_partition = { always = no }
 }
 
 e_aarlud_khanate = {
@@ -246,8 +281,10 @@ e_aarlud_khanate = {
 	color2 = { 0 250 250 }
 
 	definite_form = yes
+	can_be_named_after_dynasty = no
 
 	capital = c_sjaelland
+	can_create_on_partition = { always = no }
 }
 
 e_togskol_khanate = {
@@ -255,8 +292,10 @@ e_togskol_khanate = {
 	color2 = { 0 250 250 }
 
 	definite_form = yes
+	can_be_named_after_dynasty = no
 
 	capital = c_roma
+	can_create_on_partition = { always = no }
 }
 
 e_baruun_khanate = {
@@ -264,8 +303,10 @@ e_baruun_khanate = {
 	color2 = { 0 250 250 }
 
 	definite_form = yes
+	can_be_named_after_dynasty = no
 
 	capital = c_alexandria
+	can_create_on_partition = { always = no }
 }
 
 e_uyghur_khanate = {
@@ -273,8 +314,9 @@ e_uyghur_khanate = {
 	color2= { 0 250 250 }
 
 	definite_form = yes
-	
+	can_be_named_after_dynasty = no
 	capital = c_karabalgasun
+	can_create_on_partition = { always = no }
 	
 	ai_primary_priority = {
 		if = {
@@ -307,6 +349,7 @@ e_kirghiz_khanate = {
 e_mongol_empire = {
 	color = { 130 180 240 }
 	color2 = { 255 20 20 }
+	can_be_named_after_dynasty = no
 	ruler_uses_title_name = no
 	definite_form = yes
 	
@@ -320,6 +363,7 @@ e_mongol_empire = {
 e_kara_khitai = { #aka Western Liao / Great Liao
 	color = { 10 10 10 }
 	color2= { 255 255 255 }
+	can_be_named_after_dynasty = no
 	
 	capital = c_balashagun
 }
@@ -743,6 +787,91 @@ d_zun_warriors = {
 
 # TITULAR EMPIRES
 
+e_none = { #for Anatolia/Caucasus to control de_jure conquest. Not actually creatable
+	color = { 0 0 0 }
+	color2 = { 0 0 0 }
+	
+	capital = c_roma
+
+	can_create = { always = no }
+	can_create_on_partition = { always = no }
+	no_automatic_claims = yes
+	definite_form = yes
+	#de_jure_drift_disabled = yes
+}
+
+#Titles to replace e_byzantium
+
+e_bulgaria = { #Becomes de_jure empire for Bulgaria
+	color = { 108 78 110 }
+	color2 = { 255 255 255 }
+	capital = c_turnovo # Tyrnovo
+	definite_form = yes
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:bulgarian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				culture = culture:bulgarian
+			}
+		}	
+} 
+
+e_serbia = { #Becomes de_jure empire for Serbia and Epirus in final bookmark.
+		color = { 100 110 50 }
+		color2 = { 255 255 255 }
+		
+		capital = c_rashka # Novo Trgovište
+		definite_form = yes
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:serbian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				culture = culture:serbian
+			}
+		}	
+}
+
+e_ottoman = { #Becomes de_jure Empire for Anatolia for last bookmarks
+		color = { 115 205 130 }
+		capital = c_prusa #Moved all over the place in the 1300's. Going with Bursa since that's what it was in 1337
+		definite_form = yes
+}
+
+
+e_yuan = {
+	color = { 140 30 197 }
+
+	definite_form = yes
+	can_be_named_after_dynasty = no 
+	capital = c_karakorum #No china on map
+	can_create_on_partition = { always = no }
+}
+
+e_north_sea = {
+	color = { 0 0 60 }
+	definite_form = yes
+	can_create_on_partition = { always = no }
+	capital = c_sjaelland	#Roskilde
+}
+
 e_latin_empire = {
 	color = { 150 105 56 }
 
@@ -778,7 +907,1974 @@ k_pechenegs = {
 	capital = c_odessa # Odessa
 }
 
+k_hammadid = { # Hammadid
+	color = { 149 180 17 }
+	capital = c_allaqi # Allaqi
+	
+}
+
+k_zenata = { # Zenata
+	color = { 0 71 189 }
+	capital = c_figuig # Figuig
+	
+}
+#Breakup of Lotharingia title
+
+k_lower_lorraine = { # Niederlothringen
+		color = { 255 204 20 }
+		color2 = { 255 204 0 }
+		capital = c_antwerpen # Herstal
+		can_create = {
+			trigger_if = {
+			limit = { is_ai = yes }
+		OR = {
+		is_independent_ruler=yes
+		NOT = { exists = title:e_hre }
+			}
+				}
+		}
+		
+		
+	}
+		
+		
+k_upper_lorraine = { # Oberlothringen
+		color = { 250 150 20 }
+		color2 = { 220 220 20 }
+		capital = c_nancy # Blâmont # Lorraine - Nancy
+		can_create = {
+			trigger_if = {
+			limit = { is_ai = yes }
+		OR = {
+		is_independent_ruler=yes
+		NOT = { exists = title:e_hre }
+			}
+				}
+		}
+	
+	}
+		
+k_geats = { # Gautaríki
+	color = { 208 191 99 }
+	capital = c_ostergotland # Östergötland # Ostrogothia
+
+}
+
+k_duklja = { # Duklja
+	color = { 224 186 36 }
+	capital = c_duklja # Crna Gora # Zeta
+}
+
+k_kerman = { # Kermán
+	color = { 205 70 255 }
+	capital = c_kirman # Kermán # Kerman
+}
+
+k_tsongkha = {
+		color = { 50 60 105 }
+		color2 = { 255 255 255 }
+		
+		capital = c_shanzhou
+		
+}
+
+k_liao = {
+	color = { 33 202 156 }
+	color2= { 255 255 255 }
+		can_be_named_after_dynasty = no
+		capital = c_karakorum
+		
+	
+}
+		
+		
+#Can't believe these English Kingdoms aren't in the CK3 history
+
+
+	k_east_anglia = { # Eastengle
+		color = { 60 109 121 }
+		color2 = { 255 255 255 }
+		capital = c_norfolk # Norfolk
+
+	}
+	k_mercia = { # Mierce
+		color = { 6 42 127 }
+		color2 = { 255 255 255 }
+		capital = c_hereford # Hereford
+	}
+	
+	k_northumberland = { # Northymbraland
+		color = { 234 207 99 }
+		color2 = { 255 255 255 }
+		capital = c_northumberland # Northumberland
+	}
+	k_wessex = { # Westseaxe
+		color = { 68 140 48 }
+		color2 = { 255 255 255 }
+		capital = c_hampton # Winchester
+	}
+	
+	
+	k_strathclyde = { # Ystrad Clut
+		color = { 90 226 196 }
+		color2 = { 255 255 255 }
+		capital = c_lennox # Rinn Friu # Strathclyde
+	}
+	
+	
+	k_armenia_minor = { # Mikrá Armenia
+	color = { 14 30 131 }
+
+	capital = c_marash # Marash # Teluch
+
+}
+
+
+
+
+k_qangli = { # Qanglilar # Qangli
+	color = { 25 130 65 }
+	color2 = { 255 255 255 }
+	capital = c_turgay # Turgay
+	can_be_named_after_dynasty = no 
+
+}
+
+k_qangar = { # Qangar
+	color = { 45 99 180 }
+	color2 = { 255 255 255 }
+	capital = c_oleshye # Tokmak
+	can_be_named_after_dynasty = no 
+}
+
+k_uzes = { # Uzlar
+	color = { 220 158 121 }
+	color2 = { 255 255 255 }
+	capital = c_uzen # c_uzen
+	can_be_named_after_dynasty = no 
+}
+
+
+k_qipchaq = { # Qipchaqlar # Wild Cumans
+	color = { 45 92 150 }
+	color2 = { 255 255 255 }
+	capital = c_itil # Saray
+	can_be_named_after_dynasty = no 
+}
+
+k_cumania = { # Kumanlar # Non wild Cumans
+	color = { 166 76 99 }
+	color2 = { 255 255 255 }
+	capital = c_oleshye # Tokmak
+	can_be_named_after_dynasty = no 
+
+}
+
+k_tiaret = { # Tiáret
+	color = { 149 180 17 }
+	capital = c_tahert # Táhart # Táhert/c_atlas_mnt
+	
+}
+
+
+k_pechenegs = {
+	color = { 132 108 72}
+	can_be_named_after_dynasty = no 
+	capital = c_odessa # Odessa
+}
+
+k_salerno = { # Principato di Salerno
+	color = { 0 132 250 }
+
+	capital = c_salerno # Principato # Salerno
+
+
+}
+
+
+k_alodia = { # Aloudia # Alodia
+	color = { 175 100 80 }
+	capital = c_alodia # Soba
+
+}
+
+k_makuria = { # Makouria # Makuria
+	color = { 165 180 95 }
+	capital = c_dongola # Dongola # Makuria
+	
+}
+
+#West African titular's
+
+k_nri = {
+		color = { 50 60 115 }
+		color2 = { 255 255 255 }
+		
+		capital = c_igbo
+		
+}
+
+k_daju = { #Not using k_darfur since that'd give too large of an area to de-jure conquer but there was a Daju Kingdom from the 12th-15th centuries
+			color = { 225 105 10 }
+			color2 = { 255 255 255 }
+			
+			capital = c_east_darfur
+			
+}
+
+
 # TITULAR DUCHIES
+
+# List of Titular Stem Duchies in the HRE
+
+# Swabia
+d_swabia = { # Schwaben
+	color = { 190 190 130 }
+	color2 = { 220 220 20 }
+	capital = c_vaihingen # Hohenstaufen # Schwaben
+	ai_primary_priority = { 
+			if = {
+				limit = {
+					culture_group = culture_group:central_germanic_group
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+
+}
+
+# Lower Lorraine
+d_lower_lorraine = { # Niederlothringen
+	color = { 37 114 179 }
+	color2 = { 220 220 20 }
+	capital = c_brabant # Leuven # Brabant
+
+}
+
+# Bavaria
+d_bavaria = { # Baiern
+	color = { 56 67 158 }
+	color2 = { 220 220 20 }
+	capital = c_rothenburg # Scheyern # Oberbayern
+
+}
+
+# Saxony
+d_saxony = { # Sachsen
+	color = { 78 98 40 }
+	color2 = { 220 220 20 }
+	capital = c_luneburg # Lüneburg
+	ai_primary_priority = { 
+			if = {
+				limit = {
+					culture_group = culture_group:central_germanic_group
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+}
+
+# Franconia
+d_franconia = { # Franken
+	color = { 130 100 100 }
+	color2 = { 220 220 20 }
+	capital = c_frankfurt # Mainz
+}
+
+
+
+d_pagania = { # Neretljani
+	color = { 114 230 1 }
+	capital = c_pagania # Omis
+
+}
+
+d_khawarij = { # Khawarij # (used for the Kharijite Rebellion - NYI)
+	color = { 70 130 10 }
+	color2 = { 255 255 255 }
+	capital = c_mosul # Mosul
+}
+
+d_saxon_ostmark = { # Ostmark # March of the East or March of Gero
+	color = { 94 83 162 }
+	capital = c_vogtland # Plauen
+}
+
+d_bornholm = { # Burghændæholm #Leaving as titular since there was no Bornholm duchy in this time period.
+			color = { 222 186 42 }
+			color2 = { 255 255 255 }
+			capital = c_bornholm # Burghændæholm
+}
+	
+d_vanand = { # Vanand
+	color = { 155 100 7 }
+
+	capital = c_vanand # Vanand
+
+}
+
+d_meshketi = { # Meskheti
+	color = { 99 152 44 }
+	capital = c_samtskhe # Samtskhe # Meskheti
+}
+
+d_eretnid = { # Eretna
+	color = { 91 124 240 }
+	capital = c_sebasteia # Sebasteia # Sebastia
+
+}
+
+d_germiyan = { # Germiyan
+	color = { 255 180 180 }
+	capital = c_dorylaion # Dorylaion # Kotyaion
+
+}
+
+d_saruhan = { # Saruhan
+	color = { 144 171 225 }
+	capital = c_smyrna # Smyrna
+
+}
+
+d_aydin = { # Aydin
+	color = { 238 43 172 }
+	capital = c_ionia # Ionía # Ephesos # Tralleis
+}
+
+d_hamid = { # Hamid
+	color = { 144 66 189 }
+	capital = c_pisidia # Pisidía # Sozopolis
+
+}
+
+d_candar = { # Candar
+	color = { 238 79 182 }
+	capital = c_paphlagonia # Paphlagonia
+
+}
+
+d_karaman = { # Qaraman
+	color = { 120 41 92 }
+	capital = c_isauria # Laranda
+
+}
+
+d_tekke = { # Teke
+	color = { 244 153 189 }
+	capital = c_pamphylia # Attáleia # Attaleia
+}
+
+d_paulicians = { # Paulikianoi
+	color = { 78 33 125 }
+	capital = c_satala # Tephrike
+
+}
+
+d_osmanli = { # Osmanli
+	color = { 247 145 30 }
+	capital = c_prusa # Sangários # Sügüt
+
+}
+
+d_tao = { # Tayk
+			color = { 210 204 50 }
+			color2 = { 255 255 255 }
+			capital = c_tao # Tao
+			
+			
+}
+	
+	
+d_ahi = { # Ahiler
+	color = { 144 66 189 }
+	capital = c_galatia # Ankyra
+
+}
+
+d_yaroslavl = { # Yaroslavl
+	color = { 178 192 134 }
+	capital = c_yaroslavl # Yaroslavl
+
+}
+
+d_vitebsk = { # Vitebsk
+	color = { 196 33 55 }
+	capital = c_vitebsk # Vitebsk
+
+}
+
+d_karasi = { # Qarasi
+	color = { 88 144 77 }
+	
+	capital = c_mysia # Mysía # Akhyraous
+
+}
+
+d_rhodos = { # Rhodos
+	color = { 144 230 19 }
+	capital = c_rhodos # Dodekánisa # Rhodos
+
+}
+
+d_mentese = { # Mentese
+	color = { 60 130 20 }
+	
+	capital = c_caria # Mylasa
+}
+
+d_mingrelia = { # Samegrelo
+	color = { 25 183 33 }
+
+	capital = c_odishi # Odishi
+
+}
+
+
+d_sharif_medina = { # Madinah # Medina
+	color = { 71 159 102 }
+	capital = c_medina # Madinah # Medina
+
+}
+
+d_sharif_mecca = { # Makkah # Mecca
+	color = { 188 6 133 }
+	capital = c_mecca # Makkah # Mecca
+
+}		
+
+d_amiralarab = { # Arabiyya # Amir-al-Arab
+	color = { 217 96 63 }
+	capital = c_palmyra # Palmyra
+
+}
+
+d_sadah = { # Sadah
+	color = { 155 114 99 }
+	capital = c_najran # Sadah # Rafha
+
+}
+
+d_tiflis = { # Tiflis
+	color = { 104 20 12 }
+	capital = c_tbilisi # Tbilisi
+}
+
+##############
+# Tribal titles
+##############
+
+######################################
+# Mongols
+######################################
+
+d_khereid = { # Khereid Khanate
+	color = { 90 90 235 }
+	capital = c_ikh_bogd # Ikh Bogd
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_tatars = { # Tatar Khanate
+	color = { 110 80 255 }
+	capital = c_tovkhon
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_khamag = { # Khamag Khanate
+	color = { 130 90 255 }
+	capital = c_ulaanbaatar
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_mergid = { # Mergid Khanate
+	color = { 100 120 255 }
+	capital = c_ulan_ude
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_bayad = { # Bayad Khanate
+	color = { 15 50 30 }
+
+	capital = c_selenga
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_oirat = { #Oirad Khanate
+	color = { 30 60 17 }
+	capital = c_darkhad_valley
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_tumed = { #Tumed Khanate
+	color = { 50 30 40 }
+	capital = c_monkh_saridag
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+
+}
+
+d_barga = { #Barga Khanate
+	color = { 50 120 200 }		
+	capital = c_bargajan
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+			
+}
+
+d_tannus = { #Tuva Khanate
+	color = { 50 100 115 }	
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	capital = c_eastern_tannu
+			
+}
+
+d_naiman = {
+	color = { 80 90 15 }
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	capital = c_tseel
+			
+}
+
+######################################
+# Uighur
+######################################
+d_uighurs = { # Uighurs
+	color = { 113 91 255 }
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	capital = c_karashar # Qarashahr
+}
+
+######################################
+# Kirghiz
+######################################
+d_qirghiz = { # Qirghiz
+	color = { 147 21 39 }
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	capital = c_khotan # Khotan # Jungaria
+}
+
+d_yenisei = {
+	color = { 140 140 180 }
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	capital = c_abakan
+			
+}
+
+
+######################################
+# Khirgiz
+######################################
+
+d_khirgiz = {
+			color = { 150 150 225 }
+			color2= { 255 255 255 }
+			can_be_named_after_dynasty = no 
+			de_jure_drift_disabled = yes
+			capital = c_aley
+			
+}
+			
+######################################
+# Kimek
+######################################
+d_kimek = {
+		color = { 150 80 40 }
+		color2= { 255 255 255 }
+		can_be_named_after_dynasty = no 
+		de_jure_drift_disabled = yes
+		capital = c_karasu
+		
+}
+######################################
+# Karluk
+######################################
+d_qarluq = { # Qarluq
+	color = { 65 100 130 }
+	capital = c_balashagun # Barskhan
+	de_jure_drift_disabled = yes
+}
+
+d_yaghma = { # Yaghma
+	color = { 58 110 170 }
+	capital = c_kashgar # Kashgar
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_chigil = { # Chigil
+	color = { 65 100 130 }
+	capital = c_quriltay # Talas
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_basmils = { # Bamils
+	color = { 147 21 39 }
+	capital = c_emil # Emil
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_tukhsi = { # Tukhsi
+	color = { 147 21 39 }
+	capital = c_balashagun # Balasaghun
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+
+######################################
+# Oghuz
+######################################
+# Uzes tribes
+d_uzes = { # Uzes
+	color = { 154 92 24 }
+	color2 = { 255 255 255 }
+	capital = c_beksima # Sarpa
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_tekule = { # Teküle
+	color = { 40 91 60 }
+	color2 = { 255 255 255 }
+	capital = c_aqtobe # Op
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_oghuz = { # Oghuz
+	color = { 31 45 147 }
+	capital = c_jend # Jand
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_ghuzz = { # Ghuzz
+	color = { 210 45 45 }
+	capital = c_balkh # Balkh
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+######################################
+######################################
+# Persians
+######################################
+d_zunbil = { # Rutbils # Zunbils
+	color = { 255 150 81 }
+	capital = c_zamindawar # Zamindavar
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+
+}
+
+d_shabankara = { # Shabankara
+	color = { 244 190 91 }
+	capital = c_darabjerd # Darabjird #was 642 # Larestan
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+
+}
+
+
+####
+# Ghor
+####
+d_ghor = { # Ghór
+	color = { 195 165 65 }
+	color2 = { 255 255 255 }
+	capital = c_ghur # Ghór
+	de_jure_drift_disabled = yes
+}
+
+####
+# Persian
+####
+d_baloch = { # Baloch
+	color = { 217 118 50 }
+	color2 = { 255 255 255 }
+	capital = c_jiruft # Jiruft
+	de_jure_drift_disabled = yes
+
+}
+
+d_kufichi = { # Kufichi # Qufs
+	color = { 190 165 65 }
+	color2 = { 255 255 255 }
+	capital = c_kiz # Pandjgúr
+	de_jure_drift_disabled = yes
+}
+
+####
+# Banu Ifran
+####
+d_sala = { # Sala
+	color = { 68 255 20 }
+	color2 = { 255 255 255 }
+	capital = c_gharb # Sala
+	de_jure_drift_disabled = yes
+
+}
+
+####
+# Barghawata
+####
+d_barghawata = { # Tamasna # Sala
+	color = { 35 160 62 }
+	color2 = { 255 255 255 }
+	capital = c_asfi # Asfí # Asfî
+	de_jure_drift_disabled = yes
+}
+
+d_lamta = { # Lamta
+	color = { 194 116 28 }
+	capital = c_ifni # Ifni
+	de_jure_drift_disabled = yes
+
+}
+
+d_lamta_east = { # Lamta
+	color = { 160 95 75 }
+	capital = c_touat # Tuat
+	de_jure_drift_disabled = yes
+}
+
+d_gazzula = { # Gazzúla
+	color = { 150 56 175 }
+	capital = c_ifni # Núl
+	de_jure_drift_disabled = yes
+	
+}
+
+d_mazata = { # Mazáta
+	color = { 190 195 50 }
+	capital = c_syrte # Syrte
+	de_jure_drift_disabled = yes
+}
+
+d_musab = { # Mus'ab
+	color = { 149 180 17 }
+	capital = c_ghardaia # Al-Aghwat # Ghardaiya
+	de_jure_drift_disabled = yes
+
+}
+
+d_hilal = { # Banu Hilál
+	color = { 173 150 43 }
+	color2 = { 0 128 128 }
+	capital = c_qashtiliya # Qashtiliya
+	de_jure_drift_disabled = yes
+}
+
+d_zughba = { # Banu Zughba
+	color = { 180 115 40 }
+	color2 = { 0 128 128 }
+	capital = c_nafusa # Nafzawa
+	de_jure_drift_disabled = yes
+}
+
+d_lawata = { # Lawata
+	color = { 122 53 19 }
+	capital = c_awjila # Awjíla
+	de_jure_drift_disabled = yes
+
+}
+
+d_masila = { # Masila
+	color = { 85 8 24 }
+	capital = c_sullum # Sullum
+	de_jure_drift_disabled = yes
+}
+
+d_dakhila = { # Dakhila
+	color = { 240 124 24 }
+	capital = c_dakhla # Dakhila
+	de_jure_drift_disabled = yes
+}
+
+d_kanz = { # Kanz # Banu al-Kanz
+	color = { 130 99 122 }
+	capital = c_aswan # Aswan
+	de_jure_drift_disabled = yes
+}
+
+d_massufa = { # Massúfa
+	color = { 105 20 0 }
+	capital = c_taghaza # Taghaza
+	de_jure_drift_disabled = yes
+}
+
+
+######################################
+# Qipchaq
+######################################
+
+d_qipchaq = { # Qipchaq
+	color = { 137 41 59 }
+	capital = c_karkaraly # Balkhash
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+# Tribes
+d_ay_opa = { # Ay-opa
+	color = { 33 1 66 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_atamansku # Yaik
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_dorut = { # Dörüt
+	color = { 130 50 6 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_atyrau # Saray-Jük
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_terteroba = { # Terteroba
+	color = { 80 83 50 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_manych # Ugru
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_toqsoba = { # Toqsoba
+	color = { 28 30 150 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_khopyor # Uda # Duna-Jük
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_yimek = { # Yimek
+	color = { 128 30 110 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_karatayak # Vskol'
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_enchogli = { # Ençogli
+	color = { 99 71 16 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_odessa # Yedisan
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_olberlig = { # Ölberli
+	color = { 43 60 70 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_itil # Saray
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_targil = { # Targil
+	color = { 240 60 10 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_targyl # Khoper
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_qongurogli = { # Bekrüti
+	color = { 20 230 190 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_kuban # Cuba
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_oren = { # Ören
+	color = { 220 200 190 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_turgay # Turgay
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_qor = { # Qor
+	color = { 20 20 60 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_chilia # Basarabia
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_burchali = { # Burçali
+	color = { 14 230 78 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_samar # Aq Samar
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_chortan = { # Çortan
+	color = { 146 29 18 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_kalos_limen # Qirim
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_ulasgoli = { # Ulashogli
+	color = { 89 134 185 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_oleshye # Tokmak
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_urusoba = { # Urus-oba
+	color = { 189 10 18 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_dnipro # Özü
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_bayawut = { # Bayawut
+	color = { 59 98 77 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_sighnaq # Sighnaq
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+d_chaghraq = { # Çaghraq
+	color = { 41 90 69 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_ak-dzulpas # Irgiz
+	can_be_named_after_dynasty = no
+de_jure_drift_disabled = yes	
+	
+}
+
+d_baruq = { # Baruq
+	color = { 163 41 66 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_mangyshlak # Mangyshlak
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+	
+}
+
+d_badach = { # Badaç # Badach
+	color = { 120 40 79 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_astrakhan # Kuma
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+	
+}
+
+######################################
+# Khazars
+######################################
+d_khavars = { # Qavarlar
+	color = { 18 200 18 }
+	color2 = { 255 255 255 }
+	capital = c_bihar # Bihar
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+
+}
+
+######################################
+# Pecheneg tribes
+######################################
+d_yawdi_ertim = { # Yawdi Ertim # aka Shining horses
+	color = { 171 21 162 }
+	color2 = { 255 255 255 }
+	capital = c_samar # Aq Samar # Khortitza
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+
+}
+
+d_kuerchi_chur = { # Küerchi Chür # aka blue horses
+	color = { 44 53 106 }
+	color2 = { 255 255 255 }
+	capital = c_dnipro # Özü # Lower dneiper
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+
+}
+
+d_qabuqsin_yula = { # Qabuqsin Yula # aka bark colored horses
+	color = { 147 152 87 }
+	color2 = { 255 255 255 }
+	capital = c_oleshye # Tokmak # Lukomorie
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+
+}
+
+d_suru_kulbej = { # Suru Külbej # aka grey horses of the bey.
+	color = { 182 198 176 }
+	color2 = { 255 255 255 }
+	capital = c_golden_hills # Duna-Jük # Sugrov/Donents
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+
+}
+
+d_qara_bay = { # Qara Bay # aka black horses.
+	color = { 38 41 37 }
+	color2 = { 255 255 255 }
+	capital = c_chilia # Basarabia
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+
+}
+
+d_boru_tolmach = { # Boru Tolmach # aka grey horses of the tolmach.
+	color = { 105 111 102 }
+	color2 = { 255 255 255 }
+	capital = c_azov # Azaq # Azov
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+}
+
+
+d_yazi_qapan = { # Yazi Qapan # aka darkbrown horses.
+	color = { 145 99 10 }
+	color2 = { 255 255 255 }
+	capital = c_buzau # Buzau
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+
+}
+
+d_bula_chopan = { # Bula Chopan # aka piebald horses
+	color = { 133 102 112 }
+	color2 = { 255 255 255 }
+	capital = c_manych # Ugru # manych
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+
+}
+
+#####
+# Sami
+#####
+d_kylfings = { # Kylfingilaš
+	color = { 11 114 28 }
+	capital = c_vasterbotten # Norrland # Västerbotten
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_kvens = { # Kveanatlaš
+	color = { 117 47 47 }
+	capital = c_kemi # Österbotten
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_kvens_birkarls = { # Bircharlaboa
+	color = { 7 190 23 }
+	capital = c_kemi # c_kemi
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+
+#####
+# Finns
+#####
+d_satakunta = { # Satakuntans
+	color = { 117 47 47 }
+	capital = c_kitka # c_kitka # c_kitka
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_tavasts = { # Hämäläiset
+	color = { 131 21 21 }
+	capital = c_tavasts # Tavastland # Tavast
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_suomi_finns = { # Suomalaiset
+	color = { 100 11 114 }
+	capital = c_finland # Finland
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_savonians = { # Savolaiset
+	color = { 186 125 181 }
+	capital = c_olavinlinna # Savolax
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+#####
+# Sami
+#####
+d_sami = { # Sami
+	color = { 101 99 35 }
+	capital = c_akkel # Kantalahti # Kandalax
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_tersami = { # Sami
+	color = { 80 80 35 }
+	capital = c_jovvkuj # Kantalahti # Kandalax
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_skoltsami = { # Sami
+	color = { 90 80 50 }
+	capital = c_sombio # Kantalahti # Kandalax
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+######
+# Vepsian tribes
+######
+d_lyydians = { # Lüüdiläižed
+	color = { 105 138 187 }
+	color2 = { 255 255 255 }
+	capital = c_povenets # Latša # Kargopol
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_chudes = { # Vepsläižed
+	color = { 113 39 124 }
+	color2 = { 255 255 255 }
+	capital = c_vologda # Vologda
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+# Bjarmians
+d_toimians = { # Toimiläižed
+	color = { 159 150 150 }
+	color2 = { 255 255 255 }
+	capital = c_kevrola # Pinega
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_bjarmians = { # Bjarmiläižed
+	color = { 37 21 83 }
+	color2 = { 255 255 255 }
+	capital = c_kholmogory # Výnva # North dvina
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+######################################
+######################################
+######################################
+# Vlach
+######################################
+d_brodniks = { # Brodnici
+	color = { 181 70 28 }
+	color2 = { 255 255 255 }
+	capital = c_bucuresti # Tirgoviste
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+d_bolohoveni = { # Bolohoveni
+	color = { 40 170 88 }
+	color2 = { 255 255 255 }
+	capital = c_stoenesti # Bacau
+	can_be_named_after_dynasty = no
+de_jure_drift_disabled = yes	
+}
+
+
+######################################
+# East Slavic
+######################################
+
+d_drevlyans = { # Drevlyane
+	color = { 115 31 56 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_korosten # Ovruch # Iskorosten
+	de_jure_drift_disabled = yes
+	
+}
+
+d_ulichs = { # Ulichi # Ulichane
+	color = { 39 77 104 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_ushytsia # Podolya # Peresechen
+	de_jure_drift_disabled = yes
+	
+}
+
+d_volhynians = { # Volyniane
+	color = { 191 165 46 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_volodymyr # Vladimir Volynsky
+	de_jure_drift_disabled = yes
+	
+}
+
+d_buzhans = { # Buzhane
+	color = { 20 75 90 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_terebovl # Terebovl # Kamyanetspodilsky
+	de_jure_drift_disabled = yes
+	
+}
+
+d_tivertsi = { # Tivertsy # Tivertsi
+	color = { 54 92 124 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_halych # Yanbu # Cern
+	de_jure_drift_disabled = yes
+	
+}
+
+d_meshcheras = { # Meshcheras
+	color = { 151 71 41 }
+	capital = c_ryazan # Riazan' # Ryazan
+	de_jure_drift_disabled = yes
+	
+	
+	
+}
+
+d_kryvians = { # Krivichi
+	color = { 128 133 104 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_polotsk # Polotsk
+	de_jure_drift_disabled = yes
+	
+}
+
+d_severians = { # Severiane
+	color = { 120 155 40 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_novgorod_seversky # Novgorod Seversky
+	de_jure_drift_disabled = yes
+	
+}
+
+d_vyatichi = { # Vyatichi
+	color = { 169 183 125 }
+	color2 = { 255 255 255 }
+	capital = c_tver # Tver
+	de_jure_drift_disabled = yes
+}
+
+
+d_dregovichi = { # Dregovichi
+	color = { 100 100 20 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_pinsk # Pinsk
+	de_jure_drift_disabled = yes
+	
+}
+
+d_radimichi = { # Radimichi
+	color = { 110 136 68 }
+	color2 = { 255 255 255 }
+	
+	
+	capital = c_mstislavl # Mstislavl
+	de_jure_drift_disabled = yes
+	
+}
+
+d_polyane = { # Polyane
+	color = { 82 81 75 }
+	color2 = { 255 255 255 }
+	
+	de_jure_drift_disabled = yes
+	capital = c_kiev # Kiev
+	
+}
+
+######
+# Mordvin tribes
+######
+d_mordvins_erza = { # Erzyät
+	color = { 150 47 47 }
+	color2 = { 255 255 255 }
+	capital = c_murom # Kadom
+	de_jure_drift_disabled = yes
+}
+
+d_mordvins = { # Mokshet
+	color = { 148 165 45 }
+	color2 = { 255 255 255 }
+	capital = c_murom # Moksha
+	de_jure_drift_disabled = yes
+} # end d_mordvins
+
+d_burtas = { # Burtas
+	color = { 120 74 130 }
+	color2 = { 255 255 255 }
+	capital = c_saratov # Barysh
+	de_jure_drift_disabled = yes
+} # end d_burtas
+
+d_muromians = { # Muromians
+	color = { 160 120 75 }
+	capital = c_murom # Murom
+	de_jure_drift_disabled = yes
+}
+
+
+######
+# Karelian tribes
+######
+d_livgians = { # Livgilaižed
+	color = { 99 152 70 }
+	color2 = { 255 255 255 }
+	capital = c_onega # Olonec
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+}
+
+d_karelians = { # Karjalaižed
+	color = { 193 192 108 }
+	capital = c_viena # Karjala
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+}
+
+d_horse_karelians = { # Tamma-Karjalaižed
+	color = { 63 114 74 }
+	capital = c_viipuri # Viipuri
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+	
+}
+
+
+
+#####
+# Mari tribes
+#####
+d_maris = { # Vice Mari
+	color = { 150 130 45 }
+	capital = c_martyuba # Šošma # Mari
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+}
+
+d_maris_vetluga = { # Vütla Mari
+	color = { 180 15 63 }
+	color2 = { 255 255 255 }
+	capital = c_lyubim # Vütla # Vetluga
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+}
+
+d_meryas = { # Meryas
+	color = { 131 41 41 }
+	capital = c_rostov # Rostov # Rostov / Merya
+	can_be_named_after_dynasty = no 
+	de_jure_drift_disabled = yes
+}
+
+
+#####
+# Ingrians
+#####
+d_votes = { # Vadjalased
+	color = { 1 193 119 }
+	capital = c_koporje # Koporje
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+}
+
+d_ingrians = { # Inkerilaižed
+	color = { 193 40 40 }
+	capital = c_vodi # Ingria
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no 
+}
+
+
+#####
+# Estonian tribes
+#####
+d_estonia = { # Eestlased
+	color = { 94 60 22 }
+	de_jure_drift_disabled = yes
+	capital = c_reval # Harria # Reval
+
+}
+
+d_ugandians = { # Ugandilased
+	color = { 115 143 196 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_dorpat # Ugaunia # Dorpat
+}
+
+d_oseelians = { # Saarlased
+	color = { 124 124 124 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_osel # Osilia # Osel
+}
+
+d_rotalians = { # Läänelased
+	color = { 121 39 17 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_wiek # Rotalia # Läänemaa
+}
+
+d_vironians = { # Virulased
+	color = { 30 25 90 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_narva # Vironia # Narva
+}
+
+#####
+# Livonian tribes
+#####
+d_sakalians = { # Sakali
+	color = { 21 73 21 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_sakala # Saccalia # Sakala
+}
+
+d_vanemas = { # Vanemi
+	color = { 95 160 73 }
+	color2 = { 255 255 255 }
+	capital = c_vanemane # Vredecuren # Kurs
+	de_jure_drift_disabled = yes
+}
+
+
+######################################
+# Baltic
+######################################
+# Latvian tribes
+#####
+d_curonian = { # Kurši
+	color = { 141 55 29 }
+	de_jure_drift_disabled = yes
+	capital = c_zemigalians # Vredecuren # Kurzeme
+
+}
+
+d_selonians = { # Seli
+	color = { 22 96 143 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_selpils # Sèlija # Selija
+
+}
+
+d_talavians = { # Tãlavi
+	color = { 169 41 27 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_talava # Tholowa # Talava
+
+}
+
+d_lettigalians = { # Latgali
+	color = { 126 51 51 }
+	de_jure_drift_disabled = yes
+	capital = c_talava # Tholowa # Letigalia
+
+}
+
+d_zemigalians = { # Zemgali
+	color = { 183 21 21 }
+	de_jure_drift_disabled = yes
+	capital = c_zemigalians # Opemele # zemgali
+
+}
+
+#####
+# Lithuanian tribes
+#####
+d_deltuvians = { # Deltuvai
+	color = { 81 164 104 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_deltuva # Deltuva
+}
+
+d_yatviags = { # Jotvingiai
+	color = { 149 97 97 }
+	de_jure_drift_disabled = yes
+	capital = c_yatvyagi # Dainava
+
+}
+
+#####
+# Prussian tribes
+#####
+d_pruthenians = { # Prùsà #  prussian uprising.
+	color = { 159 195 75 }
+	de_jure_drift_disabled = yes
+	capital = c_wormditt # Warmia # Marienburg
+}
+
+d_goliadj = { # Goladi # Galindians
+	color = { 42 132 210 }
+	de_jure_drift_disabled = yes
+	capital = c_allenstein # Galindia
+}
+
+d_warmians = { # Varmi
+	color = { 1 49 93 }
+	de_jure_drift_disabled = yes
+	capital = c_wormditt # Warmia
+}
+
+d_pomesanians = { # Pomedi
+	color = { 200 99 3 }
+	de_jure_drift_disabled = yes
+	capital = c_malbork # Pomesania
+}
+
+d_sasnians = { # Sasnai
+	color = { 25 70 31 }
+	de_jure_drift_disabled = yes
+	capital = c_allenstein # Galindia
+}
+
+d_pogesanians = { # Paugudi
+	color = { 7 99 129 }
+	de_jure_drift_disabled = yes
+	capital = c_osterode # Pogesania
+}
+
+d_bartians = { # Barthi
+	color = { 22 1 7 }
+	de_jure_drift_disabled = yes
+	capital = c_bartenstein # Bartia
+}
+
+d_nadruvians = { # Nadrawai
+	color = { 93 9 77 }
+	de_jure_drift_disabled = yes
+	capital = c_scalovia # Nadruvia
+}
+
+d_scalovians = { # Skalwai
+	color = { 95 24 55 }
+	de_jure_drift_disabled = yes
+	capital = c_scalovia # Skalva # Scalovia
+}
+
+d_sambians = { # Sembai
+	color = { 22 24 66 }
+	de_jure_drift_disabled = yes
+	capital = c_konigsberg # Sambi # Sambia
+}
+
+######################################
+# West Slavic
+######################################
+######################################
+# Wends
+######################################
+# Kingdom tier
+######################################
+k_oborites = { # Obodriti
+	color = { 41 85 98 }
+	de_jure_drift_disabled = yes
+	capital = c_mecklenburg # Mecklemburg # Mecklenburg
+
+}
+
+k_pommeranians = { # Pomorzani
+	color = { 11 5 129 }
+	de_jure_drift_disabled = yes
+	capital = c_cammin # Belgard # Kolberg
+
+}
+
+k_lutici = { # Ljutici
+	color = { 22 57 233 }
+	de_jure_drift_disabled = yes
+	capital = c_brandenburg # Mittelmark # Brandenburg
+
+}
+
+k_sorbs = { # Sorbi
+	color = { 209 147 2 }
+	de_jure_drift_disabled = yes
+	capital = c_naumberg # Oberlausitz
+
+}
+
+######################################
+# Lutici tribes
+#####
+d_lutici = { # Ljutici
+	color = { 22 57 233 }
+	de_jure_drift_disabled = yes
+	capital = c_brandenburg # Mittelmark # Brandenburg
+
+}
+
+d_hevelli = { # Hawolani
+	color = { 66 35 86 }
+	de_jure_drift_disabled = yes
+	capital = c_brandenburg # Mittelmark # Brandenburg
+
+}
+
+d_sprevani = { # Sprewjani
+	color = { 111 55 139 }
+	de_jure_drift_disabled = yes
+	capital = c_spreewald # Niederlausitz
+
+}
+
+# Dossanen/Doxani/Dasseri/Desseri
+d_doxani = { # Dossani
+	color = { 88 55 100 }
+	de_jure_drift_disabled = yes
+	capital = c_magdeburg # Magdeburg
+
+}
+
+d_lunkini = { # Glinjani
+	color = { 14 51 79 }
+	de_jure_drift_disabled = yes
+	capital = c_ruppin # Prignitz
+
+
+}
+
+d_circipanes = { # Czerzpjani
+	color = { 33 72 55 }
+	de_jure_drift_disabled = yes
+	capital = c_wolgast # Gützkow
+
+}
+
+d_kessians = { # Chyzani
+	color = { 94 125 49 }
+	de_jure_drift_disabled = yes
+	capital = c_rostock # Rostock
+
+}
+
+d_readrians = { # Ratari
+	color = { 66 88 9 }
+	de_jure_drift_disabled = yes
+	capital = c_werle # Werle
+
+}
+
+d_tollensians = { # Dolenci
+	color = { 12 81 22 }
+	de_jure_drift_disabled = yes
+	capital = c_rugen # Barth
+
+}
+
+# Zamzizi/Zamcici/Zemzizi
+d_rani = { # Rujani
+	color = { 76 51 33 }
+	de_jure_drift_disabled = yes
+	capital = c_rugen # Rügen # Rugen
+
+}
+
+d_veleti = { # Wilci # Wilzi
+	color = { 115 92 133 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_werle # Werle
+
+}
+
+d_wolinians = { # Wolinjani # Velunzani
+	color = { 115 92 56 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_wolgast # Wolgast
+}
+
+######################################
+# Oborite tribes
+#####
+d_oborites = { # Obodriti
+	color = { 131 66 114 }
+	capital = c_mecklenburg # Mecklemburg # Mecklenburg
+	de_jure_drift_disabled = yes
+
+}
+
+d_wagrians = { # Wajiri
+	color = { 199 155 11 }
+	de_jure_drift_disabled = yes
+	capital = c_kiel # Kiel # Wagrien # Wagrinen
+
+}
+
+d_drevani = { # Drewani
+	color = { 141 55 179 }
+	de_jure_drift_disabled = yes
+	capital = c_dannenberg # Dannenberg
+
+}
+
+d_travnjane = { # Trawnjani
+	color = { 41 175 201 }
+	de_jure_drift_disabled = yes
+	capital = c_ratzeburg # Ratzeburg # Lauenburg
+
+}
+
+d_warnabi = { # Warnowi
+	color = { 118 65 99 }
+	de_jure_drift_disabled = yes
+	capital = c_schwerin # Schwerin
+
+}
+
+######################################
+# Pomeranian tribes
+#####
+d_pommeranians = { # Pomorzani
+	color = { 87 23 83 }
+	de_jure_drift_disabled = yes
+	capital = c_cammin # Belgard # Kolberg
+
+}
+
+d_prissani = { # Przicani
+	color = { 160 202 210 }
+	de_jure_drift_disabled = yes
+	capital = c_stettin # Stettin
+
+}
+
+d_slovinici = { # Slowinci
+	color = { 79 51 28 }
+	de_jure_drift_disabled = yes
+	capital = c_slupsk # Stolp # Schlawe-Stolp
+
+}
+
+d_kashubians = { # Kassubi
+	color = { 11 35 210 }
+	de_jure_drift_disabled = yes
+	capital = c_danzig # Danzig # Gdansk
+
+}
+
+
+########################################
+# Sorbs
+#########
+d_sorbs = { # Sorbi
+	color = { 209 147 2 }
+	de_jure_drift_disabled = yes
+	capital = c_naumberg # Oberlausitz
+
+}
+
+d_chutizi = { # Chutici # Chutizi
+	color = { 81 126 201 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_landsberg # Landsberg # Merseburg
+
+}
+
+d_leubuzzi = { # Lestkowici # Licicaviki
+	color = { 191 188 175 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_mecklenburg # Sternberg # Lubusz
+}
+
+d_glomacze = { # Glomaci # Glomacze # Aka Dolomici
+	color = { 215 143 156 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_vogtland # Voigtland
+}
+
+d_lusatians = { # Lusitzi
+	color = { 76 45 37 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_spreewald # Niederlausitz
+}
+
+d_nizzi = { # Niccici
+	color = { 45 25 88 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_wittenberg # Anhalt
+	
+}
+
+d_milceni = { # Milcani
+	color = { 56 37 19 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_meissen # Meissen
+	
+}
+
+d_nudzici = { # Nudici
+	color = { 48 180 110 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_wittenberg # Wittenberg
+	
+}
+
+d_nisan = { # Nizani
+	color = { 65 205 30 }
+	color2 = { 255 255 255 }
+	de_jure_drift_disabled = yes
+	capital = c_brene # Brehna
+	
+}
+
+d_coledizi = { # Koledici
+	color = { 67 88 10 }
+	color2 = { 255 255 255 }
+	capital = c_osterland # Groitzsch # Zeitz
+	de_jure_drift_disabled = yes
+	
+}
+
+#####
+# Polish tribes
+#####
+d_lendians = { # Ledzianie # aka Lechs
+	color = { 245 163 176 }
+	color2 = { 255 255 255 }
+	capital = c_krakowska # Krakow # Krakowskie
+	de_jure_drift_disabled = yes
+	
+}
+
+#####
+# Bohemian and Moravian tribes
+#####
+d_bohemians = { # Czechowé
+	color = { 191 117 13 }
+	color2 = { 255 255 255 }
+	capital = c_praha # Praha
+	de_jure_drift_disabled = yes
+
+	
+	
+}
+
+
+####
+
+
+d_norman_apulia = { # Apulia
+	color = { 124 30 77 }
+	capital = c_apulia # Melfi # Apulia
+
+
+}
+
+
 
 d_zaragoza = {
 	color = { 80 220 10 }
@@ -820,6 +2916,13 @@ d_swiss = {
 	color = { 255 1 1 }
 	
 	capital = c_bern
+}
+
+d_socotra = {
+	color = { 142 255 85 }
+	color2 = { 255 255 255 }
+	
+	capital = c_socotra
 }
 
 #Shen clan leaders of Eternal Bön
@@ -28873,6 +30976,8 @@ e_russia = {	#Kievan Rus
 e_caspian-pontic_steppe = {
 	color = { 230 180 10 }
 	color2= { 255 255 255 }
+
+	definite_form = yes
 	
 	capital = c_itil # Itil
 	
@@ -33184,2923 +35289,14 @@ e_siberia = {
 			}
 		}
 	}
+#}
+#e_terek = { #铁勒
+#	color = { 60 125 160 }
+#	color2= { 255 255 20 }		
+#	capital = c_abakan
+
 }
 
-e_mongolia = {
-	color = { 90 90 240 }
-	color2= {255 255 255 }
-	
-	capital = c_karakorum
-
-					cultural_names = {
-						khitan = cn_jubu
-						jurchen = cn_jubu
-					}
-	
-	ai_primary_priority = {
-		if = {
-			limit = {
-				culture_group = culture_group:mongolic_group
-			}
-			add = @better_than_the_alternatives_score
-		}
-	}
-	
-	k_mongolia = {
-		color = { 20 65 25 }
-		color2= { 255 255 255 }
-		
-		capital = c_karakorum
-		
-					cultural_names = {
-						khitan = cn_n_jubu
-						jurchen = cn_n_jubu
-					}
-		
-		ai_primary_priority = {
-			if = {
-				limit = {
-					culture_group = culture_group:mongolic_group
-				}
-				add = @better_than_the_alternatives_score
-			}
-		}
-		
-		d_otuken = {
-			color = { 20 115 32 }
-			color2= { 255 255 255 }
-			
-			capital = c_karakorum
-			
-			c_karakorum = {
-				color = { 15 90 25 }
-				color2= { 255 255 255 }
-			
-				b_karakorum = {
-					province = 1457
-					
-					color = { 15 90 25 }
-					color2= { 255 255 255 }
-				}
-				b_bayan_nuur = {
-					province = 7519
-					
-					color = { 15 90 25 }
-					color2= { 255 255 255 }
-				}
-				b_longcheng = {
-					province = 7520
-					
-					color = { 15 90 25 }
-					color2= { 255 255 255 }
-				}
-				b_khogno_khan = {
-					province = 7521
-					
-					color = { 15 90 25 }
-					color2= { 255 255 255 }
-				}
-				b_batkhaan = {
-					province = 7522
-					
-					color = { 15 90 25 }
-					color2= { 255 255 255 }
-				}
-				b_shankh = {
-					province = 7523
-					
-					color = { 15 90 25 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_karabalgasun = {
-				color = { 20 130 40 }
-				color2= { 255 255 255 }
-				
-				b_karabalgasun = {
-					province = 7525
-					
-					color = { 20 130 40 }
-					color2= { 255 255 255 }
-				}
-				b_otuken_city = {
-					province = 1461
-					
-					color = { 20 130 40 }
-					color2= { 255 255 255 }
-				}
-				b_hanhai = {
-					province = 7524
-					
-					color = { 20 130 40 }
-					color2= { 255 255 255 }
-				}
-				b_ogiy = {
-					province = 7526
-					
-					color = { 20 130 40 }
-					color2= { 255 255 255 }
-				}
-				b_sharga_OTU = {
-					province = 7530
-					
-					color = { 20 130 40 }
-					color2= { 255 255 255 }
-				}
-				b_bulgan_uul = {
-					province = 7531
-					
-					color = { 20 130 40 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_mumo = {
-				color = { 30 95 40 }
-				color2= { 255 255 255 }
-				
-				b_mumo = {
-					province = 7517
-					
-					color = { 30 95 40 }
-					color2= { 255 255 255 }
-				}
-				b_khoyorgol = {
-					province = 7518
-					
-					color = { 30 95 40 }
-					color2= { 255 255 255 }
-				}
-				b_khanjargalant = {
-					province = 7527
-					
-					color = { 30 95 40 }
-					color2= { 255 255 255 }
-				}
-				b_erdenet = {
-					province = 7528
-					
-					color = { 30 95 40 }
-					color2= { 255 255 255 }
-				}
-				b_ishgent = {
-					province = 7529
-					
-					color = { 30 95 40 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_ogrash = {
-			color = { 9 115 62 }
-			color2= { 255 255 255 }
-			
-			capital = c_ulaanbaatar
-			
-			c_ulaanbaatar = { #Called "Örgöö" in game, as Ulaanbaatar is a modern name
-				color = { 10 90 50 }
-				color2= { 255 255 255 }
-				
-				b_ulaanbaatar = {
-					province = 7532
-					
-					color = { 10 90 50 }
-					color2= { 255 255 255 }
-				}
-				b_moltsog_els = {
-					province = 7533
-					
-					color = { 10 90 50 }
-					color2= { 255 255 255 }
-				}
-				b_hustai = {
-					province = 7534
-					
-					color = { 10 90 50 }
-					color2= { 255 255 255 }
-				}
-				b_orkhontuul = {
-					province = 7535
-					
-					color = { 10 90 50 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_khentii = {
-				color = { 5 70 45 }
-				color2= { 255 255 255 }
-				
-				b_khentii = {
-					province = 7539
-					
-					color = { 5 70 45 }
-					color2= { 255 255 255 }
-				}
-				b_tuul_khentii = {
-					province = 7537
-					
-					color = { 5 70 45 }
-					color2= { 255 255 255 }
-				}
-				b_gorkhii_terelj = {
-					province = 7538
-					
-					color = { 5 70 45 }
-					color2= { 255 255 255 }
-				}
-				b_burkal = {
-					province = 7540
-					
-					color = { 5 70 45 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_naushki = {
-				color = { 28 128 77 }
-				color2= { 255 255 255 }
-				
-				b_naushki = {
-					province = 7542
-					
-					color = { 28 128 77 }
-					color2= { 255 255 255 }
-				}
-				b_chikoy_OGR = {
-					province = 7541
-					
-					color = { 28 128 77 }
-					color2= { 255 255 255 }
-				}
-				b_oarkhan_uul = {
-					province = 7536
-					
-					color = { 28 128 77 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_selenga_valley = {
-			color = { 10 56 10 }
-			color2= { 255 255 255 }
-			
-			capital = c_selenga
-			
-			c_selenga = {
-				color = { 5 35 5 }
-				color2= { 255 255 255 }
-				
-				b_selenga = {
-					province = 7555
-					
-					color = { 5 35 5 }
-					color2= { 255 255 255 }
-				}
-				b_buteeliin_nuruu = {
-					province = 7552
-					
-					color = { 5 35 5 }
-					color2= { 255 255 255 }
-				}
-				b_khamar_daban = {
-					province = 7553
-					
-					color = { 5 35 5 }
-					color2= { 255 255 255 }
-				}
-				b_galuut_nuur = {
-					province = 7554
-					
-					color = { 5 35 5 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_baibalik = {
-				color = { 5 80 5 }
-				color2= { 255 255 255 }
-				
-				b_baibalik = {
-					province = 7543
-					
-					color = { 5 80 5 }
-					color2= { 255 255 255 }
-				}
-				b_namnan_uul = {
-					province = 7544
-					
-					color = { 5 80 5 }
-					color2= { 255 255 255 }
-				}
-				b_airkhan = {
-					province = 7545
-					
-					color = { 5 80 5 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_khokhoo = {
-				color = { 35 90 45 }
-				color2= { 255 255 255 }
-				
-				b_khokhoo = {
-					province = 7547
-					
-					color = { 35 90 45 }
-					color2= { 255 255 255 }
-				}
-				b_erkhel = {
-					province = 7546
-					
-					color = { 35 90 45 }
-					color2= { 255 255 255 }
-				}
-				b_dayan_deerkhiin = {
-					province = 7548
-					
-					color = { 35 90 45 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_karatsagaan = {
-				color = { 15 130 15 }
-				color2= { 255 255 255 }
-				
-				b_karatsagaan = {
-					province = 7550
-					
-					color = { 15 130 15 }
-					color2= { 255 255 255 }
-				}
-				b_khargal = {
-					province = 7549
-					
-					color = { 15 130 15 }
-					color2= { 255 255 255 }
-				}
-				b_jida = {
-					province = 7551
-					
-					color = { 15 130 15 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_tunka = {
-				color = { 22 64 22 }
-				color2= { 255 255 255 }
-				
-				b_arshan = {
-					province = 7556
-					
-					color = { 22 64 22 }
-					color2= { 255 255 255 }
-				}
-				b_kyngarga = {
-					province = 7557
-					
-					color = { 22 64 22 }
-					color2= { 255 255 255 }
-				}
-				b_dachi_gama = {
-					province = 7558
-					
-					color = { 22 64 22 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_ovorkhangai = {
-			color = { 75 138 18 }
-			color2= { 255 255 255 }
-			
-			capital = c_tovkhon
-			
-			c_tovkhon = {
-				color = { 60 110 15 }
-				color2= { 255 255 255 }
-				
-				b_tovkhon = {
-					province = 7573
-					
-					color = { 60 110 15 }
-					color2= { 255 255 255 }
-				}
-				b_guchin_us = {
-					province = 7571
-					
-					color = { 60 110 15 }
-					color2= { 255 255 255 }
-				}
-				b_avraikheer = {
-					province = 7572
-					
-					color = { 60 110 15 }
-					color2= { 255 255 255 }
-				}
-				b_khuisiin_naiman_nuur = {
-					province = 7567
-					
-					color = { 60 110 15 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_ongi = {
-				color = { 80 170 5 }
-				color2= { 255 255 255 }
-				
-				b_ongi = {
-					province = 7570
-					
-					color = { 80 170 5 }
-					color2= { 255 255 255 }
-				}
-				b_taatsiin_tsagaan = {
-					province = 7568
-					
-					color = { 80 170 5 }
-					color2= { 255 255 255 }
-				}
-				b_myangan_yamaat = {
-					province = 7569
-					
-					color = { 80 170 5 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_ikh_bogd = {
-				color = { 85 130 40 }
-				color2= { 255 255 255 }
-				
-				b_ikh_bogd = {
-					province = 1456
-					
-					color = { 85 130 40 }
-					color2= { 255 255 255 }
-				}
-				b_tuin = {
-					province = 7565
-					
-					color = { 85 130 40 }
-					color2= { 255 255 255 }
-				}
-				b_orog = {
-					province = 7566
-					
-					color = { 85 130 40 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_bombogor = {
-				color = { 100 145 70 }
-				color2= { 255 255 255 }
-				
-				b_bombogor = {
-					province = 7562
-					
-					color = { 100 145 70 }
-					color2= { 255 255 255 }
-				}
-				b_boon_tsagaan = {
-					province = 7563
-					
-					color = { 100 145 70 }
-					color2= { 255 255 255 }
-				}
-				b_khutag = {
-					province = 7564
-					
-					color = { 100 145 70 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_khasagt_khairkhan = {
-				color = { 110 135 70 }
-				color2= { 255 255 255 }
-				
-				b_khasagt_khairkhan = {
-					province = 7559
-					
-					color = { 110 135 70 }
-					color2= { 255 255 255 }
-				}
-				b_gegeen = {
-					province = 7560
-					
-					color = { 110 135 70 }
-					color2= { 255 255 255 }
-				}
-				b_taigan = {
-					province = 7561
-					
-					color = { 110 135 70 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_arkhangai = {
-			color = { 10 75 15 }
-			color2= { 255 255 255 }
-			
-			capital = c_tarvagatai
-			
-			c_tarvagatai = {
-				color = { 30 55 35 }
-				color2= { 255 255 255 }
-				
-				b_tarvagatai = {
-					province = 1458
-					
-					color = { 20 65 25 }
-					color2= { 255 255 255 }
-				}
-				b_galt = {
-					province = 7581
-					
-					color = { 20 65 25 }
-					color2= { 255 255 255 }
-				}
-				b_tariat = {
-					province = 7582
-					
-					color = { 20 65 25 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_oigon = {
-				color = { 40 95 45 }
-				color2= { 255 255 255 }
-				
-				b_oigon = {
-					province = 7574
-					
-					color = { 40 95 45 }
-					color2= { 255 255 255 }
-				}
-				b_telmen = {
-					province = 7575
-					
-					color = { 40 95 45 }
-					color2= { 255 255 255 }
-				}
-				b_ikh_uul = {
-					province = 7576
-					
-					color = { 40 95 45 }
-					color2= { 255 255 255 }
-				}
-				b_tsetsen_khairkhan = {
-					province = 7577
-					
-					color = { 40 95 45 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_uliastai = {
-				color = { 55 90 60 }
-				color2= { 255 255 255 }
-				
-				b_uliastai = {
-					province = 7579
-					
-					color = { 55 90 60 }
-					color2= { 255 255 255 }
-				}
-				b_ulaagchiin_khar = {
-					province = 7578
-					
-					color = { 55 90 60 }
-					color2= { 255 255 255 }
-				}
-				b_otgontenger = {
-					province = 7580
-					
-					color = { 55 90 60 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_khovsgol = {
-			color = { 31 77 35 }
-			color2= { 255 255 255 }
-			
-			capital = c_darkhad_valley
-			
-			c_darkhad_valley = {
-				color = { 15 40 17 }
-				color2= { 255 255 255 }
-				
-				b_darkhad = {
-					province = 7588
-					
-					color = { 15 40 17 }
-					color2= { 255 255 255 }
-				}
-				b_khoridol_saridag = {
-					province = 7589
-					
-					color = { 15 40 17 }
-					color2= { 255 255 255 }
-				}
-				b_tsagaanuur = {
-					province = 1455
-					
-					color = { 15 40 17 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_tomorbulag = {
-				color = { 10 45 30 }
-				color2= { 255 255 255 }
-				
-				b_tomorbulag = {
-					province = 7585
-					
-					color = { 10 45 30 }
-					color2= { 255 255 255 }
-				}
-				b_karates = {
-					province = 7583
-					
-					color = { 10 45 30 }
-					color2= { 255 255 255 }
-				}
-				b_sangiin_dalai = {
-					province = 7584
-					
-					color = { 10 45 30 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_ulantaiga = {
-				color = { 50 90 65 }
-				color2= { 255 255 255 }
-				
-				b_dood_tsagaan_nuur = {
-					province = 7586
-					
-					color = { 50 90 65 }
-					color2= { 255 255 255 }
-				}
-				b_ulaantaiga = {
-					province = 7587
-					
-					color = { 50 90 65 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_gobi_altai = {
-			color = { 111 128 22 }
-			color2= { 255 255 255 }
-			
-			capital = c_tseel
-			
-			c_tseel = {
-				color = { 95 110 15 }
-				color2= { 255 255 255 }
-				
-				b_tseel = {
-					province = 7592
-					
-					color = { 95 110 15 }
-					color2= { 255 255 255 }
-				}
-				b_alag_khairkhan = {
-					province = 7591
-					
-					color = { 95 110 15 }
-					color2= { 255 255 255 }
-				}
-				b_aj_bogd = {
-					province = 1453
-					
-					color = { 95 110 15 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_sharga = {
-				color = { 145 160 50 }
-				color2= { 255 255 255 }
-				
-				b_sharga = {
-					province = 1450
-					
-					color = { 145 160 50 }
-					color2= { 255 255 255 }
-				}
-				b_bumbag_hayrhan_uul = {
-					province = 7590
-					
-					color = { 145 160 50 }
-					color2= { 255 255 255 }
-				}
-				
-			}
-			c_zarman = {
-				color = { 120 120 5}
-				color2= { 255 255 255 }
-				
-				b_nutsgen_uul = {
-					province = 7593
-					
-					color = { 120 120 5 }
-					color2= { 255 255 255 }
-				}
-				b_eej_khairkhan = {
-					province = 7594
-					
-					color = { 120 120 5 }
-					color2= { 255 255 255 }
-				}
-				b_zarman = {
-					province = 7595
-					
-					color = { 120 120 5 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_ubsunur_hollow = {
-			color = { 62 128 74 }
-			color2= { 255 255 255 }
-			
-			capital = c_uvs_nuur
-			
-			c_uvs_nuur = {
-				color = { 55 110 65 }
-				color2= { 255 255 255 }
-				
-				b_uvs_nuur = {
-					province = 7596
-					
-					color = { 55 110 65 }
-					color2= { 255 255 255 }
-				}
-				b_khan_khokhii = {
-					province = 7603
-					
-					color = { 55 110 65 }
-					color2= { 255 255 255 }
-				}
-				b_khan_huhiin = {
-					province = 7604
-					
-					color = { 55 110 65 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_ulaangom = {
-				color = { 90 150 100 }
-				color2= { 255 255 255 }
-				
-				b_ulaangom = {
-					province = 7597
-					
-					color = { 90 150 100 }
-					color2= { 255 255 255 }
-				}
-				b_turgen = {
-					province = 7598
-					
-					color = { 90 150 100 }
-					color2= { 255 255 255 }
-				}
-				b_khyarhgas = {
-					province = 7599
-					
-					color = { 90 150 100 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_tesiin_gol = {
-				color = { 35 75 45 }
-				color2= { 255 255 255 }
-				
-				b_tesiin_gol = {
-					province = 7600
-					
-					color = { 35 75 45 }
-					color2= { 255 255 255 }
-				}
-				b_bayan_UVS = {
-					province = 7601
-					
-					color = { 35 75 45 }
-					color2= { 255 255 255 }
-				}
-				b_altan_els = {
-					province = 7602
-					
-					color = { 35 75 45 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_urgamal = {
-				color = { 60 140 65 }
-				color2= { 255 255 255 }
-				
-				b_airag = {
-					province = 7605
-					
-					color = { 60 140 65 }
-					color2= { 255 255 255 }
-				}
-				b_urgamal = {
-					province = 7606
-					
-					color = { 60 140 65 }
-					color2= { 255 255 255 }
-				}
-				b_setsen_sart = {
-					province = 7607
-					
-					color = { 60 140 65 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_khar_us = {
-				color = { 80 145 75 }
-				color2= { 255 255 255 }
-				
-				b_khar_us = {
-					province = 7610
-					
-					color = { 80 145 75 }
-					color2= { 255 255 255 }
-				}
-				b_durgun = {
-					province = 7608
-					
-					color = { 80 145 75 }
-					color2= { 255 255 255 }
-				}
-				b_elsen_tasarkhai = {
-					province = 7609
-					
-					color = { 80 145 75 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_khovd = {
-			color = { 106 161 118 }
-			color2= { 255 255 255 }
-			
-			capital = c_harhiraa
-			
-			c_harhiraa = {
-				color = { 100 145 110 }
-				color2= { 255 255 255 }
-				
-				b_achit_nuur = {
-					province = 7611
-					
-					color = { 100 145 110 }
-					color2= { 255 255 255 }
-				}
-				b_tsagan_shibetu = {
-					province = 7612
-					
-					color = { 100 145 110 }
-					color2= { 255 255 255 }
-				}
-				b_turgen_uul = {
-					province = 7613
-					
-					color = { 100 145 110 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_tsambagarau = {
-				color = { 140 175 145 }
-				color2= { 255 255 255 }
-				
-				b_tsambagarau = {
-					province = 7615
-					
-					color = { 140 175 145 }
-					color2= { 255 255 255 }
-				}
-				b_tal_tugal = {
-					province = 7614
-					
-					color = { 140 175 145 }
-					color2= { 255 255 255 }
-				}
-				b_munkh_khairkhan = {
-					province = 7616
-					
-					color = { 140 175 145 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-	}
-
-k_jubu = {    #阻卜
-
-color = { 25 130 45 }
-color2 = { 255 255 255 }
-
-					cultural_names = {
-						khitan = cn_jubu
-						jurchen = cn_jubu
-					}
-
-capital = c_karat
-
-		d_karat = {   #金微/乞颜
-				color = { 23 152 51 }
-				color2 = { 255 255 255 }
-			
-				capital = c_karat
-
-			c_karat = {  #哈老徒/贺兰
-				color = { 20 160 250 }
-				color2 = { 255 255 255 }
-				
-				b_Karat = {
-					province = 10836
-
-					color = { 220 160 250 }
-					color2 = { 255 255 255 }
-				}
-				b_BurchCliff = {
-					province = 10835
-
-					color = { 220 160 250 }
-					color2 = { 255 255 255 }
-				}
-				b_Salianchuan = {
-					province = 10837
-
-					color = { 220 160 250 }
-					color2 = { 255 255 255 }
-				}
-			}
-
-			c_tarqan = { #达尔罕
-				color = { 20 160 250 }
-				color2 = { 255 255 255 }
-
-				b_Tarqan = {
-					province = 10838
-
-					color = { 220 160 250 }
-					color2 = { 255 255 255 }
-				}
-				b_UlanNor = {
-					province = 10839
-
-					color = { 220 160 250 }
-					color2 = { 255 255 255 }
-				}
-				b_Quxuewur = {
-					province = 10840
-
-					color = { 250 150 220 }
-					color2 = { 255 255 255 }
-				}
-				b_Jurgtu = {
-					province = 10856
-
-					color = { 200 185 250 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-	
-		d_khiyat = {   #金微/乞颜
-			color = { 20 155 55 }
-			color2 = { 255 255 255 }
-			
-			capital = c_khiyat
-
-			c_khiyat = {  #金微/乞颜
-				color = { 20 165 115 }
-				color2 = { 255 255 255 }
-				
-				b_Jinwei_Balitunalan = {
-					province = 10830
-
-					color = { 229 165 115 }
-					color2 = { 255 255 255 }
-				}
-				b_Khumarkhan = {
-					province = 10834
-
-					color = { 229 165 115 }
-					color2 = { 255 255 255 }
-				}
-				b_Nartushtu = {
-					province = 10831
-
-					color = { 229 165 115 }
-					color2 = { 255 255 255 }
-				}
-			}
-
-			c_horhnajubur = {  #豁儿豁
-				color = { 20 179 229 }
-				color2 = { 255 255 255 }
-
-				b_Horhnajubur = {
-					province = 10827
-
-					color = { 219 125 85 }
-					color2 = { 255 255 255 }
-				}
-				b_UrjaRiver = {
-					province = 10832
-
-					color = { 229 165 115 }
-					color2 = { 255 255 255 }
-				}
-			}
-        }
-
-		d_Luju = {   #龙驹
-			color = { 20 161 63 }
-			color2 = { 255 255 255 }
-			
-			capital = c_khatan
-
-			c_khatan = {  #回鹘可敦城
-				color = { 20 175 225 }
-				color2 = { 255 255 255 }
-								
-				b_Khedun = { #河董
-					province = 10846
-
-					color = { 195 175 225 }
-					color2 = { 255 255 255 }
-				}
-				b_Joba = { 
-					province = 10852
-
-					color = { 195 175 225 }
-					color2 = { 255 255 255 }
-				}
-				b_TarLake = {
-					province = 10833
-
-					color = { 245 245 195 }
-					color2 = { 255 255 255 }
-				}
-			}
-
-			c_luqu_valley = { #胪朐河/龙驹河
-				color = { 20 185 250 }
-				color2 = { 255 255 255 }
-								
-				b_Taran = {  #塔懒
-					province = 10844
-
-					color = { 200 185 250 }
-					color2 = { 255 255 255 }
-				}
-				b_Pibeihe = {
-					province = 10845
-
-					color = { 200 185 250 }
-					color2 = { 255 255 255 }
-				}
-			}
-
-			c_bayanterm = {  #
-				color = { 20 179 229 }
-				color2 = { 255 255 255 }
-
-				b_Bayanterm = {
-					province = 10850
-
-					color = { 195 175 225 }
-					color2 = { 255 255 255 }
-				}
-				b_Harstinnsom = {
-					province = 10854
-
-					color = { 195 175 225 }
-					color2 = { 255 255 255 }
-				}
-				b_Kukucher = {  
-					province = 10849
-
-					color = { 200 185 250 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-
-		d_teriqan = {	#窴颜
-			color = { 20 169 220 }
-			color2 = { 255 255 255 }
-
-			c_teriqan = {  #帖里干/窴颜
-				color = { 20 182 225 }
-				color2 = { 255 255 255 }
-								
-				b_Shimutnor = {
-					province = 10847
-
-					color = { 170 182 225 }
-					color2 = { 255 255 255 }
-				}
-				b_Dalaiblak = {
-					province = 10848
-
-					color = { 170 182 225 }
-					color2 = { 255 255 255 }
-				}
-			}
-
-			c_manglai = {
-				color = { 20 186 225 }
-				color2 = { 255 255 255 }
-			
-				b_Manglai_Hulusutaichahan = {
-					province = 10851
-
-					color = { 170 182 225 }
-					color2 = { 255 255 255 }
-				}
-				b_Ulabayan = {
-					province = 10855
-
-					color = { 170 182 225 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-
-        d_murin = { 
-			color = { 20 150 220 }
-			color2 = { 255 255 255 }
-
-			capital = c_murin			
-			
-			c_murin = {    #参天可汗道/木邻道
-				color = { 20 150 220 }
-				color2 = { 255 255 255 }
-	
-				b_WangjiRiver = {
-					province = 10842
-
-					color = { 250 150 220 }
-					color2 = { 255 255 255 }
-				}
-				b_Lanrhaelun = {
-					province = 10841
-
-					color = { 250 150 220 }
-					color2 = { 255 255 255 }
-				}
-				b_Shalantu = {
-					province = 10843
-
-					color = { 250 150 220 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-
-		d_onon = { #斡难
-			color = { 20 158 60 }
-			color2 = { 255 255 255 }
-			
-			capital = c_onon
-
-			c_onon = {
-				color = { 29 125 85 }
-				color2 = { 255 255 255 }
-				
-				b_Enan = {
-					province = 10824
-
-					color = { 219 125 85 }
-					color2 = { 255 255 255 }
-				}
-				b_Derompant = {
-					province = 10828
-
-					color = { 219 125 85 }
-					color2 = { 255 255 255 }
-				}
-				b_Oriauturs = {
-					province = 10826
-
-					color = { 219 125 85 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_kirluk = { #鸡鹿/赤苦
-				color = { 20 145 95 }
-				color2 = { 255 255 255 }
-				
-				b_Jiluzhou_Xijie = {
-					province = 10829
-
-					color = { 209 145 95 }
-					color2 = { 255 255 255 }
-				}
-				b_Dahur = {
-					province = 10825
-
-					color = { 209 145 95 }
-					color2 = { 255 255 255 }
-				}
-				b_Chirkh = {
-					province = 10818
-
-					color = { 209 145 95 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_julop = {  #烛龙
-				color = { 20 125 105 }
-				color2 = { 255 255 255 }
-				
-				b_Amyid = {
-					province = 10817
-
-					color = { 209 125 105 }
-					color2 = { 255 255 255 }
-				}
-				b_Nertschin = {
-					province = 10816
-
-					color = { 209 125 105 }
-					color2 = { 255 255 255 }
-				}
-				b_Chorna = {
-					province = 10815
-
-					color = { 209 125 105 }
-					color2 = { 255 255 255 }
-				}
-			}
-        }
-
-		d_argun = {   #望建/额尔古纳
-			color = { 20 155 251 }
-			color2 = { 255 255 255 }
-			
-			capital = c_argun
-
-			c_argun = {  #额尔古纳
-				color = { 20 162 133 }
-				color2 = { 255 255 255 }
-				
-				b_Erguna = {
-					province = 10820
-
-					color = { 197 162 133 }
-					color2 = { 255 255 255 }
-				}
-				b_Borjia = {  #博尔集亚
-					province = 10823
-
-					color = { 20 162 133 }
-					color2 = { 255 255 255 }
-				}
-				b_Imu = {
-					province = 10822
-
-					color = { 197 162 133 }
-					color2 = { 255 255 255 }
-				}
-			}
-
-			c_chiya = {  #赤雅
-				color = { 20 225 150 }
-				color2 = { 255 255 255 }
-				
-				b_Chiya = {
-					province = 10821
-
-					color = { 20 225 150 }
-					color2 = { 255 255 255 }
-				}
-				b_Amazar = {
-					province = 10813
-
-					color = { 20 225 150 }
-					color2 = { 255 255 255 }
-				}
-				b_Yonganshan = {
-					province = 10814
-
-					color = { 20 225 150 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-		
-		d_holon = { #呼伦
-			color = { 20 240 190 }
-			color2 = { 255 255 255 }
-			
-			capital = c_holonnor
-			
-			c_holonnor = {  #呼伦/俱轮
-				color = { 20 245 195 }
-				color2 = { 255 255 255 }
-				
-				b_Jumgu = {
-					province = 10802
-
-					color = { 245 245 195 }
-					color2 = { 255 255 255 }
-				}
-				b_Ersu = {
-					province = 10801
-
-					color = { 245 245 195 }
-					color2 = { 255 255 255 }
-				}
-				b_Jingbian_Liao = {
-					province = 10803
-
-					color = { 245 245 195 }
-					color2 = { 255 255 255 }
-				}
-				b_HolonNor = {
-					province = 10805
-
-					color = { 245 245 195 }
-					color2 = { 255 255 255 }
-				}
-			}
-
-			c_buyur = { #捕鱼儿海
-				color = { 20 210 175 }
-				color2 = { 255 255 255 }
-				
-				b_BuyurLake = {
-					province = 10798
-
-					color = { 210 210 175 }
-					color2 = { 255 255 255 }
-				}
-				b_HelaRiver = {
-					province = 10796
-
-					color = { 210 210 175 }
-					color2 = { 255 255 255 }
-				}
-				b_Duoquanzi = {
-					province = 10797
-
-					color = { 210 210 175 }
-					color2 = { 255 255 255 }
-				}
-				b_Karanjanshato = {
-					province = 10853
-
-					color = { 210 210 175 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-    }
-	
-	k_tuva = {
-		color = { 45 112 100 }
-		color2= { 255 255 20 }
-		
-		capital = c_arzhan
-		
-		d_togina = {
-			color = { 41 163 163 }
-			color2= { 255 255 255 }
-			
-			capital = c_arzhan
-			
-			c_arzhan = {
-				color = { 40 140 140 }
-				color2= { 255 255 255 }
-				
-				b_arzhan = {
-					province = 1459
-					
-					color = { 40 140 140 }
-					color2= { 255 255 255 }
-				}
-				b_saryg_sep = {
-					province = 7617
-					
-					color = { 40 140 140 }
-					color2= { 255 255 255 }
-				}
-				b_por_bajin = {
-					province = 7618
-					
-					color = { 40 140 140 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_tapsa = {
-				color = { 35 110 110 }
-				color2= { 255 255 255 }
-				
-				b_tapsa = {
-					province = 7619
-					
-					color = { 35 110 110 }
-					color2= { 255 255 255 }
-				}
-				b_ikh_nogoon = {
-					province = 7620
-					
-					color = { 35 110 110 }
-					color2= { 255 255 255 }
-				}
-				b_ak_altyg_khol = {
-					province = 7621
-					
-					color = { 35 110 110 }
-					color2= { 255 255 255 }
-				}
-				b_bilin = {
-					province = 7622
-					
-					color = { 35 110 110 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_azas = {
-				color = { 25 85 85 }
-				color2= { 255 255 255 }
-				
-				b_azas = {
-					province = 7624
-					
-					color = { 25 85 85 }
-					color2= { 255 255 255 }
-				}
-				b_eki_khem = {
-					province = 7623
-					
-					color = { 25 85 85 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_tannu_ola = {
-			color = { 65 145 128 }
-			color2= { 255 255 255 }
-			
-			capital = c_eastern_tannu
-			
-			c_eastern_tannu = {
-				color = { 60 130 115 }
-				color2= { 255 255 255 }
-				
-				b_karatangdy = {
-					province = 1452
-					
-					color = { 60 130 115 }
-					color2= { 255 255 255 }
-				}
-				b_khemchiq = {
-					province = 7628
-					
-					color = { 60 130 115 }
-					color2= { 255 255 255 }
-				}
-				b_sagly = {
-					province = 7629
-					
-					color = { 60 130 115 }
-					color2= { 255 255 255 }
-				}
-				b_despen = {
-					province = 7630
-					
-					color = { 60 130 115 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_western_tannu = {
-				color = { 40 105 90 }
-				color2= { 255 255 255 }
-				
-				b_turgen_uul_bis = {
-					province = 7625
-					
-					color = { 40 105 90 }
-					color2= { 255 255 255 }
-				}
-				b_mungun_taiga = {
-					province = 7626
-					
-					color = { 40 105 90 }
-					color2= { 255 255 255 }
-				}
-				b_khindigtik_khol = {
-					province = 7627
-					
-					color = { 40 105 90 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_western_sayan = {
-			color = { 101 181 169 }
-			color2= { 255 255 255 }
-			
-			capital = c_stoyanka
-			
-			c_stoyanka = {
-				color = { 100 165 155 }
-				color2= { 255 255 255 }
-				
-				b_stoyanka = {
-					province = 7639
-					
-					color = { 100 165 155 }
-					color2= { 255 255 255 }
-				}
-				b_urbun = {
-					province = 7640
-					
-					color = { 100 165 155 }
-					color2= { 255 255 255 }
-				}
-				b_ulaan_gol = {
-					province = 7641
-					
-					color = { 100 165 155 }
-					color2= { 255 255 255 }
-				}
-				b_arja = {
-					province = 7642
-					
-					color = { 100 165 155 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_katu_yaryk = {
-				color = { 135 200 195 }
-				color2= { 255 255 255 }
-				
-				b_katu_yaryk = {
-					province = 7632
-					
-					color = { 135 200 195 }
-					color2= { 255 255 255 }
-				}
-				b_altyn_kol = {
-					province = 7631
-					
-					color = { 135 200 195 }
-					color2= { 255 255 255 }
-				}
-				b_kara_khol_TUV = {
-					province = 7633
-					
-					color = { 135 200 195 }
-					color2= { 255 255 255 }
-				}
-				b_tsagaan_gazar = {
-					province = 7634
-					
-					color = { 135 200 195 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_kantegir = {
-				color = { 85 150 155 }
-				color2= { 255 255 255 }
-				
-				b_gosudar = {
-					province = 7635
-					
-					color = { 85 150 155 }
-					color2= { 255 255 255 }
-				}
-				b_sutkhol = {
-					province = 7636
-					
-					color = { 85 150 155 }
-					color2= { 255 255 255 }
-				}
-				b_kantegir = {
-					province = 7637
-					
-					color = { 85 150 155 }
-					color2= { 255 255 255 }
-				}
-				b_sayanchu = {
-					province = 7638
-					
-					color = { 85 150 155 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-	}
-	
-	k_khakassia = {
-		color = { 140 140 140}
-		color2= { 255 255 20 }
-		
-		capital = c_abakan
-		
-		d_khakass_hollow = {
-			color = { 181 177 177 }
-			color2= { 255 255 255 }
-			
-			capital = c_abakan
-			
-			c_abakan = {
-				color = { 160 160 160 }
-				color2= { 255 255 255 }
-				
-				b_abakan = {
-					province = 1454
-					
-					color = { 160 160 160 }
-					color2= { 255 255 255 }
-				}
-				b_ulugkol = {
-					province = 7646
-					
-					color = { 160 160 160 }
-					color2= { 255 255 255 }
-				}
-				b_sosno = {
-					province = 7647
-					
-					color = { 160 160 160 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_julym = {
-				color = { 115 115 115 }
-				color2= { 255 255 255 }
-				
-				b_julym = {
-					province = 7643
-					
-					color = { 115 115 115 }
-					color2= { 255 255 255 }
-				}
-				b_yezagash = {
-					province = 7644
-					
-					color = { 115 115 115 }
-					color2= { 255 255 255 }
-				}
-				b_uchum = {
-					province = 7645
-					
-					color = { 115 115 115 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_jerjul = {
-				color = { 85 85 85 }
-				color2= { 255 255 255 }
-				
-				b_jerjul = {
-					province = 7648
-					
-					color = { 85 85 85 }
-					color2= { 255 255 255 }
-				}
-				b_argyjek = {
-					province = 7649
-					
-					color = { 85 85 85 }
-					color2= { 255 255 255 }
-				}
-				b_sisim = {
-					province = 7650
-					
-					color = { 85 85 85 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_kizir = {
-				color = { 120 130 120 }
-				color2= { 255 255 255 }
-				
-				b_kizir = {
-					province = 7653
-					
-					color = { 120 130 120 }
-					color2= { 255 255 255 }
-				}
-				b_tuba_TUV = {
-					province = 7651
-					
-					color = { 120 130 120 }
-					color2= { 255 255 255 }
-				}
-				b_shina = {
-					province = 7652
-					
-					color = { 120 130 120 }
-					color2= { 255 255 255 }
-				}
-				b_tiberkul = {
-					province = 7656
-					
-					color = { 120 130 120 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_anja = {
-				color = { 85 100 105 }
-				color2= { 255 255 255 }
-				
-				b_anja_TUV = {
-					province = 7654
-					
-					color = { 85 100 105 }
-					color2= { 255 255 255 }
-				}
-				b_tofa_nuruud = {
-					province = 7655
-					
-					color = { 85 100 105 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_kyzylkul = {
-				color = { 160 155 150 }
-				color2= { 255 255 255 }
-				
-				b_bolsho_kyzylkul = {
-					province = 7657
-					
-					color = { 160 155 150 }
-					color2= { 255 255 255 }
-				}
-				b_amyl = {
-					province = 7659
-					
-					color = { 160 155 150 }
-					color2= { 255 255 255 }
-				}
-				b_borus = {
-					province = 7660
-					
-					color = { 160 155 150 }
-					color2= { 255 255 255 }
-				}
-				b_kop_golyn = {
-					province = 7658
-					
-					color = { 160 155 150 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_shoria = {
-			color = { 165 140 171 }
-			color2= { 255 255 255 }
-			
-			capital = c_kuzbas
-			
-			c_kuzbas = {
-				color = { 150 130 155 }
-				color2= { 255 255 255 }
-				
-				b_kuznetsk = { #Called fictional "Kuzna"
-					province = 7663
-					
-					color = { 150 130 155 }
-					color2= { 255 255 255 }
-					
-					cultural_names = {
-						russian = cn_kuznetsk
-					}
-				}
-				b_kuztom = {
-					province = 7661
-					
-					color = { 150 130 155 }
-					color2= { 255 255 255 }
-				}
-				b_kuzalatau = {
-					province = 7662
-					
-					color = { 150 130 155 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_shor = {
-				color = { 125 120 155 }
-				color2= { 255 255 255 }
-				
-				b_kondoma_MON = {
-					province = 7664
-					
-					color = { 125 120 155 }
-					color2= { 255 255 255 }
-				}
-				b_mrassu = {
-					province = 7665
-					
-					color = { 125 120 155 }
-					color2= { 255 255 255 }
-				}
-				b_shor = {
-					province = 7667
-					
-					color = { 125 120 155 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_uul_chors = {
-				color = { 150 140 175 }
-				color2= { 255 255 255 }
-				
-				b_abaza = {
-					province = 7668
-					
-					color = { 150 140 175 }
-					color2= { 255 255 255 }
-				}
-				b_khartomor_uul = {
-					province = 7666
-					
-					color = { 150 140 175 }
-					color2= { 255 255 255 }
-				}
-				b_granuul = {
-					province = 7669
-					
-					color = { 150 140 175 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_kargassia = {
-			color = { 136 186 136 }
-			color2= { 255 255 255 }
-			
-			capital = c_burugu_aallar
-			
-			c_burugu_aallar = {
-				color = { 90 125 90 }
-				color2= { 255 255 255 }
-				
-				b_tofalaria = {
-					province = 7670
-					
-					color = { 90 125 90 }
-					color2= { 255 255 255 }
-				}
-				b_miirchun = {
-					province = 7671
-					
-					color = { 90 125 90 }
-					color2= { 255 255 255 }
-				}
-				b_ikh_orgil = {
-					province = 7672
-					
-					color = { 90 125 90 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_chagdy_aallar = {
-				color = { 130 170 130 }
-				color2= { 255 255 255 }
-				
-				b_kandat_uul = {
-					province = 7673
-					
-					color = { 130 170 130 }
-					color2= { 255 255 255 }
-				}
-				b_kazyr = {
-					province = 7674
-					
-					color = { 130 170 130 }
-					color2= { 255 255 255 }
-				}
-				b_kazas = {
-					province = 7675
-					
-					color = { 130 170 130 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_songuu_aallar = {
-				color = { 150 160 135 }
-				color2= { 255 255 255 }
-				
-				b_ergaki = {
-					province = 7676
-					
-					color = { 150 160 135 }
-					color2= { 255 255 255 }
-				}
-				b_orgogdon_rok = {
-					province = 7677
-					
-					color = { 150 160 135 }
-					color2= { 255 255 255 }
-				}
-				b_baldyrgannyg = {
-					province = 7678
-					
-					color = { 150 160 135 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_eastern_sayan = {
-			color = { 132 164 171 }
-			color2= { 255 255 255 }
-			
-			capital = c_karauda
-			
-			c_karauda = {
-				color = { 130 160 145 }
-				color2= { 255 255 255 }
-				
-				b_karauda = {
-					province = 7679
-					
-					color = { 130 160 145 }
-					color2= { 255 255 255 }
-				}
-				b_iya_TUV = {
-					province = 7680
-					
-					color = { 130 160 145 }
-					color2= { 255 255 255 }
-				}
-				b_doloon_nuur = {
-					province = 7681
-					
-					color = { 130 160 145 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_shityy = {
-				color = { 130 155 160 }
-				color2= { 255 255 255 }
-				
-				b_shityy = {
-					province = 7682
-					
-					color = { 130 155 160 }
-					color2= { 255 255 255 }
-				}
-				b_tsagaan_kropot = {
-					province = 7683
-					
-					color = { 130 155 160 }
-					color2= { 255 255 255 }
-				}
-				b_dibi_TUV = {
-					province = 7684
-					
-					color = { 130 155 160 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_kropot = {
-				color = { 105 125 130 }
-				color2= { 255 255 255 }
-				
-				b_kropot = {
-					province = 7685
-					
-					color = { 105 125 130 }
-					color2= { 255 255 255 }
-				}
-				b_urik = {
-					province = 7686
-					
-					color = { 105 125 130 }
-					color2= { 255 255 255 }
-				}
-				b_setgel_uul = {
-					province = 7687
-					
-					color = { 105 125 130 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_monkh_saridag = {
-				color = { 120 140 140 }
-				color2= { 255 255 255 }
-				
-				b_monkh_saridag = {
-					province = 7689
-					
-					color = { 120 140 140 }
-					color2= { 255 255 255 }
-				}
-				b_khurel_uul = {
-					province = 7688
-					
-					color = { 120 140 140 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-	}
-	
-	k_buryatia = {
-		color = { 50 115 160 }
-		color2= { 255 255 20 }
-		
-		capital = c_ulan_ude
-		
-		d_uda_valley = {
-			color = { 53 152 181 }
-			color2= { 255 255 255 }
-			
-			capital = c_ulan_ude
-			
-			c_ulan_ude = {
-				color = { 50 135 160 }
-				color2= { 255 255 255 }
-				
-				cultural_names = {
-					russian = cn_udinsk
-				}
-				
-				b_ulan_ude = {
-					province = 7690
-					
-					color = { 50 135 160 }
-					color2= { 255 255 255 }
-					
-					cultural_names = {
-						russian = cn_udinsk
-					}
-				}
-				b_altaichei = {
-					province = 7691
-					
-					color = { 50 135 160 }
-					color2= { 255 255 255 }
-				}
-				b_khudan_BUR = {
-					province = 7692
-					
-					color = { 50 135 160 }
-					color2= { 255 255 255 }
-				}
-				b_saranka = {
-					province = 7693
-					
-					color = { 50 135 160 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_chikoy = {
-				color = { 65 155 145 }
-				color2= { 255 255 255 }
-				
-				b_chikoy = {
-					province = 7694
-					
-					color = { 65 155 145 }
-					color2= { 255 255 255 }
-				}
-				b_khilok = {
-					province = 7695
-					
-					color = { 65 155 145 }
-					color2= { 255 255 255 }
-				}
-				b_oungo = {
-					province = 7696
-					
-					color = { 65 155 145 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_dauria = {
-			color = { 72 163 232 }
-			color2= { 255 255 255 }
-			
-			capital = c_bargajan
-			
-			c_bargajan = {
-				color = { 70 150 210 }
-				color2= { 255 255 255 }
-				
-				b_bargajan = {
-					province = 7704
-					
-					color = { 70 150 210 }
-					color2= { 255 255 255 }
-				}
-				b_khilem_khamar = {
-					province = 1460
-					
-					color = { 70 150 210 }
-					color2= { 255 255 255 }
-				}
-				b_frolikha = {
-					province = 7705
-					
-					color = { 70 150 210 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_muya = {
-				color = { 50 95 135 }
-				color2= { 255 255 255 }
-				
-				b_muya = {
-					province = 7707
-					
-					color = { 50 95 135 }
-					color2= { 255 255 255 }
-				}
-				b_jergin = {
-					province = 7706
-					
-					color = { 50 95 135 }
-					color2= { 255 255 255 }
-				}
-				b_vitimkan = {
-					province = 7703
-					
-					color = { 50 95 135 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_kotokel = {
-				color = { 70 125 210 }
-				color2= { 255 255 255 }
-				
-				b_kotokel = {
-					province = 7699
-					
-					color = { 70 125 210 }
-					color2= { 255 255 255 }
-				}
-				b_kabans = {
-					province = 7697
-					
-					color = { 70 125 210 }
-					color2= { 255 255 255 }
-				}
-				b_itantsa = {
-					province = 7698
-					
-					color = { 70 125 210 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_yera = {
-				color = { 50 120 180 }
-				color2= { 255 255 255 }
-				
-				b_yera = {
-					province = 7700
-					
-					color = { 50 120 180 }
-					color2= { 255 255 255 }
-				}
-				b_shilmuustoi = {
-					province = 7701
-					
-					color = { 50 120 180 }
-					color2= { 255 255 255 }
-				}
-				b_zuunbaykal = {
-					province = 7702
-					
-					color = { 50 120 180 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_bargujin_tukum = {
-			color = { 59 97 122 }
-			color2= { 255 255 255 }
-			
-			capital = c_kotera
-			
-			c_kotera = {
-				color = { 50 80 100 }
-				color2= { 255 255 255 }
-				
-				b_kotera = {
-					province = 7708
-					
-					color = { 50 80 100 }
-					color2= { 255 255 255 }
-				}
-				b_gants_khondii = {
-					province = 7709
-					
-					color = { 50 80 100 }
-					color2= { 255 255 255 }
-				}
-				b_mamakhondii = {
-					province = 7710
-					
-					color = { 50 80 100 }
-					color2= { 255 255 255 }
-				}
-				b_shugel_ondor = {
-					province = 7711
-					
-					color = { 50 80 100 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_vitim = {
-				color = { 90 120 150 }
-				color2= { 255 255 255 }
-				
-				b_vitim = {
-					province = 7714
-					
-					color = { 90 120 150 }
-					color2= { 255 255 255 }
-				}
-				b_vitimkhad = {
-					province = 7712
-					
-					color = { 90 120 150 }
-					color2= { 255 255 255 }
-				}
-				b_karamuya = {
-					province = 7713
-					
-					color = { 90 120 150 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_karabaigal = {
-				color = { 70 95 120 }
-				color2= { 255 255 255 }
-				
-				b_chuulunuruu = {
-					province = 7715
-					
-					color = { 70 95 120 }
-					color2= { 255 255 255 }
-				}
-				b_chonoshud = {
-					province = 7716
-					
-					color = { 70 95 120 }
-					color2= { 255 255 255 }
-				}
-				b_karaoi = {
-					province = 7717
-					
-					color = { 70 95 120 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_chuya = {
-				color = { 55 70 90 }
-				color2= { 255 255 255 }
-				
-				b_chuya = {
-					province = 7719
-					
-					color = { 55 70 90 }
-					color2= { 255 255 255 }
-				}
-				b_alsholoi = {
-					province = 7718
-					
-					color = { 55 70 90 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_baigaluuls = {
-			color = { 100 150 181 }
-			color2= { 255 255 255 }
-			
-			capital = c_baigaluuls
-			
-			c_baigaluuls = {
-				color = { 80 130 160 }
-				color2= { 255 255 255 }
-				
-				b_kirenga = {
-					province = 7720
-					
-					color = { 80 130 160 }
-					color2= { 255 255 255 }
-				}
-				b_cherskogo = {
-					province = 7722
-					
-					color = { 80 130 160 }
-					color2= { 255 255 255 }
-				}
-				b_baigalan_chaya = {
-					province = 7723
-					
-					color = { 80 130 160 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_uulynkhol = {
-				color = { 60 95 120 }
-				color2= { 255 255 255 }
-				
-				b_nogoon_naluu = {
-					province = 7721
-					
-					color = { 60 95 120 }
-					color2= { 255 255 255 }
-				}
-				b_daoroouul = {
-					province = 7724
-					
-					color = { 60 95 120 }
-					color2= { 255 255 255 }
-				}
-				b_khilgazar = {
-					province = 7725
-					
-					color = { 60 95 120 }
-					color2= { 255 255 255 }
-				}
-				b_khuldursgal = {
-					province = 7726
-					
-					color = { 60 95 120 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_tsagaanbaigal = {
-			color = { 80 174 191 }
-			color2= { 255 255 255 }
-			
-			capital = c_olkhon
-			
-			c_olkhon = {
-				color = { 75 155 170 }
-				color2= { 255 255 255 }
-				
-				b_olkhon = {
-					province = 7778
-					
-					color = { 75 155 170 }
-					color2= { 255 255 255 }
-				}
-				b_bugulde = {
-					province = 7779
-					
-					color = { 75 155 170 }
-					color2= { 255 255 255 }
-				}
-				b_manzurka = {
-					province = 7777
-					
-					color = { 75 155 170 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_irkutsk = { #Called "Erhüü" in game
-				color = { 95 160 170 }
-				color2= { 255 255 255 }
-				
-				cultural_names = {
-					russian = cn_irkutsk
-				}
-				
-				b_irkutsk = {
-				#Called "Erhüü" in game
-					province = 7780
-					
-					color = { 95 160 170 }
-					color2= { 255 255 255 }
-					
-					cultural_names = {
-						russian = cn_irkutsk
-					}
-				}
-				b_osa_MON = {
-					province = 7775
-					
-					color = { 95 160 170 }
-					color2= { 255 255 255 }
-				}
-				b_KUDA_MON = {
-					province = 7776
-					
-					color = { 95 160 170 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_ryty = {
-				color = { 55 115 130 }
-				color2= { 255 255 255 }
-				
-				b_ryty = {
-					province = 7727
-					
-					color = { 55 115 130 }
-					color2= { 255 255 255 }
-				}
-				b_berikul = {
-					province = 7728
-					
-					color = { 55 115 130 }
-					color2= { 255 255 255 }
-				}
-				b_chikan = {
-					province = 7729
-					
-					color = { 55 115 130 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-	}
-	
-	k_angara = {
-		color = { 55 55 55 }
-		color2= { 255 255 20 }
-		
-		capital = c_krasnoyarsk
-		
-		d_yenisei_kan = {
-			color = { 65 65 65 }
-			color2= { 255 255 255 }
-			
-			cultural_names = {
-				buryat = cn_gorlog
-				uriankhai = cn_kim_sug
-			}
-			
-			capital = c_krasnoyarsk
-			
-			c_krasnoyarsk = { #Called "Kyzyl Char" in game
-				color = { 100 100 100 }
-				color2= { 255 255 255 }
-				
-				cultural_names = {
-					russian = cn_krasnoyarsk
-				}
-				
-				b_krasnoyarsk = { #Called "Kyzyl Char" in game
-					province = 1462
-					
-					cultural_names = {
-						russian = cn_krasnoyarsk
-					}
-					
-					color = { 100 100 100 }
-					color2= { 255 255 255 }
-				}
-				b_kem_MON = {
-					province = 7733
-					
-					color = { 100 100 100 }
-					color2= { 255 255 255 }
-				}
-				b_kemchug = {
-					province = 7734
-					
-					color = { 100 100 100 }
-					color2= { 255 255 255 }
-				}
-				b_stolby = {
-					province = 7735
-					
-					color = { 100 100 100 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_mana = {
-				color = { 85 72 72 }
-				color2= { 255 255 255 }
-				
-				b_mana_MON = {
-					province = 7736
-					
-					color = { 85 72 72 }
-					color2= { 255 255 255 }
-				}
-				b_kyzyl-kan = {
-					province = 7737
-					
-					color = { 85 72 72 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_shishina = {
-				color = { 75 75 75 }
-				color2= { 255 255 255 }
-				
-				b_shishina = {
-					province = 7738
-					
-					color = { 75 75 75 }
-					color2= { 255 255 255 }
-				}
-				b_taseya = {
-					province = 7739
-					
-					color = { 75 75 75 }
-					color2= { 255 255 255 }
-				}
-				b_nemkina = {
-					province = 7740
-					
-					color = { 75 75 75 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_kansk = { #Called fictional "Kankhot" in game
-				color = { 55 55 55 }
-				color2= { 255 255 255 }
-				
-				cultural_names = {
-					russian = cn_kansk
-				}
-				
-				b_kansk = { #Called fictional "Kankhot" in game
-					province = 7742
-					
-					cultural_names = {
-						russian = cn_kansk
-					}
-					
-					color = { 55 55 55 }
-					color2= { 255 255 255 }
-				}
-				b_biriusa = {
-					province = 7741
-					
-					color = { 55 55 55 }
-					color2= { 255 255 255 }
-				}
-				b_khoidkhiliin = {
-					province = 7743
-					
-					color = { 55 55 55 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_tagul = {
-				color = { 55 50 45 }
-				color2= { 255 255 255 }
-				
-				b_tagul = {
-					province = 7744
-					
-					color = { 55 50 45 }
-					color2= { 255 255 255 }
-				}
-				b_agul = {
-					province = 7745
-					
-					color = { 55 50 45 }
-					color2= { 255 255 255 }
-				}
-				b_narsgol = {
-					province = 7746
-					
-					color = { 55 50 45 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_chuna_valley = {
-			color = { 26 51 34 }
-			color2= { 255 255 255 }
-			
-			#Called "Üd Valley" by default
-			
-			cultural_names = {
-				russian = cn_chuna_valley
-			}
-			
-			capital = c_chuna
-			
-			c_chuna = { #Called "Üd" by default
-				color = { 15 30 20 }
-				color2= { 255 255 255 }
-				
-				cultural_names = {
-					russian = cn_chuna
-				}
-				
-				b_chuna = {
-					province = 7748
-					#Called "Üd" by default
-					
-					color = { 15 30 20 }
-					color2= { 255 255 255 }
-					
-					cultural_names = {
-						russian = cn_chuna
-					}
-				}
-				b_moson_kholtos = {
-					province = 7747
-					
-					color = { 15 30 20 }
-					color2= { 255 255 255 }
-				}
-				b_tsartsanmod = {
-					province = 7749
-					
-					color = { 15 30 20 }
-					color2= { 255 255 255 }
-				}
-				b_biryusa = {
-					province = 7750
-					
-					color = { 15 30 20 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_bratsk = { #Called fictional "Bura" in game
-				color = { 18 41 18 }
-				color2= { 255 255 255 }
-				
-				cultural_names = {
-					russian = cn_bratsk
-				}
-				
-				b_bratsk = { #Called fictional "Bura" in game
-					province = 7753
-					
-					color = { 18 41 18 }
-					color2= { 255 255 255 }
-				}
-				b_khereeoi = {
-					province = 7751
-					
-					color = { 18 41 18 }
-					color2= { 255 255 255 }
-				}
-				b_tsasengiin = {
-					province = 7752
-					
-					color = { 18 41 18 }
-					color2= { 255 255 255 }
-				}
-				b_bugyntalbar = {
-					province = 7754
-					
-					color = { 18 41 18 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_tulun = {
-				color = { 41 64 41 }
-				color2= { 255 255 255 }
-				
-				b_kaduy = {
-					province = 7755
-					
-					color = { 41 64 41 }
-					color2= { 255 255 255 }
-				}
-				b_tulun = {
-					province = 7756
-					
-					color = { 41 64 41 }
-					color2= { 255 255 255 }
-				}
-				b_kirei = {
-					province = 7757
-					
-					color = { 41 64 41 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_lena = {
-			color = { 71 79 94 }
-			color2= { 255 255 255 }
-			#called "Eülge" in game
-			
-			cultural_names = {
-				buryat = cn_eulkhe
-				russian = cn_lena
-			}
-			
-			capital = c_lena			
-			
-			c_lena = {
-				color = { 55 60 70 }
-				color2= { 255 255 255 }
-				#called "Eülge" in game
-				
-				cultural_names = {
-					buryat = cn_eulkhe
-					russian = cn_lena
-				}
-				
-				b_lena = {
-					province = 7732
-					#called "Eülge" in game
-					
-					color = { 55 60 70 }
-					color2= { 255 255 255 }
-					
-					cultural_names = {
-						buryat = cn_eulkhe
-						russian = cn_lena
-					}
-				}
-				b_kutukan_ondort = {
-					province = 7730
-					
-					color = { 55 60 70 }
-					color2= { 255 255 255 }
-				}
-				b_ichikta = {
-					province = 7731
-					
-					color = { 55 60 70 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_ilga = {
-				color = { 60 70 90 }
-				color2= { 255 255 255 }
-				
-				b_ilim_MON = {
-					province = 7772
-					
-					color = { 60 70 90 }
-					color2= { 255 255 255 }
-				}
-				b_ilga = {
-					province = 7773
-					
-					color = { 60 70 90 }
-					color2= { 255 255 255 }
-				}
-				b_ivda = {
-					province = 7774
-					
-					color = { 60 70 90 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_gatsuurgazar = {
-				color = { 20 25 35 }
-				color2= { 255 255 255 }
-				
-				b_gatsuurgazar = {
-					province = 7770
-					
-					color = { 20 25 35 }
-					color2= { 255 255 255 }
-				}
-				b_kjoosonoi = {
-					province = 7771
-					
-					color = { 20 25 35 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-		
-		d_angara = {
-			color = { 64 45 45 }
-			color2= { 255 255 255 }
-			
-			cultural_names = {
-				mongol = cn_angar
-				buryat = cn_angar
-				oirat = cn_angar
-				naiman = cn_angar
-				kerait = cn_angar
-				khitan = cn_angar
-				jurchen = cn_angar
-				uriankhai = cn_angar
-				kirghiz = cn_angar
-				uyghur = cn_angar
-			}
-			
-			capital = c_kitoi
-			
-			c_kitoi = {
-				color = { 51 33 33 }
-				color2= { 255 255 255 }
-				
-				b_kitoi = {
-					province = 7768
-					
-					color = { 51 33 33 }
-					color2= { 255 255 255 }
-				}
-				b_noty = {
-					province = 7767
-					
-					color = { 51 33 33 }
-					color2= { 255 255 255 }
-				}
-				b_olkha = {
-					province = 7769
-					
-					color = { 51 33 33 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_kymyl_tey = {
-				color = { 60 55 50 }
-				color2= { 255 255 255 }
-				
-				b_kymyl_tey = {
-					province = 7759
-					
-					color = { 60 55 50 }
-					color2= { 255 255 255 }
-				}
-				b_angaragiin_degee = {
-					province = 7758
-					
-					color = { 60 55 50 }
-					color2= { 255 255 255 }
-				}
-				b_zima_MON = {
-					province = 7760
-					
-					color = { 60 55 50 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_okangara = {
-				color = { 30 20 20 }
-				color2= { 255 255 255 }
-				
-				b_okangara = {
-					province = 7761
-					
-					color = { 30 20 20 }
-					color2= { 255 255 255 }
-				}
-				b_bisha_MON = {
-					province = 7762
-					
-					color = { 30 20 20 }
-					color2= { 255 255 255 }
-				}
-				b_mori_kliringiin = {
-					province = 7763
-					
-					color = { 30 20 20 }
-					color2= { 255 255 255 }
-				}
-			}
-			c_kada = {
-				color = { 60 55 55 }
-				color2= { 255 255 255 }
-				
-				b_kada_MON = {
-					province = 7764
-					
-					color = { 60 55 55 }
-					color2= { 255 255 255 }
-				}
-				b_alyaty = {
-					province = 7765
-					
-					color = { 60 55 55 }
-					color2= { 255 255 255 }
-				}
-				b_kurkat = {
-					province = 7766
-					
-					color = { 60 55 55 }
-					color2= { 255 255 255 }
-				}
-			}
-		}
-	}
-}
 
 e_tartaria = {
 	color = { 205 5 5 }
@@ -73196,635 +72392,6 @@ e_bengal = {
 			}
 		}
 	}
-	
-	k_pagan = {
-		color = { 166 40 224 }
-		color2 = { 255 255 255 }
-		
-		capital = c_pagan
-		
-		ai_primary_priority = {
-			if = {
-				limit = {
-					culture_group = culture_group:burman_group
-				}
-				add = @correct_culture_primary_score
-			}
-		}
-		
-		d_pagan = {
-			color = { 136 20 194 }
-			color2 = { 255 255 255 }
-			
-			capital = c_pagan #Pagan
-			
-			c_pagan = {
-				color = { 116 10 174 }
-				color2 = { 255 255 255 }
-				
-				b_pagan = {
-					province = 9550
-					
-					color = { 116 10 174 }
-					color2 = { 255 255 255 }
-				}
-				b_popa = {
-					province = 9551
-					
-					color = { 116 10 174 }
-					color2 = { 255 255 255 }
-				}
-				b_myitche = {
-					province = 9554
-					
-					color = { 116 10 174 }
-					color2 = { 255 255 255 }
-				}
-				b_tantkyitaung = {
-					province = 9553
-					
-					color = { 116 10 174 }
-					color2 = { 255 255 255 }
-				}
-				b_nyaung_u = {
-					province = 9552
-					
-					color = { 116 10 174 }
-					color2 = { 255 255 255 }
-				}
-				b_powundaung = {
-					province = 9555
-					
-					color = { 116 10 174 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_ava = {
-				color = { 86 10 194 }
-				color2 = { 255 255 255 }
-				
-				b_ava = {
-					province = 9556
-					
-					color = { 86 10 194 }
-					color2 = { 255 255 255 }
-				}
-				b_pinya = {
-					province = 9557
-					
-					color = { 86 10 194 }
-					color2 = { 255 255 255 }
-				}
-				b_taungbyon = {
-					province = 9558
-					
-					color = { 86 10 194 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_kyaukse = {
-				color = { 106 40 194 }
-				color2 = { 255 255 255 }
-				
-				b_kyaukse = {
-					province = 9559
-					
-					color = { 106 40 194 }
-					color2 = { 255 255 255 }
-				}
-				b_maingmaw = {
-					province = 9560
-					
-					color = { 106 40 194 }
-					color2 = { 255 255 255 }
-				}
-				b_mekkhaya = {
-					province = 9561
-					
-					color = { 106 40 194 }
-					color2 = { 255 255 255 }
-				}
-				b_yawnghwe = {
-					province = 9570
-					
-					color = { 106 40 194 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_minbu = {
-				color = { 96 50 204 }
-				color2 = { 255 255 255 }
-				
-				b_minbu = {
-					province = 9562
-					
-					color = { 96 50 204 }
-					color2 = { 255 255 255 }
-				}
-				b_salin = {
-					province = 9563
-					
-					color = { 96 50 204 }
-					color2 = { 255 255 255 }
-				}
-				b_ngape = {
-					province = 9564
-					
-					color = { 96 50 204 }
-					color2 = { 255 255 255 }
-				}
-				b_shwesettaw = {
-					province = 9565
-					
-					color = { 96 50 204 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_sagaing = {
-				color = { 146 0 194 }
-				color2 = { 255 255 255 }
-				
-				b_sagaing = {
-					province = 9568
-					
-					color = { 146 0 194 }
-					color2 = { 255 255 255 }
-				}
-				b_halin = {
-					province = 9569
-					
-					color = { 146 0 194 }
-					color2 = { 255 255 255 }
-				}
-				b_myinmu = {
-					province = 9639
-					
-					color = { 146 0 194 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_yamethin = {
-				color = { 86 0 144 }
-				color2 = { 255 255 255 }
-				
-				b_yamethin = {
-					province = 9571
-					
-					color = { 86 0 144 }
-					color2 = { 255 255 255 }
-				}
-				b_peikthanomyo = {
-					province = 9574
-					
-					color = { 86 0 144 }
-					color2 = { 255 255 255 }
-				}
-				b_binnaka = {
-					province = 9573
-					
-					color = { 86 0 144 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-		
-		d_tagaung  = {
-			color = { 204 67 190 }
-			color2 = { 255 255 255 }
-			
-			capital = c_takon # Takon
-			
-			c_takon = {
-				color = { 184 57 170 }
-				color2 = { 255 255 255 }
-				
-				b_takon = { #AKA Tagaung
-					province = 9643
-					
-					color = { 184 57 170 }
-					color2 = { 255 255 255 }
-				}
-				b_katha = {
-					province = 9644
-					
-					color = { 184 57 170 }
-					color2 = { 255 255 255 }
-				}
-				b_htigyaing = {
-					province = 9645
-					
-					color = { 184 57 170 }
-					color2 = { 255 255 255 }
-				}
-				b_myedu = {
-					province = 9646
-					
-					color = { 184 57 170 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_madaya = {
-				color = { 164 77 170 }
-				color2 = { 255 255 255 }
-				
-				b_madaya = {
-					province = 9640
-					
-					color = { 164 77 170 }
-					color2 = { 255 255 255 }
-				}
-				b_momeik = {
-					province = 9642
-					
-					color = { 164 77 170 }
-					color2 = { 255 255 255 }
-				}
-				b_singu = {
-					province = 9641
-					
-					color = { 164 77 170 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_hanlan = {
-				color = { 154 57 180 }
-				color2 = { 255 255 255 }
-				
-				b_hanlan = {
-					province = 9647
-					
-					color = { 154 57 180 }
-					color2 = { 255 255 255 }
-				}
-				b_maukkadaw = {
-					province = 9622
-					
-					color = { 154 57 180 }
-					color2 = { 255 255 255 }
-				}
-				b_mingiu = {
-					province = 9623
-					
-					color = { 154 57 180 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_kale = {
-				color = { 214 87 150 }
-				color2 = { 255 255 255 }
-				
-				b_kale = {
-					province = 9624
-					
-					color = { 214 87 150 }
-					color2 = { 255 255 255 }
-				}
-				b_chin = {
-					province = 9625
-					
-					color = { 214 87 150 }
-					color2 = { 255 255 255 }
-				}
-				b_thaungdut = {
-					province = 9658
-					
-					color = { 214 87 150 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-		
-		d_sriksetra = {
-			color = { 156 50 103 }
-			color2 = { 255 255 255 }
-			
-			capital = c_sriksetra
-			
-			c_sriksetra = {
-				color = { 136 30 83 }
-				color2 = { 255 255 255 }
-				
-				b_sriksetra = {
-					province = 9588
-					
-					color = { 136 30 83 }
-					color2 = { 255 255 255 }
-				}
-				b_myede = {
-					province = 9589
-					
-					color = { 136 30 83 }
-					color2 = { 255 255 255 }
-				}
-				b_thayetmyo = {
-					province = 9590
-					
-					color = { 136 30 83 }
-					color2 = { 255 255 255 }
-				}
-				b_taungdwingyi = {
-					province = 9634
-					
-					color = { 136 30 83 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_magwe = {
-				color = { 136 60 73 }
-				color2 = { 255 255 255 }
-				
-				b_magwe = {
-					province = 9575
-					
-					color = { 136 60 73 }
-					color2 = { 255 255 255 }
-				}
-				b_shwemyo = {
-					province = 9572
-					
-					color = { 136 60 73 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_hinthada = {
-				color = { 146 20 103 }
-				color2 = { 255 255 255 }
-				
-				b_hinthada = {
-					province = 9591
-					
-					color = { 146 20 103 }
-					color2 = { 255 255 255 }
-				}
-				b_myanaung = {
-					province = 9592
-					
-					color = { 146 20 103 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_toungoo = {
-				color = { 156 60 93 }
-				color2 = { 255 255 255 }
-				
-				b_toungoo = {
-					province = 9593
-					
-					color = { 156 60 93 }
-					color2 = { 255 255 255 }
-				}
-				b_mong_pai = {
-					province = 9594
-					
-					color = { 156 60 93 }
-					color2 = { 255 255 255 }
-				}
-				b_swa = {
-					province = 9595
-					
-					color = { 156 60 93 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-		
-		d_arakan = {
-			color = { 230 37 82 }
-			color2 = { 255 255 255 }
-			
-			capital = c_vaisali
-			
-			c_vaisali = {
-				color = { 210 17 62 }
-				color2 = { 255 255 255 }
-				
-				cultural_names = {
-					burmese = cn_waithali
-				}
-				
-				b_vaisali = {
-					province = 9576
-					
-					color = { 210 17 62 }
-					color2 = { 255 255 255 }
-					
-					cultural_names = {
-						burmese = cn_waithali
-					}
-				}
-				b_launggyet = {
-					province = 9577
-					
-					color = { 210 17 62 }
-					color2 = { 255 255 255 }
-				}
-				b_mrauk_u = {
-					province = 9578
-					
-					color = { 210 17 62 }
-					color2 = { 255 255 255 }
-				}
-				b_mahamuni = {
-					province = 9579
-					
-					color = { 210 17 62 }
-					color2 = { 255 255 255 }
-				}
-				b_akyab = {
-					province = 9580
-					
-					color = { 210 17 62 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_ramu = {
-				color = { 230 67 42 }
-				color2 = { 255 255 255 }
-				
-				b_ramu = {
-					province = 9581
-					
-					color = { 230 67 42 }
-					color2 = { 255 255 255 }
-				}
-				b_dianga = {
-					province = 9582
-					
-					color = { 230 67 42 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_thabeik_taung = {
-				color = { 230 57 52 }
-				color2 = { 255 255 255 }
-				
-				b_thabeik_taung = {
-					province = 9583
-					
-					color = { 230 57 52 }
-					color2 = { 255 255 255 }
-				}
-				b_matamuhuri = {
-					province = 9584
-					
-					color = { 230 57 52 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_sandoway = {
-				color = { 230 47 102 }
-				color2 = { 255 255 255 }
-				
-				b_sandoway = {
-					province = 9585
-					
-					color = { 230 47 102 }
-					color2 = { 255 255 255 }
-				}
-				b_ramree = {
-					province = 9586
-					
-					color = { 230 47 102 }
-					color2 = { 255 255 255 }
-				}
-				b_an = {
-					province = 9587
-					
-					color = { 230 47 102 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-		
-		d_ramannadesa = {
-			color = { 76 30 241 }
-			color2 = { 255 255 255 }
-			
-			capital = c_thaton
-			
-			c_thaton = {
-				color = { 56 20 181 }
-				color2 = { 255 255 255 }
-				
-				b_thaton = {
-					province = 9627
-					
-					color = { 56 20 181 }
-					color2 = { 255 255 255 }
-				}
-				b_muttina = {
-					province = 9628
-					
-					color = { 56 20 181 }
-					color2 = { 255 255 255 }
-				}
-				b_mawlamyine = {
-					province = 9629
-					
-					color = { 56 20 181 }
-					color2 = { 255 255 255 }
-				}
-				b_taikkala = {
-					province = 9630
-					
-					color = { 56 20 181 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_sittaung = {
-				color = { 66 40 221 }
-				color2 = { 255 255 255 }
-				
-				b_sittaung = {
-					province = 9637
-					
-					color = { 66 40 221 }
-					color2 = { 255 255 255 }
-				}
-				b_shwegyin = {
-					province = 9638
-					
-					color = { 66 40 221 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_pegu = {
-				color = { 76 120 241 }
-				color2 = { 255 255 255 }
-				
-				b_pegu = {
-					province = 9596
-					
-					color = { 76 120 241 }
-					color2 = { 255 255 255 }
-				}
-				b_tharrawaddy = {
-					province = 9635
-					
-					color = { 76 120 241 }
-					color2 = { 255 255 255 }
-				}
-				b_phyu = {
-					province = 9636
-					
-					color = { 76 120 241 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_dagon = {
-				color = { 56 90 251 }
-				color2 = { 255 255 255 }
-				
-				b_dagon = {
-					province = 9598
-					
-					color = { 56 90 251 }
-					color2 = { 255 255 255 }
-				}
-				b_syriam = {
-					province = 9597
-					
-					color = { 56 90 251 }
-					color2 = { 255 255 255 }
-				}
-				b_krapan = {
-					province = 9599
-					
-					color = { 56 90 251 }
-					color2 = { 255 255 255 }
-				}
-				b_bogale = {
-					province = 9626
-					
-					color = { 56 90 251 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_kusumi = {
-				color = { 46 150 251 }
-				color2 = { 255 255 255 }
-				
-				b_kusumi = { #AKA Bassein
-					province = 9632
-					
-					color = { 46 150 251 }
-					color2 = { 255 255 255 }
-				}
-				b_myaungmya = {
-					province = 9633
-					
-					color = { 46 150 251 }
-					color2 = { 255 255 255 }
-				}
-				b_negrais = {
-					province = 9631
-					
-					color = { 46 150 251 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-	}
 }
 
 e_deccan = {
@@ -79852,4 +78419,42 @@ k_winideheim = {
 	can_create = { always = no }
 }
 
+#Blanked. Required for various things
 
+d_lower_bosna = {
+			color = { 180 85 120 }
+			color2 = { 255 255 255 }
+}
+
+d_taranto = {
+			color = { 180 85 120 }
+			color2 = { 255 255 255 }
+}
+		
+d_durazzo = {
+			color = { 180 85 120 }
+			color2 = { 255 255 255 }
+}
+
+k_shirvan = {
+	color = { 80 105 230 }
+	color2 = { 255 255 255 }
+	
+	capital = c_shirvan
+}
+
+k_khwarezmia = {
+	color = { 255 67 20 }
+	color2 = { 255 255 255 }
+	
+	can_create = {
+		trigger_if = {
+			limit = {
+				is_ai = yes
+			}
+			NOT = { culture = culture:mongol }
+		}
+	}
+	
+	capital = c_gurganj	#	Gurganj
+}
